@@ -3,14 +3,36 @@ import React from 'react'
 const Commitment = () => {
     return (
         <div className='w-full h-fit p-[10vw] flex flex-col bg-my-baby-blue font-mukta-mahee text-my-midnight-blue'>
-            <div className="lg:w-[600px] items-center justify-center z-30">
-                <div className=" relative pb-[100%] flex items-center justify-center">
-                    <div className="absolute top-0 w-full h-full items-center flex justify-center">
-                        <div className="absolute z-30 w-full h-full">
-                            <div className="absolute w-full h-full bg-[url('/components/greg-goated-pic-3x.png')] bg-center bg-contain object-contain bg-no-repeat z-30" ></div>
+            <div className=' flex '>
+                <div className="lg:w-[600px] items-center justify-center z-30">
+                    <div className=" relative pb-[100%] flex items-center justify-center">
+                        <div className="absolute top-0 w-full h-full items-center flex justify-center">
+                            <div className="absolute z-30 w-full h-full">
+                                <div className="absolute w-full h-full bg-[url('/components/greg-goated-pic-3x.png')] bg-center bg-contain object-contain bg-no-repeat z-30" ></div>
+                            </div>
                         </div>
-                    </div>
-                </div>                     
+                    </div>                     
+                </div>
+
+                <div className="lg:w-[35vw] mt-[20vh] ml-auto items-center justify-center z-30">
+                    <div className=" relative pb-[10%] flex items-center justify-center">
+                        <div className="absolute top-0 w-full h-full items-center flex justify-center">
+                            <div className="absolute z-30 w-full h-full mix-blend-lighten">
+                                <video
+                                    id='holistic-vid'
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                    className="w-full h-full object-cover"
+                                >
+                                    <source src="/animations/values.mp4" type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
             </div>
 
             <div className='w-full grid lg:grid-cols-2 grid-cols-1 gap-[200px] text-3xl mt-[50px]'>
