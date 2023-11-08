@@ -16,7 +16,7 @@ const Vision = (props: Props) => {
                 </div>
 
                 <div className='leading-[5vh]'>
-                    We envision a future where analytics is not just about numbers but about understanding the stories behind them. By merging AI's power with human intuition, 
+                    We envision a future where analytics is not just about numbers but about understanding the stories behind them. By merging AI&apos;s power with human intuition, 
                     we aim to redefine the realm of data analytics, ensuring strategies that are not only precise but also resonate with the people they impact.
                 </div>
             </div>
