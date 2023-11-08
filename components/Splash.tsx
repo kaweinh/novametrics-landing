@@ -5,7 +5,7 @@ type Props = {}
 
 const Splash = (props: Props) => {
     return (
-        <div className='relative w-screen h-screen bg-my-baby-blue flex justify-center items-center text-my-midnight-blue font-mukta-mahee'>
+        <div className='relative w-screen h-screen bg-white flex justify-center items-center text-my-midnight-blue font-mukta-mahee'>
 
             <div className="lg:w-[60vw] mb-[8vh] items-center justify-center mr-auto ml-[4vw]">
                 <div className=" relative pb-[75%] flex items-center justify-center">
