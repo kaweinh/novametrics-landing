@@ -26,7 +26,7 @@ const AboutUs = (props: Props) => {
                 </div>                     
             </div>
 
-            <div className='ml-auto mr-[5vw]'>
+            <div className='ml-auto mr-[5vw] bg-my-pink-very-light'>
                 <div className="lg:w-[20vw] items-center justify-center z-20">
                     <div className=" relative pb-[100%] flex items-center justify-center">
                         <div className="absolute top-0 w-full h-full items-center flex justify-center">

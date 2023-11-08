@@ -14,8 +14,8 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
-        'my-baby-blue': '#EEF4FB',
-        'my-baby-purple': '#EBE8EF',
+        'my-baby-blue': '#f0f6fc',
+        'my-baby-purple': '#EDEBF1',
         'my-midnight-blue': '#111133',
         'my-purple-medium': '#672672',
         'my-pink-very-light': '#F5F3F7',
