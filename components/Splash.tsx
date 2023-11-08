@@ -33,7 +33,7 @@ const Splash = (props: Props) => {
 
             <div className="absolute lg:w-[40vw] items-center justify-center right-0 mr-[5vw] z-30 opacity-50">
                 <div className=" relative pb-[100%] flex items-center justify-center">
-                    <div className="absolute top-0 w-full h-full bg-black items-center flex justify-center">
+                    <div className="absolute top-0 w-full h-full items-center flex justify-center">
                         <div className="absolute z-30 w-full h-full mix-blend-lighten">
                             <video
                                 id='neural-vid'
