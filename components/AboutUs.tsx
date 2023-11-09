@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 type Props = {}
 
@@ -26,23 +27,12 @@ const AboutUs = (props: Props) => {
                 </div>                     
             </div>
 
-            <div className='ml-auto mr-[5vw] bg-my-pink-very-light'>
-                <div className="lg:w-[20vw] items-center justify-center z-20">
-                    <div className=" relative pb-[100%] flex items-center justify-center">
+            <div className='ml-auto relative'>
+                <div className="lg:w-[40vw] items-center justify-center z-20 mr-[-4vw]">
+                    <div className="relative pb-[50%] flex items-center justify-center">
                         <div className="absolute top-0 w-full h-full items-center flex justify-center">
-                            <div className="absolute z-30 w-full h-full">
-                                <video
-                                    id='about-us-vid'
-                                    autoPlay
-                                    loop
-                                    muted
-                                    playsInline
-                                    className="w-full h-full object-cover"
-                                >
-                                    <source src="/animations/grid-circles.mp4" type="video/mp4" />
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
+                            <img className='h-full w-full' src="/animations/grid_circles.gif" alt="not here"></img>
+                            
                         </div>
                     </div>                     
                 </div>
