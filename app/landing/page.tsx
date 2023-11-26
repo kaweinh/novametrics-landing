@@ -38,7 +38,7 @@ export default function Home() {
           className="absolute w-screen h-screen bg-[url('/components/midtest3.png')] bg-cover object-cover bg-no-repeat z-10"
           style={{ 
             opacity: scrollYProgress,
-            scale: useTransform(scrollYProgress, [0, 1], [0.1, 1.5])
+            scale: useTransform(scrollYProgress, [0, 1], [1, 1.5])
           }}
         ></motion.div>
       </div>

@@ -9,7 +9,7 @@ const Footer = (props: Props) => {
             <div className='absolute bottom-0 w-full px-[10vw]'>
                 <div className='flex flex-col'>
                     <div className=' flex justify-center items-center'>
-                        <div className="w-[50px] h-[50px] bg-[url('/components/logo-black.svg')] bg-center bg-contain object-contain bg-no-repeat z-30"></div>
+                        <div className="w-[50px] h-[50px] bg-[url('/components/sh-logo.svg')] bg-center bg-contain object-contain bg-no-repeat z-30"></div>
                     </div>
 
                     <div className='w-full h-[2px] mt-[20px] mb-[20px] bg-black'></div>

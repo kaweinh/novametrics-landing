@@ -1,52 +1,32 @@
 import React from 'react'
 import Image from 'next/image'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import SweepReveal from './SweepReveal'
 
 type Props = {}
 
 const AboutUs = (props: Props) => {
-  return (
-    <div className='w-full h-fit p-[10vw] flex flex-col bg-my-baby-purple font-mukta-mahee text-my-midnight-blue'>
-        <div className='flex items-center'>
-            <div className="lg:w-[20vw] items-center justify-center z-20">
-                <div className=" relative pb-[20%] flex items-center justify-center">
-                    <div className="absolute top-0 w-full h-full items-center flex justify-center">
-                        <div className="absolute z-30 w-full h-full mix-blend-lighten">
-                            <video
-                                id='about-us-vid'
-                                autoPlay
-                                loop
-                                muted
-                                playsInline
-                                className="w-full h-full object-cover"
-                            >
-                                <source src="/animations/about-us-typed.mp4" type="video/mp4" />
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
-                </div>                     
-            </div>
 
-            <div className='ml-auto relative'>
-                <div className="lg:w-[40vw] items-center justify-center z-20 mr-[-4vw]">
-                    <div className="relative pb-[50%] flex items-center justify-center">
-                        <div className="absolute top-0 w-full h-full items-center flex justify-center">
-                            <img className='h-full w-full' src="/animations/grid_circles.gif" alt="not here"></img>
-                            
-                        </div>
-                    </div>                     
-                </div>
-            </div>
+  return (
+    <div className='w-full h-fit p-[10vw] flex bg-neutral-white font-mukta-mahee text-my-midnight-blue'>
+        <div className='w-[40%] relative'>
+            <div className="absolute mix-blend-luminosity rounded-full w-[25vw] h-[50vh] bg-[url('/components/clipartppt.png')] bg-cover object-cover bg-no-repeat z-10"></div>
         </div>
 
-        <div className=' flex text-3xl mt-[50px]'>
-            <div className='w-[60%] leading-[5vh]'>
-                Our journey began at Princeton University, where innovative ideas met real-world challenges. Ever-adapting, our holistic approach harnesses the power of AI and 
-                Weak-Signal Analysis to provide the next generation of predictive analytics. Our data-to-decision (D2D) capabilities ensure that you are always a step ahead, leveraging 
-            </div>
+        <div className='w-[60%] flex flex-col'>
+            <div className=' text-6xl font-bold text-accent-dark mb-10'> About Us </div>
 
-            <div className=' mt-[60px] w-[35%] ml-[5%] leading-[5vh]'>
-                Novametrics is a boutique analytics firm that provides advanced data-to-decision services for government agencies, NGOs, foundations, impact investment funds, and aid and development groups.
+            <div className='flex text-3xl mt-[0px]'>
+                <div className='w-full leading-[5vh]' >
+                    <SweepReveal texts={[
+                        `Our journey began at Princeton University, where innovative ideas met real-world challenges. Ever-adapting, 
+                        our holistic approach harnesses the power of AI and Weak-Signal Analysis to provide the next generation of predictive analytics. 
+                        Our data-to-decision (D2D) capabilities ensure that you are always a step ahead, leveraging something.`,
+                        
+                        `Novametrics is a boutique analytics firm that provides advanced data-to-decision services for government agencies, NGOs, foundations, 
+                        impact investment funds, and aid and development groups.`
+                    ]}/>
+                </div>
             </div>
         </div>
     </div>

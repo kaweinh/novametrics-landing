@@ -6,8 +6,7 @@ type Props = {}
 const Partners = (props: Props) => {
     return (
         <div className='w-full h-fit relative'>
-            <div className='relative w-full h-fit flex justify-center items-center bg-my-baby-blue font-mukta-mahee text-my-midnight-blue'>
-                <div className=' absolute top-0 w-[60%] h-[2px] bg-black'></div>
+            <div className='relative w-full h-fit flex justify-center items-center bg-white font-mukta-mahee text-my-midnight-blue'>
                 <div className=' flex flex-col justify-center items-center px-[10vw] py-[10vh]'>
                     <div className=' text-3xl'>
                         Join the network of organizations that have used our advanced analytics to support their data-to-decision pathways

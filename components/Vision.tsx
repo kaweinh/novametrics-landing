@@ -1,25 +1,47 @@
 import React from 'react'
+import SweepReveal from './SweepReveal'
+import { motion, useScroll, useTransform } from "framer-motion";
 
 type Props = {}
 
 const Vision = (props: Props) => {
+    const ref = React.useRef<HTMLDivElement>(null)
+    const { scrollYProgress } = useScroll({ 
+      target: ref, 
+      offset: ["start end", "end 0.2"] 
+    })
+
     return (
-        <div className='w-full h-fit p-[10vw] flex flex-col bg-my-baby-yellow font-mukta-mahee text-my-midnight-blue'>
-            <div className='text-[80px] font-bold'>
-                Mission and Vision
-            </div>
-
-            <div className='w-full grid lg:grid-cols-2 grid-cols-1 gap-[100px] text-3xl mt-[50px]'>
-                <div className='leading-[5vh]'>
-                    Novametrics is committed to fostering a world where data analytics and strategic planning honor the intricate tapestry of global communities, 
-                    offering bespoke solutions that respect the unique needs and potentials of each society.
+        <div 
+            className="w-full h-full bg-[url('/components/mission-bg.png')] bg-cover object-cover bg-no-repeat">
+            <motion.div 
+                ref={ ref } 
+                className='w-full h-fit p-[10vw] flex flex-col bg-black bg-opacity-80 font-mukta-mahee text-neutral-white'
+                style={{ 
+                    backgroundColor: useTransform(
+                        scrollYProgress, [0, 1], 
+                        [  
+                            'rgba(0,0,0, 1)',
+                            'rgba(0,0,0, 0.4)'
+                        ])
+                }}
+            >
+                <div className='text-6xl font-bold text-primary-light mb-10'>
+                    Mission and Vision
                 </div>
 
-                <div className='leading-[5vh]'>
-                    We envision a future where analytics is not just about numbers but about understanding the stories behind them. By merging AI&apos;s power with human intuition, 
-                    we aim to redefine the realm of data analytics, ensuring strategies that are not only precise but also resonate with the people they impact.
+                <div className='text-3xl w-[60%]'>
+                    <div className='leading-[5vh] mb-10'>
+                        Novametrics is a boutique analytics firm that provides advanced data-to-decision services for government agencies, 
+                        NGOs, foundations, impact investment funds, and aid and development groups.
+                    </div>
+
+                    <div className='leading-[5vh]'>
+                        We envision a future where analytics is not just about numbers but about understanding the stories behind them. By merging AI&apos;s power with human intuition, 
+                        we aim to redefine the realm of data analytics, ensuring strategies that are not only precise but also resonate with the people they impact.
+                    </div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 }
