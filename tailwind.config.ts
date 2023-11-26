@@ -24,6 +24,23 @@ const config: Config = {
         'my-green-blue-see-thru': 'rgba(17,70, 70, 0.3)',
         'my-baby-yellow': '#F9F7F4',
 
+        'primary-dark': '#111133',
+        'primary-dull': '#314E78',
+        'primary': '#1A51AA',
+        'primary-soft': '#5C9DFF',
+        'primary-softer': '#99C2FF',
+        'primary-light': '#AEDFF8',
+
+        'accent': '#58A55D',
+        'accent-dark': '#496F5D',
+        'accent-light': '#97D8B2',
+        'accent-soft': '#CEDFD6',
+
+        'neutral-white': '#EAE8E1',
+        'neutral-brown-orange': '#E1D7CA',
+        'neutral-brown': '#DBD6C6',
+        'neutral-gray-light': '#B4B4B4',
+        'neutral-gray-dark': '#6E7173'
       },
       fontFamily: {
         'mukta-mahee': ['Mukta Mahee']

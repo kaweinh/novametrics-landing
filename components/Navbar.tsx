@@ -43,7 +43,7 @@ const Navbar = (props: Props) => {
     const getIcon = () => { 
         return (
             <div 
-                className='w-[47px] h-[47px] ml-[50px] z-40 left-0 absolute bg-no-repeat bg-cover cursor-pointer' style={{ backgroundImage: `url('/components/logo-white.svg')` }}
+                className='w-[50px] h-[45px] ml-[200px] z-40 left-0 absolute bg-no-repeat bg-cover cursor-pointer' style={{ backgroundImage: `url('/components/sh-logo.svg')` }}
             ></div>
         )
     }
@@ -85,7 +85,7 @@ const Navbar = (props: Props) => {
             transition={{ duration: 0.5 }}
             className='block'
         >
-            <div className={ `relative flex w-full h-[70px] justify-center items-center bg-gradient-to-r from-my-black-see-thru to-my-green-blue-see-thru ease-in-out bg-opacity-20 backdrop-blur-xl font-mukta-mahee `}>
+            <div className={ `relative flex w-full h-[70px] justify-center items-center bg-gradient-to-r to-my-black-see-thru from-my-green-blue-see-thru ease-in-out bg-opacity-20 backdrop-blur-xl font-mukta-mahee `}>
                 { getIcon() } 
                 
                 <div className='z-50 lg:hidden text-white absolute mr-[10px] mt-[0px] right-0 hover:text-gray-500 cursor-pointer p-5' onClick={() => { setMobileMenuOpen( !mobileMenuOpen )}} >
@@ -104,7 +104,7 @@ const Navbar = (props: Props) => {
                     <motion.div 
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.9 }}
-                        className=' bg-my-purple-medium px-4 h-fit py-2 mr-[50px] rounded-lg items-center flex text-xl font-bold cursor-pointer select-none'
+                        className=' bg-primary px-4 h-fit py-2 mr-[50px] rounded items-center flex text-xl font-bold cursor-pointer select-none'
                     >
                         Contact Us
                     </motion.div>
