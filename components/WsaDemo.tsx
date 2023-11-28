@@ -142,7 +142,7 @@ const WsaDemo = (props: Props) => {
                     <h1 className=' font-bold text-6xl mb-[5vh]'> Hindcasting </h1>
 
                     <div className=' text-white'>
-                        A bunch of text about hind-casting the chart to the right mentioned somehow please and perfectly. Hames and stuff and things and i could go on but I'll leave it here for now.
+                        A bunch of text about hind-casting the chart to the right mentioned somehow please and perfectly. Hames and stuff and things and i could go on but I&apos;ll leave it here for now.
                     </div>
                 </div>
             </div>

@@ -107,7 +107,7 @@ export default function Home() {
                     <FlowDiagram layers={ flowLayers } text_color='white'/>
 
                     <div className=' text-3xl text-primary-dark px-[10vw] mt-[5vh]'>
-                        Some text about the above high-level architecture looks good and promising and stuff and things and i could go on but I'll leave it here for now.
+                        Some text about the above high-level architecture looks good and promising and stuff and things and i could go on but I&apos;ll leave it here for now.
                     </div>
                 </div>
 
