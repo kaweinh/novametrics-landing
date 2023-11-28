@@ -1,6 +1,37 @@
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
+  safelist: [
+    'grid-cols-1',
+    'grid-cols-2',
+    'grid-cols-3',
+    'grid-cols-4',
+    'grid-cols-5',
+    'grid-cols-6',
+    'grid-cols-7',
+    'grid-cols-8',
+    'grid-cols-9',
+    'grid-cols-10',
+
+    'bg-primary-dark',
+    'bg-primary-dull',
+    'bg-primary',
+    'bg-primary-soft',
+    'bg-primary-softer',
+    'bg-primary-light',
+
+    'bg-accent',
+    'bg-accent-dark',
+    'bg-accent-light',
+    'bg-accent-soft',
+
+    'bg-neutral-white',
+    'bg-neutral-brown-orange',
+    'bg-neutral-brown',
+
+    'text-neutral-white',
+    'border-neutral-white'
+  ],
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
