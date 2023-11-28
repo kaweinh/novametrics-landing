@@ -101,20 +101,20 @@ export default function Home() {
                 <div className='w-full px-[10vw] py-[10vh] bg-white flex flex-col'>
                     <div className=' px-[10vw] flex justify-center '>
                         <h1 className=' font-bold text-6xl text-primary-dark mb-[5vh]'>
-                            Discovery-To-Decision Architecture 
+                            Data-To-Decision Architecture 
                         </h1>
                     </div>
                     <FlowDiagram layers={ flowLayers } text_color='white'/>
 
                     <div className=' text-3xl text-primary-dark px-[10vw] mt-[5vh]'>
-                        Some text about the above high-level architecture looks good and promising and stuff and things and i could go on but I&apos;ll leave it here for now.
+                        Explore our innovative Data-to-Decision Architecture, where sophisticated analysis and insightful modeling converge to empower decision-making with precision-targeted interventions.
                     </div>
                 </div>
 
                 <div ref={bg2Ref} className='w-full h-[120vh] relative overflow-hidden'>
                     <div className='absolute h-full w-full flex flex-col justify-center items-center z-40'>
                         <h1 className=' text-white text-6xl font-bold '>
-                            Weak Signal Analysis Methodology
+                            Weak Signal Analysis
                         </h1>
 
                         <p className='text-white text-3xl px-[20vw] mt-[5vh] mb-[5vh]'>
@@ -123,7 +123,8 @@ export default function Home() {
                         </p>
 
                         <p className='text-white text-3xl px-[20vw] mb-[5vh]'>
-                            Some note about this process starting with the data acquisition, normalizing / processing and creation of pearson correlation matrices.
+                            Following data acquisition to rigorous processing and quality assurance, the creation of Pearson Correlation Matrices reveal the intricate 
+                            interplay of indicators that represent populations, regions, and their environments.
                         </p>
 
                         <div className='w-full flex justify-center items-center text-8xl text-white'>

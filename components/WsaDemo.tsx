@@ -64,12 +64,10 @@ const WsaDemo = (props: Props) => {
 
             <div className='flex justify-center items-center w-full h-fit bg-white py-[10vh] px-[10vw]'>
                 <div className=' flex flex-col items-center justify-start font-mukta-mahee text-3xl text-primary-dark w-[100%]'>
-                    <h1 className=' font-bold text-6xl mb-[5vh]'> Separating the Signals from the Noise </h1>
+                    <h1 className=' font-bold text-6xl mb-[5vh]'> Amplifying Signals Below the Noise </h1>
 
                     <SweepReveal texts={[
-                        `Novametrics uses advanced analytics to help organizations navigate the complexities of the modern world. 
-                        We provide a range of services, including data collection, analysis, and visualization, to help our clients 
-                        make informed decisions and achieve their goals.`
+                        `Advanced AI and machine learning algorithms are used to amplify weak signals and distill clarity from the noise, bringing critical insights to the forefront of decision-making.`
                     ]}/>
                 </div>
 
@@ -139,10 +137,10 @@ const WsaDemo = (props: Props) => {
                 </div>
 
                 <div className=' flex flex-col font-mukta-mahee text-3xl text-white w-[50%] mr-auto'>
-                    <h1 className=' font-bold text-6xl mb-[5vh]'> Hindcasting </h1>
+                    <h1 className=' font-bold text-6xl mb-[5vh]'> Predictive Power for Proactive Strategies </h1>
 
                     <div className=' text-white'>
-                        A bunch of text about hind-casting the chart to the right mentioned somehow please and perfectly. Hames and stuff and things and i could go on but I&apos;ll leave it here for now.
+                        Hindcasting sharpens our predictive models, instilling confidence with historical validation to shape strategic foresight.
                     </div>
                 </div>
             </div>
@@ -160,12 +158,12 @@ const WsaDemo = (props: Props) => {
 
             <div className='flex justify-center items-center h-fit px-[10vw]'>
                 <div className=' flex flex-col font-mukta-mahee text-3xl text-primary-dark w-[60%] mr-auto'>
-                    <h1 className=' font-bold text-6xl mb-[5vh]'> Location Specific Policy Intervention </h1>
+                    <h1 className=' font-bold text-6xl mb-[5vh]'> Geographically Targeted Interventions </h1>
 
                     <SweepReveal texts={[
-                        `Each country has a unique set of characteristics that influence its development and stability. 
-                        Novametrics uses a variety of data sources to understand these characteristics and how they interact
-                        with each other. This allows us to identify potential weak signals and provide actionable insights`
+                        `
+                        By deciphering unique local dynamics, Novametrics delivers geographically targeted interventions that inform and shape strategic policy for sustainable impact and development.
+                        `
                     ]}/>
                 </div>
 
