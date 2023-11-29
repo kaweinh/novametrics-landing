@@ -11,6 +11,7 @@ import Commitment from '@/components/Commitment';
 import Partners from '@/components/Partners';
 import TestAnimation from '@/components/TestAnimation';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   const [activePage, setActivePage] = React.useState('Home')
@@ -42,6 +43,7 @@ export default function Home() {
           }}
         ></motion.div>
       </div>
+
       <Features />
 
       <div className='z-20 relative'>
@@ -50,7 +52,8 @@ export default function Home() {
 
       <Vision />
       <Commitment />
-      <Partners />
+      
+      <Footer fadeColor='neutral-white' />
 
     </div>  
   )

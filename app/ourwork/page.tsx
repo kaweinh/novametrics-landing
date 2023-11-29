@@ -7,6 +7,8 @@ import FlowDiagram from '@/components/FlowDiagram';
 import PrettyMatrix from '@/components/PrettyMatrix';
 import WsaDemo from '@/components/WsaDemo';
 import FunList from '@/components/FunList';
+import Partners from '@/components/Partners';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   const [activePage, setActivePage] = React.useState('Our Work')
@@ -98,6 +100,8 @@ export default function Home() {
 
                 <FunList />
 
+                <Partners />
+
                 <div className='w-full px-[10vw] py-[10vh] bg-white flex flex-col'>
                     <div className=' px-[10vw] flex justify-center '>
                         <h1 className=' font-bold text-6xl text-primary-dark mb-[5vh]'>
@@ -133,22 +137,17 @@ export default function Home() {
                     </div>
 
                     <motion.div 
-                        style={{ 
-                            scaleX: useTransform(bg2Progress, [0, 1], [1, 1.2])
-                        }}
                         className="w-full h-full bg-[url('/components/midtest2.png')] bg-center bg-cover object-cover bg-no-repeat z-20"
                     >
-                        <div className='w-full h-full bg-primary-dark bg-opacity-[0.93]'></div>
+                        <div className='w-full h-full bg-primary-dark bg-opacity-[0.93] backdrop-blur-sm'></div>
                     </motion.div>
                 </div>
 
-                <div className='h-fit w-full bg-white'>
+                <div className='h-fit w-full'>
                     <WsaDemo />
                 </div>
 
-                <div className='w-full h-[50vh]'>
-
-                </div>
+                <Footer fadeColor='white' />
                 
             </div>
         </div>  

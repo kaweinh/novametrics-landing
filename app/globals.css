@@ -16,6 +16,43 @@
   }
 }
 
+.partners-circles::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle, rgba(230, 230, 230, 0.1) 30%, transparent 40%);
+  background-size: 5px 5px;
+  opacity: 0.2;
+}
+
+
+.footer-circles::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle, #B4B4B4 30%, transparent 40%);
+  background-size: 4px 4px;
+  opacity: 0.2;
+}
+
+.animation-squares::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle, #B4B4B4 30%, transparent 40%);
+  background-size: 8px 8px;
+  opacity: 0.15;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(

@@ -54,6 +54,7 @@ const config: Config = {
         'my-midnight-blue-see-thru': 'rgba(17,17,51, 0.3)',
         'my-green-blue-see-thru': 'rgba(17,70, 70, 0.3)',
         'my-baby-yellow': '#F9F7F4',
+        'my-white-see-thru': 'rgba(255, 255, 255, 0.90)',
 
         'primary-dark': '#111133',
         'primary-dull': '#314E78',

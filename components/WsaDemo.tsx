@@ -156,7 +156,7 @@ const WsaDemo = (props: Props) => {
                 </motion.div>
             </div>
 
-            <div className='flex justify-center items-center h-fit px-[10vw]'>
+            <div className='flex justify-center items-center h-fit px-[10vw] py-[10vh]'>
                 <div className=' flex flex-col font-mukta-mahee text-3xl text-primary-dark w-[60%] mr-auto'>
                     <h1 className=' font-bold text-6xl mb-[5vh]'> Geographically Targeted Interventions </h1>
 
