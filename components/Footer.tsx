@@ -8,35 +8,36 @@ type Props = {
 }
 
 type FadeProps = {
-    color: string
+    color: string,
+    delay: number
 }
 
-const FadeOutBox = ( { color }: FadeProps ) => {    
+const FadeOutBox = ( { color, delay }: FadeProps ) => {    
     if( color == 'blue') {
         return ( <motion.div 
             initial={{ opacity: 0 }}
-            animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: 1 } }}
+            animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: delay } }}
             className='w-full h-full bg-primary-light bg-opacity-70'>
             </motion.div> 
         );
     } else if( color == 'dark blue') {
         return ( <motion.div 
             initial={{ opacity: 0 }}
-            animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: 1.5 } }}
+            animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: delay } }}
             className='w-full h-full bg-primary bg-opacity-70'>
             </motion.div> 
         );
     } else if( color == 'green') {
         return ( <motion.div 
             initial={{ opacity: 0 }}
-            animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: 2} }}
+            animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: delay } }}
             className='w-full h-full bg-accent bg-opacity-70'>
             </motion.div> 
         );
     } else {
         return ( <motion.div 
             initial={{ opacity: 0 }}
-            animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: 0.5 } }}
+            animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: delay } }}
             className='w-full h-full bg-accent-dark bg-opacity-70'>
             </motion.div> 
         );
@@ -50,36 +51,113 @@ const Footer = ( { fadeColor }: Props) => {
     const rows = Array.from({ length: numRows }, (_, index) => index + 1);
     const cols = Array.from({ length: numCols }, (_, index) => index + 1);
 
-    const [greenCell, setGreenCell] = React.useState(20000);
-    const [blueCell, setBlueCell] = React.useState(20000);
-    const [darkBlueCell, setDarkBlueCell] = React.useState(20000)
-    const [darkGreenCell, setDarkGreenCell] = React.useState(20000)  
+    const [greenCell, setGreenCell] = React.useState( Array<number>() );
+    const [blueCell, setBlueCell] = React.useState( Array<number>() );
+    const [darkBlueCell, setDarkBlueCell] = React.useState( Array<number>() )
+    const [darkGreenCell, setDarkGreenCell] = React.useState( Array<number>() )  
 
     // Function to generate a random cell number
     const getRandomCell = () => {
         return Math.floor(Math.random() * numRows * numCols )
     }
-  
-    React.useEffect(() => {
-      const interval = setInterval(() => {
-        setGreenCell( getRandomCell() );
-        setDarkGreenCell( getRandomCell());
-        setBlueCell( getRandomCell());
-        setDarkBlueCell( getRandomCell());
-      }, 5000); // Change every second
-  
-      return () => clearInterval(interval);
-    }, []);
 
-    const getCellDisplay = ( index: number) => {
-        if( greenCell == index ) {
-            return <FadeOutBox color='green'/>
-        } else if( darkGreenCell == index ) {
-            return <FadeOutBox color='dark green'/>
-        } else if( blueCell == index ) {
-            return <FadeOutBox color='blue'/>
-        } else if( darkBlueCell == index ) {
-            return <FadeOutBox color='dark blue'/>
+    const getRandomSet = () => {
+        let randomSet = Array<number>()
+        for( let i = 0; i < 10; i++ ) {
+            randomSet.push( getRandomCell() )
+        }
+        return randomSet
+    }
+
+    React.useEffect(() => {
+        // Function that sets the new sets
+        const updateCells = () => {
+          setDarkGreenCell(getRandomSet());
+        };
+      
+        const initialDelay = 3000;
+        const timeout = setTimeout(() => {
+          updateCells();
+          const interval = setInterval(() => {
+            updateCells();
+          }, 6000); // Change every 6 seconds
+    
+          return () => {
+            clearInterval(interval);
+          };
+        }, initialDelay);
+        return () => clearTimeout(timeout);
+      }, []);
+
+      React.useEffect(() => {
+        // Function that sets the new sets
+        const updateCells = () => {
+          setBlueCell(getRandomSet());
+        };
+      
+        const initialDelay = 1000;
+        const timeout = setTimeout(() => {
+          updateCells();
+          const interval = setInterval(() => {
+            updateCells();
+          }, 6000); // Change every 6 seconds
+    
+          return () => {
+            clearInterval(interval);
+          };
+        }, initialDelay);
+        return () => clearTimeout(timeout);
+      }, []);
+
+      React.useEffect(() => {
+        // Function that sets the new sets
+        const updateCells = () => {
+          setDarkBlueCell(getRandomSet());
+        };
+      
+        const initialDelay = 2000;
+        const timeout = setTimeout(() => {
+          updateCells();
+          const interval = setInterval(() => {
+            updateCells();
+          }, 6000); // Change every 6 seconds
+    
+          return () => {
+            clearInterval(interval);
+          };
+        }, initialDelay);
+        return () => clearTimeout(timeout);
+      }, []);
+
+      React.useEffect(() => {
+        // Function that sets the new sets
+        const updateCells = () => {
+          setGreenCell(getRandomSet());
+        };
+      
+        const initialDelay = 3000;
+        const timeout = setTimeout(() => {
+          updateCells();
+          const interval = setInterval(() => {
+            updateCells();
+          }, 6000); // Change every 6 seconds
+    
+          return () => {
+            clearInterval(interval);
+          };
+        }, initialDelay);
+        return () => clearTimeout(timeout);
+      }, []);
+
+    const getCellDisplay = ( index: number ) => {
+        if( greenCell.includes( index ) ) {
+            return <FadeOutBox color='green' delay={index % 4}/>
+        } else if( darkGreenCell.includes( index ) ) {
+            return <FadeOutBox color='dark green' delay={index % 4}/>
+        } else if( blueCell.includes( index ) ) {
+            return <FadeOutBox color='blue' delay={index % 4}/>
+        } else if( darkBlueCell.includes( index ) ) {
+            return <FadeOutBox color='dark blue' delay={index % 4}/>
         } 
     }
 
@@ -102,7 +180,10 @@ const Footer = ( { fadeColor }: Props) => {
                                             <tr key={r_index} className=' backdrop-blur-md'>
                                                 { cols.map(( _, c_index ) => ( 
                                                     <td key={ c_index} className='w-[1vw] h-[1vw] border-1 border-white'>
-                                                        { ![greenCell, blueCell, darkGreenCell, darkBlueCell].includes( r_index * numCols + c_index ) && (
+                                                        {   !greenCell.includes( r_index * numCols + c_index ) && 
+                                                            !blueCell.includes( r_index * numCols + c_index ) && 
+                                                            !darkGreenCell.includes( r_index * numCols + c_index ) && 
+                                                            !darkBlueCell.includes( r_index * numCols + c_index ) && (
                                                             <div key={ c_index } className=' bg-neutral-white w-full h-full bg-opacity-30'> </div>
                                                         )}
 

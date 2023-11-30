@@ -5,9 +5,27 @@ import VeBarChart from './VeBarChart'
 
 type Props = {}
 
+type ProvinceInfo = {
+    name: string,
+    imgTag: string,
+    mb: string,
+    mr: string,
+}
+
+const provinces: Array<ProvinceInfo> = [
+    { name: 'comilla', imgTag: "bg-[url('/reports/comilla.png')]", mb: 'mb-[25vh]', mr: 'mr-[6.6vw]'  },
+    { name: 'coxs_bazar', imgTag: "bg-[url('/reports/coxs_bazar.png')]", mb: 'mb-[7vh]', mr: 'mr-[2.5vw]'  },
+    { name: 'gazipur', imgTag: "bg-[url('/reports/gazipur.png')]", mb: 'mb-[31vh]', mr: 'mr-[9.3vw]'  },
+    { name: 'jessore', imgTag: "bg-[url('/reports/jessore.png')]", mb: 'mb-[22vh]', mr: 'mr-[15vw]'  },
+    { name: 'joypurhat', imgTag: "bg-[url('/reports/joypurhat.png')]", mb: 'mb-[40vh]', mr: 'mr-[15vw]'  },
+    { name: 'rajashahi', imgTag: "bg-[url('/reports/rajashahi.png')]", mb: 'mb-[35vh]', mr: 'mr-[33vh]' },
+]
+
 const WsaDemo = (props: Props) => {
     const vid1Ref = React.useRef<HTMLVideoElement>(null)
     const vid2Ref = React.useRef<HTMLVideoElement>(null)
+
+    const [ activeProvince, setProvince ] = React.useState('comilla')
 
     // Function to play or pause both videos
     function playPauseVideos( playing : boolean ) {
@@ -58,6 +76,33 @@ const WsaDemo = (props: Props) => {
       target: bg2Ref, 
       offset: ["start end", "end start"] 
     })
+
+    const getProvincePin = ( info: ProvinceInfo ) => {
+        if( info.name == activeProvince ) {
+            return (
+                <div className={ `absolute lg:w-[50px] bottom-[-2vh] right-[-0.5vw] ${info.mr} ${info.mb} items-center justify-center z-50 mx-auto `}>
+                    <div className=" relative pb-[300%] flex items-center justify-center">
+                        <div className="absolute top-0 w-full h-full items-center flex justify-center">
+                            <div className={ `w-full h-full bg-[url('/components/pin.svg')] bg-center bg-contain object-fill bg-no-repeat`}> </div>
+                        </div>
+                    </div>
+                </div>
+            )
+        } else {
+            return (
+                <motion.div 
+                    whileHover={{ scale: 1.5 }}
+                    onClick={() => { setProvince(info.name) }}
+                    className={ `absolute lg:w-[30px] bottom-0 right-0 ${info.mr} ${info.mb} items-center cursor-pointer justify-center z-50 mx-auto `}>
+                    <div className=" relative pb-[300%] flex items-center justify-center">
+                        <div className="absolute top-0 w-full h-full items-center flex justify-center">
+                            <div className={ `w-full h-full bg-[url('/components/pin.png')] bg-center bg-contain object-fill bg-no-repeat`}> </div>
+                        </div>
+                    </div>
+                </motion.div>
+            )
+        }
+    }
 
     return (
         <div className='w-full h-fit flex flex-col items-center justify-center'>
@@ -156,7 +201,7 @@ const WsaDemo = (props: Props) => {
                 </motion.div>
             </div>
 
-            <div className='flex justify-center items-center h-fit px-[10vw] py-[10vh]'>
+            <div className=' relative flex justify-center items-center h-fit px-[10vw] py-[10vh]'>
                 <div className=' flex flex-col font-mukta-mahee text-3xl text-primary-dark w-[60%] mr-auto'>
                     <h1 className=' font-bold text-6xl mb-[5vh]'> Geographically Targeted Interventions </h1>
 
@@ -165,6 +210,14 @@ const WsaDemo = (props: Props) => {
                         By deciphering unique local dynamics, Novametrics delivers geographically targeted interventions that inform and shape strategic policy for sustainable impact and development.
                         `
                     ]}/>
+                </div>
+
+                <div className="absolute lg:w-[180px] bottom-0 right-0 mr-[30vw] items-center justify-center z-50 mx-auto">
+                    <div className=" relative pb-[200%] flex items-center justify-center">
+                        <div className="absolute top-0 w-full h-full items-center flex justify-center">
+                            <div className={ `w-full h-full bg-[url('/reports/${activeProvince}.png')] bg-center bg-contain object-fill bg-no-repeat `}> </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="lg:w-[400px] items-center justify-center z-30 mx-auto">
@@ -186,6 +239,10 @@ const WsaDemo = (props: Props) => {
                                 </div>
                             </div>
                         </div>
+
+                        { provinces.map((province, index) => (
+                            getProvincePin(province)
+                        ))}
                     </div>   
                 </div>                  
             </div>
