@@ -56,7 +56,7 @@ const PartnerTicker = (props: Props) => {
             initial={{ x: 400 }}
             animate={{ x: -300 }}
             transition={{ duration: 10, repeat: Infinity, repeatType: 'reverse', ease: 'linear' }}
-            className="flex relative justify-center items-center w-[200vw] z-30 bg-white bg-opacity-70 backdrop-blur-3xl"
+            className="flex relative justify-center items-center w-[200vw] z-30 bg-accent-soft backdrop-blur-3xl"
         >
             <div className=' footer-circles -z-10'> </div>
             {partners.map((partner, index) => (

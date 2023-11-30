@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 type Props = {}
 
@@ -45,13 +46,16 @@ const Splash = (props: Props) => {
                         >
                             Book a Consultation 
                         </motion.div>
-                        <motion.div 
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.9 }}
-                            className='py-4 px-4 bg-accent-dark text-white text-xl cursor-pointer select-none rounded ml-[50px] w-[210px] font-medium text-center'
-                        > 
-                            Learn More 
-                        </motion.div>
+
+                        <Link href="/ourwork">
+                            <motion.div 
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.9 }}
+                                className='py-4 px-4 bg-accent-dark text-white text-xl cursor-pointer select-none rounded ml-[50px] w-[210px] font-medium text-center'
+                            > 
+                                Learn More 
+                            </motion.div>
+                        </Link>
                     </div>
 
                 </div>

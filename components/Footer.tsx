@@ -2,6 +2,7 @@ import React from 'react'
 import { AnimatePresence, motion, usePresence } from 'framer-motion'
 import '../app/globals.css'
 import { gsap } from 'gsap';
+import Link from 'next/link';
 
 type Props = {
     fadeColor: string
@@ -228,31 +229,44 @@ const Footer = ( { fadeColor }: Props) => {
             <div className='absolute bottom-0 w-full px-[10vw]'>
                 <div className='flex flex-col'>
                     <div className=' flex justify-center items-center'>
-                        <div className="w-[50px] h-[50px] bg-[url('/components/sh-logo.svg')] bg-center bg-contain object-contain bg-no-repeat z-30"></div>
+                        <Link href='/landing'>
+                            <motion.div 
+                                whileHover={{ scale: 1.1 }}
+                                className="w-[50px] h-[50px] bg-[url('/components/sh-logo.svg')] bg-center bg-contain object-contain bg-no-repeat z-30"
+                            ></motion.div>
+                        </Link>
 
                         <div className='absolute w-[20%] mr-[10vw] right-0 flex justify-end text-xl font-thin'>
                             <div className='flex mr-[0.5vw] items-end'>
-                                <motion.div 
-                                    whileHover={{
-                                        fontWeight: "bold",
-                                        color: "#6E7173"
-                                    }}
-                                    className=' cursor-pointer'
-                                > Our Work </motion.div>
-                                <motion.div 
-                                    whileHover={{
-                                        fontWeight: "bold",
-                                        color: "#6E7173"
-                                    }}
-                                    className=' cursor-pointer mx-[2vw]'
-                                > Publications </motion.div>
-                                <motion.div 
-                                    whileHover={{
-                                        fontWeight: "bold",
-                                        color: "#6E7173"
-                                    }}
-                                    className=' cursor-pointer'
-                                > Team </motion.div>
+                                <Link href='ourwork'>
+                                    <motion.div 
+                                        whileHover={{
+                                            fontWeight: "bold",
+                                            color: "#6E7173"
+                                        }}
+                                        className=' cursor-pointer'
+                                    > Our Work </motion.div>
+                                </Link>
+
+                                <Link href='publications'>
+                                    <motion.div 
+                                        whileHover={{
+                                            fontWeight: "bold",
+                                            color: "#6E7173"
+                                        }}
+                                        className=' cursor-pointer mx-[2vw]'
+                                    > Publications </motion.div>
+                                </Link>
+
+                                <Link href='team'>
+                                    <motion.div 
+                                        whileHover={{
+                                            fontWeight: "bold",
+                                            color: "#6E7173"
+                                        }}
+                                        className=' cursor-pointer'
+                                    > Team </motion.div>
+                                </Link>
                             </div>                  
                         </div>
                     </div>
@@ -269,13 +283,15 @@ const Footer = ( { fadeColor }: Props) => {
                             <div className=' text-sm font-thin'> Novametrics LLC. All rights reserved </div>
                         </div>
 
-                        <motion.div
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.9 }}
-                            className='ml-auto mr-0 cursor-pointer select-none'
-                        >
-                            <div className=" w-[50px] h-[50px] bg-[url('/components/linkedin-black.svg')] bg-center bg-contain object-contain bg-no-repeat z-30"></div>
-                        </motion.div>
+                        <a href='https://www.linkedin.com/company/novametricsllc/' target='_blank'>
+                            <motion.div
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                                className='ml-auto mr-0 cursor-pointer select-none'
+                            >
+                                <div className=" w-[50px] h-[50px] bg-[url('/components/linkedin-black.svg')] bg-center bg-contain object-contain bg-no-repeat z-30"></div>
+                            </motion.div>
+                        </a>
                     </div>
                 </div>
             </div>

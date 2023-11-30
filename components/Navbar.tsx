@@ -42,20 +42,22 @@ const Navbar = (props: Props) => {
 
     const getIcon = () => { 
         return (
-            <div className='absolute flex justify-center items-center left-0'>
-                <div 
-                    className='w-[50px] h-[45px] ml-[200px] z-40 bg-no-repeat bg-cover cursor-pointer'
-                    style={{ backgroundImage: `url('/components/sh-logo.svg')` }}
-                ></div>
+            <Link href='/landing' className='absolute flex justify-center items-center left-0'>
 
-                <div className='text-3xl text-neutral-white font-mukta-mahee font-semibold ml-[1vw]'> Novametrics </div>
-            </div>
+                    <div 
+                        className='w-[50px] h-[45px] ml-[200px] z-40 bg-no-repeat bg-cover cursor-pointer'
+                        style={{ backgroundImage: `url('/components/sh-logo.svg')` }}
+                    ></div>
+
+                    <div className='text-3xl text-neutral-white font-mukta-mahee font-semibold ml-[1vw]'> Novametrics </div>
+
+            </Link>
         )
     }
 
     const getMobileLinkObject = (pageName: string) => {
         return (
-            <Link href={'/' + pageName.toLowerCase() } >
+            <Link href={ '/' + pageName.toLowerCase().replace(" ", "") }>
                 <div
                     onClick={() => { setMobileMenuOpen( false ) }} 
                     className={ `relative z-50 p-[4vh] pl-[70px]  text-left bg-gradient-to-r from-my-black-see-thru to-my-green-blue-see-thru ease-in-out bg-opacity-20 backdrop-blur-xl border-b-[0.1px] border-my-gray-dark font-open-sans hover:bg-zinc-800 cursor-pointer ${ pageName == props.activePage ? 'text-my-purple-light' : 'text-my-white'}` } > 
@@ -69,7 +71,7 @@ const Navbar = (props: Props) => {
         return (
             <div className='flex items-center'>
                 <div className='py-3 xl:px-16 lg:px-12 z-40'>
-                    <Link href={ '/' + pageName }>
+                    <Link href={ '/' + pageName.toLowerCase().replace(" ", "") }>
                         <div>
                             <div 
                                 className={ ` font-thin hover:font-bold cursor-pointer select-none text-lg` } > 

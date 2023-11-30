@@ -29,6 +29,13 @@ const config: Config = {
     'bg-neutral-brown-orange',
     'bg-neutral-brown',
 
+    'border-primary-dark',
+    'border-primary-dull',
+    'border-primary',
+    'border-primary-soft',
+    'border-primary-softer',
+    'border-primary-light',
+
     'text-neutral-white',
     'border-neutral-white'
   ],

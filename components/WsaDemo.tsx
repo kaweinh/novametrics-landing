@@ -213,7 +213,7 @@ const WsaDemo = (props: Props) => {
                     ]}/>
                 </div>
 
-                <div className="absolute lg:w-[180px] bottom-0 right-0 mr-[30vw] items-center justify-center z-50 mx-auto">
+                <div className="absolute lg:w-[180px] bottom-0 right-0 mr-[30vw] items-center justify-center z-40 mx-auto">
                     <div className=" relative pb-[200%] flex items-center justify-center">
                         <div className="absolute top-0 w-full h-full items-center flex justify-center">
                             <div className={ `w-full h-full bg-[url('/reports/${activeProvince}.png')] bg-center bg-contain object-fill bg-no-repeat `}> </div>
