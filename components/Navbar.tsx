@@ -111,7 +111,7 @@ const Navbar = (props: Props) => {
                     <motion.div 
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.9 }}
-                        className=' bg-primary px-4 h-fit py-2 mr-[100px] rounded items-center flex text-xl font-bold cursor-pointer select-none'
+                        className=' bg-primary px-4 h-fit py-2 mr-[100px] rounded-sm items-center flex text-xl cursor-pointer select-none'
                     >
                         Contact Us
                     </motion.div>
