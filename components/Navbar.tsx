@@ -11,7 +11,7 @@ type Props = {
 
 const Navbar = (props: Props) => {
     const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
-    const pages = [ 'About Us', 'Our Work', 'The Team', 'Publications' ]
+    const pages = [ 'Our Work', 'Publications', 'Team' ]
 
     const [scrollingDown, setScrollingDown] = React.useState(false);
     const controls = useAnimation();
@@ -72,13 +72,13 @@ const Navbar = (props: Props) => {
                     <Link href={ '/' + pageName }>
                         <div>
                             <div 
-                                className={ ` hover:text-my-midnight-blue cursor-pointer select-none text-lg` } > 
+                                className={ ` font-thin hover:font-bold cursor-pointer select-none text-lg` } > 
                                 {pageName} 
                             </div>
                         </div>
                     </Link>
                 </div>
-                <div className='ml-auto mr-0 w-[2px] h-[40px] bg-white'></div>
+                <div className='ml-auto mr-0 w-[1px] h-[20px] bg-neutral-gray-dark'></div>
             </div>
         )
     }
@@ -111,7 +111,7 @@ const Navbar = (props: Props) => {
                     <motion.div 
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.9 }}
-                        className=' bg-primary px-4 h-fit py-2 mr-[50px] rounded items-center flex text-xl font-bold cursor-pointer select-none'
+                        className=' bg-primary px-4 h-fit py-2 mr-[100px] rounded items-center flex text-xl font-bold cursor-pointer select-none'
                     >
                         Contact Us
                     </motion.div>
