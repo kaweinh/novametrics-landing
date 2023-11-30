@@ -57,8 +57,8 @@ export default function Home() {
             </div>
 
             <div className='relative w-screen h-fit flex flex-col justify-center items-center font-mukta-mahee'>
-                <div className='w-full h-[70vh] relative overflow-hidden'>
-                    <div className='absolute text-8xl text-white z-40 top-[40%] left-[20%]'>
+                <div className='w-full h-[40vh] relative overflow-hidden'>
+                    <div className='absolute text-6xl text-white z-40 top-[50%] left-[20%]'>
                         Team
                     </div>
 

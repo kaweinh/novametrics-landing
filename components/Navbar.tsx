@@ -49,7 +49,7 @@ const Navbar = (props: Props) => {
                         style={{ backgroundImage: `url('/components/sh-logo-black.svg')` }}
                     ></div>
 
-                    <div className='text-3xl text-black font-mukta-mahee font-semibold ml-[1vw]'> Novametrics </div>
+                    <div className='text-3xl text-white font-mukta-mahee font-semibold ml-[1vw]'> Novametrics </div>
 
             </Link>
         )
