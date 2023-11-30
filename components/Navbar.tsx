@@ -46,10 +46,10 @@ const Navbar = (props: Props) => {
 
                     <div 
                         className='w-[50px] h-[45px] ml-[200px] z-40 bg-no-repeat bg-cover cursor-pointer'
-                        style={{ backgroundImage: `url('/components/sh-logo.svg')` }}
+                        style={{ backgroundImage: `url('/components/sh-logo-black.svg')` }}
                     ></div>
 
-                    <div className='text-3xl text-neutral-white font-mukta-mahee font-semibold ml-[1vw]'> Novametrics </div>
+                    <div className='text-3xl text-black font-mukta-mahee font-semibold ml-[1vw]'> Novametrics </div>
 
             </Link>
         )
@@ -74,7 +74,7 @@ const Navbar = (props: Props) => {
                     <Link href={ '/' + pageName.toLowerCase().replace(" ", "") }>
                         <div>
                             <div 
-                                className={ ` font-thin hover:font-bold cursor-pointer select-none text-lg` } > 
+                                className={ ` font-thin hover:font-bold text-white cursor-pointer select-none text-lg` } > 
                                 {pageName} 
                             </div>
                         </div>

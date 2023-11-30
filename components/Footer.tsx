@@ -232,7 +232,7 @@ const Footer = ( { fadeColor }: Props) => {
                         <Link href='/landing'>
                             <motion.div 
                                 whileHover={{ scale: 1.1 }}
-                                className="w-[50px] h-[50px] bg-[url('/components/sh-logo.svg')] bg-center bg-contain object-contain bg-no-repeat z-30"
+                                className="w-[50px] h-[50px] bg-[url('/components/sh-logo-black.svg')] bg-center bg-contain object-contain bg-no-repeat z-30"
                             ></motion.div>
                         </Link>
 
