@@ -13,16 +13,16 @@ const Vision = (props: Props) => {
 
     return (
         <div 
-            className="w-full h-full bg-[url('/components/mission-bg.png')] bg-cover object-cover bg-no-repeat">
+            className="relative w-full h-full bg-[url('/components/mission-bg.png')] bg-cover object-cover bg-no-repeat">
             <motion.div 
                 ref={ ref } 
-                className='w-full h-fit p-[10vw] flex flex-col bg-black bg-opacity-80 font-mukta-mahee text-neutral-white'
+                className='w-full h-fit p-[10vw] flex flex-col bg-black font-mukta-mahee text-neutral-white partners-circles'
                 style={{ 
                     backgroundColor: useTransform(
                         scrollYProgress, [0, 1], 
                         [  
                             'rgba(0,0,0, 1)',
-                            'rgba(0,0,0, 0.4)'
+                            'rgba(0,0,0, 0.5)'
                         ])
                 }}
             >

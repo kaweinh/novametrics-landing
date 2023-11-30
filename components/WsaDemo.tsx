@@ -80,7 +80,7 @@ const WsaDemo = (props: Props) => {
     const getProvincePin = ( info: ProvinceInfo ) => {
         if( info.name == activeProvince ) {
             return (
-                <div className={ `absolute lg:w-[50px] bottom-[-2vh] right-[-0.5vw] ${info.mr} ${info.mb} items-center justify-center z-50 mx-auto `}>
+                <div key={ info.name } className={ `absolute lg:w-[50px] bottom-[-2vh] right-[-0.5vw] ${info.mr} ${info.mb} items-center justify-center z-50 mx-auto `}>
                     <div className=" relative pb-[300%] flex items-center justify-center">
                         <div className="absolute top-0 w-full h-full items-center flex justify-center">
                             <div className={ `w-full h-full bg-[url('/components/pin.svg')] bg-center bg-contain object-fill bg-no-repeat`}> </div>
@@ -91,6 +91,7 @@ const WsaDemo = (props: Props) => {
         } else {
             return (
                 <motion.div 
+                    key={ info.name }
                     whileHover={{ scale: 1.5 }}
                     onClick={() => { setProvince(info.name) }}
                     className={ `absolute lg:w-[30px] bottom-0 right-0 ${info.mr} ${info.mb} items-center cursor-pointer justify-center z-50 mx-auto `}>

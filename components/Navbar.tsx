@@ -42,9 +42,14 @@ const Navbar = (props: Props) => {
 
     const getIcon = () => { 
         return (
-            <div 
-                className='w-[50px] h-[45px] ml-[200px] z-40 left-0 absolute bg-no-repeat bg-cover cursor-pointer' style={{ backgroundImage: `url('/components/sh-logo.svg')` }}
-            ></div>
+            <div className='absolute flex justify-center items-center left-0'>
+                <div 
+                    className='w-[50px] h-[45px] ml-[200px] z-40 bg-no-repeat bg-cover cursor-pointer'
+                    style={{ backgroundImage: `url('/components/sh-logo.svg')` }}
+                ></div>
+
+                <div className='text-3xl text-neutral-white font-mukta-mahee font-semibold ml-[1vw]'> Novametrics </div>
+            </div>
         )
     }
 
@@ -85,7 +90,9 @@ const Navbar = (props: Props) => {
             transition={{ duration: 0.5 }}
             className='block'
         >
-            <div className={ `relative flex w-full h-[70px] justify-center items-center bg-gradient-to-r to-my-black-see-thru from-my-green-blue-see-thru ease-in-out bg-opacity-20 backdrop-blur-xl font-mukta-mahee `}>
+            <div className={ `relative text-white flex w-full h-[70px] justify-center items-center bg-gradient-to-r to-my-black-see-thru from-my-green-blue-see-thru ease-in-out bg-opacity-20 backdrop-blur-xl font-mukta-mahee `}>
+                <div className=' navbar-circles -z-10'> </div>
+
                 { getIcon() } 
                 
                 <div className='z-50 lg:hidden text-white absolute mr-[10px] mt-[0px] right-0 hover:text-gray-500 cursor-pointer p-5' onClick={() => { setMobileMenuOpen( !mobileMenuOpen )}} >

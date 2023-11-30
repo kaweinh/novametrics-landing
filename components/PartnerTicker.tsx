@@ -29,21 +29,21 @@ export const getLogoSized = (logo: string, imgTag: string) => {
         return (
             <motion.div 
                 whileHover={{ scale: 1.05 }}
-                className={ `w-[200px] h-[150px] mx-[1vw] ${imgTag} bg-center bg-contain object-fill bg-no-repeat `}
+                className={ `w-[200px] h-[150px] mx-[1vw] ${imgTag} z-40 bg-center bg-contain object-fill bg-no-repeat `}
             ></motion.div>
         )
     } else if( logo == "Children's Investment Fund Foundation") {
         return (
             <motion.div 
                 whileHover={{ scale: 1.05 }}
-                className={ `w-[200px] h-[100px] mx-[2vw] ${imgTag} bg-center bg-contain object-fill bg-no-repeat `}
+                className={ `w-[200px] h-[100px] mx-[2vw] ${imgTag} z-40 bg-center bg-contain object-fill bg-no-repeat `}
             ></motion.div>
         )
     } else {
         return (
             <motion.div 
                 whileHover={{ scale: 1.05 }}
-                className={ `w-[100px] h-[100px] mx-[3vw] ${imgTag} bg-center bg-contain object-fill bg-no-repeat `}
+                className={ `w-[100px] h-[100px] mx-[3vw] ${imgTag} z-40 bg-center bg-contain object-fill bg-no-repeat `}
             ></motion.div>
         )
     }
@@ -53,11 +53,12 @@ const PartnerTicker = (props: Props) => {
 
     return (
         <motion.div 
-            initial={{ x: 600 }}
+            initial={{ x: 400 }}
             animate={{ x: -300 }}
-            transition={{ duration: 20, repeat: Infinity, repeatType: 'reverse' }}
-            className="flex justify-center items-center w-[200vw] z-30 bg-white bg-opacity-50"
+            transition={{ duration: 10, repeat: Infinity, repeatType: 'reverse', ease: 'linear' }}
+            className="flex relative justify-center items-center w-[200vw] z-30 bg-white bg-opacity-70 backdrop-blur-3xl"
         >
+            <div className=' footer-circles -z-10'> </div>
             {partners.map((partner, index) => (
                 <div key={index} className=''>
                     { getLogoSized(partner.name, partner.imgTag) }
