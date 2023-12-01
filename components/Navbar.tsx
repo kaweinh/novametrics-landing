@@ -49,7 +49,7 @@ const Navbar = (props: Props) => {
                         style={{ backgroundImage: `url('/components/sh-logo-dull.svg')` }}
                     ></div>
 
-                    <div className='text-3xl text-black font ml-[1vw]'> 
+                    <div className='text-3xl text-primary-dull font ml-[1vw]'> 
                     
                         Nova 
                         <span className=''>
@@ -80,7 +80,7 @@ const Navbar = (props: Props) => {
                     <Link href={ '/' + pageName.toLowerCase().replace(" ", "") }>
                         <div>
                             <div 
-                                className={ ` font-thin hover:font-bold text-black cursor-pointer select-none text-lg` } > 
+                                className={ ` font-thin hover:font-bold text-primary-dull cursor-pointer select-none text-lg` } > 
                                 {pageName} 
                             </div>
                         </div>
@@ -98,14 +98,14 @@ const Navbar = (props: Props) => {
             transition={{ duration: 0.5 }}
             className='block'
         >
-            <div className={ `relative text-black flex w-full h-[70px] justify-center items-center ease-in-out font-mukta-mahee `}>
+            <div className={ `relative text-primary-dull flex w-full h-[70px] justify-center items-center ease-in-out font-mukta-mahee `}>
                 <div className="absolute w-full h-full bg-[url('/components/oceanic.png')] bg-center bg-cover object-cover bg-no-repeat z-10">
                     <div className='w-full h-full bg-neutral-gray-light bg-opacity-80 z-30 footer-circles backdrop-blur-2xl'></div>
                 </div>
 
                 { getIcon() } 
                 
-                <div className='z-50 lg:hidden text-black absolute mr-[10px] mt-[0px] right-0 hover:text-gray-500 cursor-pointer p-5' onClick={() => { setMobileMenuOpen( !mobileMenuOpen )}} >
+                <div className='z-50 lg:hidden text-primary-dull absolute mr-[10px] mt-[0px] right-0 hover:text-gray-500 cursor-pointer p-5' onClick={() => { setMobileMenuOpen( !mobileMenuOpen )}} >
                     { mobileMenuOpen ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
                 </div>
 

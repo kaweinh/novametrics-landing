@@ -19,7 +19,7 @@ const AboutUs = (props: Props) => {
         </div>
 
         <div className='w-[60%] flex flex-col bg-white rounded-xl p-10'>
-            <div className=' text-6xl font-bold text-primary-soft mb-10'> About Us </div>
+            <div className=' text-6xl font-bold text-primary-dull mb-10'> About Us </div>
 
             <div className='flex text-3xl mt-[0px]'>
                 <div className='w-full leading-[5vh]' >
