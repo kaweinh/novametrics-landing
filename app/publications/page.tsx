@@ -101,7 +101,7 @@ export default function Home() {
 
                         <div className='flex flex-col gap-8 mt-[20vh]'>
                             { getPdfObject("/publications/pdfs/ctip_philippines.pdf", "bg-[url('/publications/covers/ctip_philippines.png')]", 'primary-dull', false) }
-                            { getPdfObject("", "", 'primary-dull', false, true) }
+                            { getPdfObject("/publications/pdfs/geotimes.pdf", "bg-[url('/publications/covers/geotimes.png')]", 'primary-dull', false) }
                         </div>
                     </div>
                 </div>

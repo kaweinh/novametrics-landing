@@ -49,7 +49,7 @@ const Navbar = (props: Props) => {
                         style={{ backgroundImage: `url('/components/sh-logo-dull.svg')` }}
                     ></div>
 
-                    <div className='text-3xl text-primary-dull font ml-[1vw]'> 
+                    <div className='text-3xl text-black font ml-[1vw]'> 
                     
                         Nova 
                         <span className=''>
