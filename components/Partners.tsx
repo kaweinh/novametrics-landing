@@ -23,8 +23,8 @@ export const getLogoSized = (logo: string, imgTag: string) => {
     } else if( logo == "United Nations Foundation" ) { 
         return (
             <motion.div 
-                initial={{ scale: 1.9, x: -50 }}
-                whileHover={{ scale: 1.9, x: -50 }}
+                initial={{ scale: 1.2 }}
+                whileHover={{ scale: 1.2 }}
                 className={ `w-[100px] h-[100px] ${imgTag} bg-center bg-contain object-fill bg-no-repeat scale-150 `}
             ></motion.div>
         )       
@@ -55,7 +55,7 @@ const Partners = (props: Props) => {
                 <div className='absolute h-full w-full grid grid-cols-6 justify-center items-center mb-[5%] px-[20vw]'>
                     {partners.slice(0, 6).map((partner, index) => (
                         <div key={ partner.name } className='z-20 flex items-center justify-center'>
-                            <div className='absolute bg-white bg-opacity-75 w-[8vw] h-[8vw] flex items-center justify-center'>
+                            <div className='absolute bg-white bg-opacity-75 w-[8vw] h-[8vw] flex items-center justify-center p-2'>
                                 {getLogoSized(partner.name, partner.imgTag)}
                             </div>
                         </div>
@@ -65,7 +65,7 @@ const Partners = (props: Props) => {
                 <div className='absolute h-full w-full grid grid-cols-5 justify-center items-center mt-[15%] ml-[1%] px-[23vw]'>
                     {partners.slice(6, 12).map((partner, index) => (
                         <div key={index} className=' z-20 flex items-center justify-center p-20'>
-                            <div className='absolute bg-white bg-opacity-75 w-[8vw] h-[8vw] flex items-center justify-center'>
+                            <div className='absolute bg-white bg-opacity-75 w-[8vw] h-[8vw] flex items-center justify-center p-2'>
                                 {getLogoSized(partner.name, partner.imgTag)}
                             </div>
                         </div>
