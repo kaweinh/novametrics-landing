@@ -6,7 +6,10 @@ type Props = {}
 
 const Splash = (props: Props) => {
     return (
-        <div className='relative w-screen h-screen bg-white flex flex-col justify-center items-start text-my-midnight-blue font-mukta-mahee px-[300px]'>
+        <div 
+            className='relative w-screen h-[100vh] rounded-b-[2rem] bg-white flex flex-col justify-center items-start text-my-midnight-blue font-mukta-mahee px-[300px]'   
+            style={{ clipPath: 'ellipse(100% 95% at 50% 0%)' }}     
+        >
             <div className=' flex justify-center items-center'>
                 <div className='flex flex-col mr-[5vw]'>
                     <motion.div

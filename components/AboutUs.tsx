@@ -8,7 +8,9 @@ type Props = {}
 const AboutUs = (props: Props) => {
 
   return (
-    <div className='w-full h-fit p-[10vw] flex bg-neutral-white font-mukta-mahee text-my-midnight-blue'>
+    <div className='w-full h-fit px-[10vw] pb-[20vh] pt-[40vh] flex bg-neutral-white font-mukta-mahee text-my-midnight-blue'
+        style={{ clipPath: 'ellipse(100% 95% at 50% 95%)' }}     
+    >
         <div className='w-[40%] relative'>
             <div className="absolute mix-blend-luminosity rounded-full w-[25vw] h-[50vh] bg-[url('/components/clipartppt.png')] bg-cover object-cover bg-no-repeat z-10"></div>
         </div>

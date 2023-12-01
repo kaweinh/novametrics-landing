@@ -30,7 +30,7 @@ export default function Home() {
         <Navbar activePage={ activePage } setActivePage={ setActivePage } rootPage='home' />
       </div>
 
-      <div className='z-20 relative'>
+      <div className='z-30 relative bg-primary-dull bg-opacity-90'>
         <Splash />
       </div>
 
@@ -38,15 +38,18 @@ export default function Home() {
         <motion.div 
           className="absolute w-screen h-screen bg-[url('/components/midtest3.png')] bg-cover object-cover bg-no-repeat z-10"
           style={{ 
-            opacity: scrollYProgress,
-            scale: useTransform(scrollYProgress, [0, 1], [1, 1.5])
+            //opacity: scrollYProgress,
+            //scale: useTransform(scrollYProgress, [0, 1], [1.5, 2])
+            scale: 1.5
           }}
         ></motion.div>
       </div>
 
-      <Features />
+      <div className='z-20'>
+        <Features />
+      </div>
 
-      <div className='z-20 relative'>
+      <div className='z-20 relative bg-primary-dull bg-opacity-90'>
         <AboutUs />
       </div>
 

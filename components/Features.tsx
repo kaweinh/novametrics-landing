@@ -69,8 +69,6 @@ const Features = (props: Props) => {
                     </div>
                 </div>
             </div>
-
-            <PartnerTicker />
         </div>
     </div>
   )
