@@ -60,7 +60,7 @@ export default function Home() {
         <Partners />
       </div>
 
-      <div className='w-full h-[10vh] bg-neutral-white'></div>
+      <div className='w-full h-[30vh] bg-neutral-white'></div>
       
       <Footer fadeColor='neutral-white' />
 

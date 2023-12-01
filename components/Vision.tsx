@@ -13,16 +13,22 @@ const Vision = (props: Props) => {
 
     return (
         <div 
-            className="relative w-full h-full bg-[url('/components/oceanic_2.png')] bg-cover object-cover bg-no-repeat">
+            className="relative w-full h-[80vh] flex justify-center items-center bg-[url('/components/@@@.png')] bg-cover object-cover bg-center bg-no-repeat">
+            <motion.div 
+                className="absolute w-full h-full bg-[url('/components/@@@.png')] bg-center bg-cover object-cover bg-no-repeat z-10 "
+            >
+                <div className='w-full h-full bg-primary-dull bg-opacity-[0.95] backdrop-blur-sm publications-texture '></div>
+            </motion.div>
+
             <motion.div 
                 ref={ ref } 
-                className='w-full h-fit p-[10vw] flex flex-col bg-primary-dark font-mukta-mahee text-neutral-white partners-circles bg-opacity-90 backdrop-blur-lg'
+                className='absolute w-full h-fit px-[10vw] py-[10vh] flex font-mukta-mahee text-neutral-white z-20'
             >
-                <div className='text-6xl font-bold text-primary-light mb-10'>
-                    Mission and Vision
-                </div>
+                <div className='text-3xl text-black w-[75%] p-10 bg-white rounded-xl'>
+                    <div className='text-6xl font-bold text-primary-soft mb-10'>
+                        Mission and Vision
+                    </div>
 
-                <div className='text-3xl w-[60%] text-white'>
                     <div className='leading-[5vh] mb-10'>
                         Novametrics is a boutique analytics firm that provides advanced data-to-decision services for government agencies, 
                         NGOs, foundations, impact investment funds, and aid and development groups.
