@@ -7,6 +7,8 @@ const Features = (props: Props) => {
   return (
     <div className="w-full h-fit relative">
         <div className='relative bg-primary-dull bg-opacity-90 backdrop-blur-sm px-[5vw] flex flex-col justify-center items-center w-full h-fit font-mukta-mahee text-neutral-white z-10'>
+            <div className='absolute w-full h-full publications-texture'></div>
+
             <div className=' grid grid-cols-1 lg:grid-cols-3 w-full gap-4'>
 
                 <div className='flex flex-col justify-center items-center px-4'>

@@ -30,7 +30,7 @@ export default function Home() {
         <Navbar activePage={ activePage } setActivePage={ setActivePage } rootPage='home' />
       </div>
 
-      <div className='z-30 relative bg-primary-dull bg-opacity-90'>
+      <div className='z-30 relative bg-primary-dull bg-opacity-90 publications-texture'>
         <Splash />
       </div>
 
@@ -49,7 +49,7 @@ export default function Home() {
         <Features />
       </div>
 
-      <div className='z-20 relative bg-primary-dull bg-opacity-90'>
+      <div className='z-20 relative bg-primary-dull bg-opacity-90 publications-texture'>
         <AboutUs />
       </div>
 
