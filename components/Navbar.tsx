@@ -46,13 +46,13 @@ const Navbar = (props: Props) => {
 
                     <div 
                         className='w-[40px] h-[36px] ml-[200px] z-40 bg-no-repeat bg-cover cursor-pointer'
-                        style={{ backgroundImage: `url('/components/sh-logo-black.svg')` }}
+                        style={{ backgroundImage: `url('/components/sh-logo-dull.svg')` }}
                     ></div>
 
-                    <div className='text-3xl text-black font-bold ml-[1vw]'> 
+                    <div className='text-3xl text-black font ml-[1vw]'> 
                     
                         Nova 
-                        <span className=' font-light'>
+                        <span className=''>
                             metrics 
                         </span>
                     </div>
