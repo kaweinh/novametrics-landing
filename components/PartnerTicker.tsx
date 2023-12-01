@@ -10,7 +10,7 @@ export type PartnerInfo = {
 }
 
 export const partners: Array<PartnerInfo> = [
-    { name: 'Pew Charitable Trusts', imgTag: "bg-[url('/partner-logos/pew_Transparent.png')]", linkUrl: ''}, 
+    { name: 'Pew Charitable Trusts', imgTag: "bg-[url('/partner-logos/pew_transparent.png')]", linkUrl: ''}, 
 //    { name: 'United Nations', imgTag: "bg-[url('/partner-logos/un_Transparent.png')]", linkUrl: ''}, 
     { name: 'USAID', imgTag: "bg-[url('/partner-logos/usaid_Transparent.png')]", linkUrl: ''}, 
     { name: 'UNODC', imgTag: "bg-[url('/partner-logos/unodc_Transparent.png')]", linkUrl: ''}, 
