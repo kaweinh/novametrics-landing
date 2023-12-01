@@ -35,7 +35,7 @@ const Splash = (props: Props) => {
                             className='mb-4'> 
 
                             Elevating &nbsp;
-                            <span className=' text-primary-soft'>
+                            <span className=' text-primary-softer'>
                                 Actions 
                             </span> 
                         </motion.div>
@@ -54,7 +54,7 @@ const Splash = (props: Props) => {
                             <motion.div 
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.9 }}
-                                className='py-4 px-4 bg-black text-white text-xl cursor-pointer select-none rounded ml-[50px] w-[210px] font-medium text-center'
+                                className='py-4 px-4 bg-primary-dark text-white text-xl cursor-pointer select-none rounded ml-[50px] w-[210px] font-medium text-center'
                             > 
                                 Learn More 
                             </motion.div>
