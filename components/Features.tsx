@@ -12,7 +12,7 @@ const Features = (props: Props) => {
             <div className=' grid grid-cols-1 lg:grid-cols-3 w-full gap-4'>
 
                 <div className='flex flex-col justify-center items-center px-4'>
-                    <div className="lg:w-[7vw] mt-[2vh] items-center justify-center z-30">
+                    <div className="lg:w-[11vw] mt-[2vh] items-center justify-center z-30">
                         <div className=" relative pb-[100%] flex items-center justify-center">
                             <div className="absolute top-0 w-full h-full items-center flex justify-center">
                                 <div className="absolute z-30 w-full h-full mix-blend-lighten">
@@ -36,7 +36,7 @@ const Features = (props: Props) => {
                 </div>
 
                 <div className='flex flex-col justify-center items-center px-4'>
-                    <div className="lg:w-[6vw] items-center justify-center z-30">
+                    <div className="lg:w-[11vw] items-center justify-center z-30">
                         <div className=" relative pb-[100%] flex items-center justify-center">
                             <div className="absolute top-0 w-full h-full items-center flex justify-center">
                                 <div className="absolute z-30 w-full h-full mix-blend-lighten">

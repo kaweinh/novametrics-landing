@@ -28,6 +28,14 @@ export const getLogoSized = (logo: string, imgTag: string) => {
                 className={ `w-[100px] h-[100px] ${imgTag} bg-center bg-contain object-fill bg-no-repeat scale-150 `}
             ></motion.div>
         )       
+    } if ( logo == 'UNODC' ) { 
+        return (
+            <motion.div 
+                initial={{ scale: 1.5 }}
+                whileHover={{ scale: 1.5 }}
+                className={ `w-[100px] h-[100px] ${imgTag} bg-center bg-contain object-fill bg-no-repeat scale-150 `}
+            ></motion.div>
+        )      
     } else {
         return (
             <motion.div 

@@ -13,15 +13,16 @@ export const partners: Array<PartnerInfo> = [
     { name: 'Pew Charitable Trusts', imgTag: "bg-[url('/partner-logos/pew_Transparent.png')]", linkUrl: ''}, 
 //    { name: 'United Nations', imgTag: "bg-[url('/partner-logos/un_Transparent.png')]", linkUrl: ''}, 
     { name: 'USAID', imgTag: "bg-[url('/partner-logos/usaid_Transparent.png')]", linkUrl: ''}, 
-    { name: 'Walmart Foundation', imgTag: "bg-[url('/partner-logos/walmart_foundation.png')]", linkUrl: ''}, 
-    { name: 'World Bank', imgTag: "bg-[url('/partner-logos/worldbank_Transparent.png')]", linkUrl: ''}, 
+    { name: 'UNODC', imgTag: "bg-[url('/partner-logos/unodc_Transparent.png')]", linkUrl: ''}, 
     { name: 'UNDP', imgTag: "bg-[url('/partner-logos/undp_Transparent.png')]", linkUrl: ''}, 
-    { name: 'United Nations Foundation', imgTag: "bg-[url('/partner-logos/unf.png')]", linkUrl: ''}, 
-    { name: 'UNODC', imgTag: "bg-[url('/partner-logos/unodc.png')]", linkUrl: ''}, 
+    { name: 'World Bank', imgTag: "bg-[url('/partner-logos/worldbank_Transparent.png')]", linkUrl: ''}, 
+
+    { name: 'Global Partnership for Sustainable Development Data', imgTag: "bg-[url('/partner-logos/gpfsdd_Transparent.png')]", linkUrl: ''},
     { name: 'Liberia', imgTag: "bg-[url('/partner-logos/liberia.svg')]", linkUrl: ''}, 
     { name: "Children's Investment Fund Foundation", imgTag: "bg-[url('/partner-logos/ciff_Transparent.png')]", linkUrl: ''}, 
+    { name: 'United Nations Foundation', imgTag: "bg-[url('/partner-logos/unf.png')]", linkUrl: ''}, 
     { name: 'Global Fund to End Modern Slavery', imgTag: "bg-[url('/partner-logos/gftems.png')]", linkUrl: ''}, 
-    { name: 'Global Partnership for Sustainable Development Data', imgTag: "bg-[url('/partner-logos/gpfsdd.jpg')]", linkUrl: ''}, 
+    { name: 'Walmart Foundation', imgTag: "bg-[url('/partner-logos/walmart_foundation_Transparent.png')]", linkUrl: ''},  
 ] 
 
 export const getLogoSized = (logo: string, imgTag: string) => {
