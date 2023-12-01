@@ -2,14 +2,17 @@ import React from 'react'
 import Image from 'next/image'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import SweepReveal from './SweepReveal'
+import PartnerTicker from './PartnerTicker'
 
 type Props = {}
 
 const AboutUs = (props: Props) => {
 
   return (
-    <div className='w-full h-fit px-[10vw] pb-[20vh] pt-[40vh] flex bg-neutral-white font-mukta-mahee text-my-midnight-blue'
-        style={{ clipPath: 'ellipse(100% 95% at 50% 95%)' }}     
+    <div className='w-full h-fit relative px-[10vw] pb-[20vh] pt-[40vh] flex bg-neutral-white font-mukta-mahee text-my-midnight-blue'
+        style={{ 
+            clipPath: 'ellipse(100% 95% at 50% 95%)'
+        }}   
     >
         <div className='w-[40%] relative'>
             <div className="absolute mix-blend-luminosity rounded-full w-[25vw] h-[50vh] bg-[url('/components/clipartppt.png')] bg-cover object-cover bg-no-repeat z-10"></div>
@@ -30,6 +33,10 @@ const AboutUs = (props: Props) => {
                     ]}/>
                 </div>
             </div>
+        </div>
+
+        <div className='absolute top-0 '>
+            <PartnerTicker />
         </div>
     </div>
   )
