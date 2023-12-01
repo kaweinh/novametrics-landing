@@ -80,7 +80,9 @@ const Navbar = (props: Props) => {
                     <Link href={ '/' + pageName.toLowerCase().replace(" ", "") }>
                         <div>
                             <div 
-                                className={ ` font-thin hover:font-bold text-primary-dull cursor-pointer select-none text-lg` } > 
+                                className={ ` hover:font-bold 
+                                    ${props.activePage == pageName ? ' font-bold text-primary-dull' :'text-black font-thin'} 
+                                cursor-pointer select-none text-lg` } > 
                                 {pageName} 
                             </div>
                         </div>

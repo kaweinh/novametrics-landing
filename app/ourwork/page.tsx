@@ -104,13 +104,13 @@ export default function Home() {
 
                 <div className='w-full px-[10vw] py-[10vh] bg-white flex flex-col'>
                     <div className=' px-[10vw] flex justify-center '>
-                        <h1 className=' font-bold text-6xl text-primary-dark mb-[5vh]'>
+                        <h1 className=' font-bold text-6xl text-primary-dull mb-[5vh]'>
                             Data-To-Decision Architecture 
                         </h1>
                     </div>
                     <FlowDiagram layers={ flowLayers } text_color='white'/>
 
-                    <div className=' text-3xl text-primary-dark px-[10vw] mt-[5vh]'>
+                    <div className=' text-3xl text-black px-[10vw] mt-[5vh]'>
                         Explore our innovative Data-to-Decision Architecture, where sophisticated analysis and insightful modeling converge to empower decision-making with precision-targeted interventions.
                     </div>
                 </div>

@@ -237,15 +237,15 @@ const VeBarChart = (props: Props) => {
                 ref={d3Container}
             />
 
-            <div className='absolute font-mukta-mahee text-right text-[0.6rem] w-[70px] text-rose-200 mr-[300px] mb-[200px]'>
+            <div className='absolute font-mukta-mahee text-right text-[0.6rem] w-[70px] text-neutral-brown-orange mr-[300px] mb-[200px]'>
                 President Duterte takes office and begins his &quot;war on drugs&quot;
             </div>
 
-            <div className='absolute font-mukta-mahee text-right text-[0.6rem] w-[70px] text-rose-200 mr-[30px] mb-[150px]'>
+            <div className='absolute font-mukta-mahee text-right text-[0.6rem] w-[70px] text-neutral-brown-orange  mr-[30px] mb-[150px]'>
                 Battle of Marawi 
             </div>
 
-            <div className='absolute font-mukta-mahee text-right text-[0.6rem] w-[150px] text-rose-200 ml-[320px] mt-[30px]'>
+            <div className='absolute font-mukta-mahee text-right text-[0.6rem] w-[150px] text-neutral-brown-orange  ml-[320px] mt-[30px]'>
                 BARMM is established between the Philippines government and the Moro Islamic Liberation Front (MILF)
             </div>
         </div>

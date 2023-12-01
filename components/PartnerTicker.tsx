@@ -10,18 +10,18 @@ export type PartnerInfo = {
 }
 
 export const partners: Array<PartnerInfo> = [
-    { name: 'Pew Charitable Trusts', imgTag: "bg-[url('/partner-logos/pew_transparent.png')]", linkUrl: ''}, 
-    { name: 'United Nations', imgTag: "bg-[url('/partner-logos/un_Transparent.png')]", linkUrl: ''}, 
-    { name: 'USAID', imgTag: "bg-[url('/partner-logos/usaid_Transparent.png')]", linkUrl: ''}, 
-    { name: 'Walmart Foundation', imgTag: "bg-[url('/partner-logos/walmart_foundation.png')]", linkUrl: ''}, 
-    { name: 'World Bank', imgTag: "bg-[url('/partner-logos/worldbank_Transparent.png')]", linkUrl: ''}, 
-    { name: 'UNDP', imgTag: "bg-[url('/partner-logos/undp_Transparent.png')]", linkUrl: ''}, 
-    { name: 'United Nations Foundation', imgTag: "bg-[url('/partner-logos/unf.png')]", linkUrl: ''}, 
-    { name: 'UNODC', imgTag: "bg-[url('/partner-logos/unodc.png')]", linkUrl: ''}, 
-    { name: 'Liberia', imgTag: "bg-[url('/partner-logos/liberia.svg')]", linkUrl: ''}, 
-    { name: "Children's Investment Fund Foundation", imgTag: "bg-[url('/partner-logos/ciff_Transparent.png')]", linkUrl: ''}, 
-    { name: 'Global Fund to End Modern Slavery', imgTag: "bg-[url('/partner-logos/gftems.png')]", linkUrl: ''}, 
-//    { name: 'Global Partnership for Sustainable Development Data', imgTag: "bg-[url('/partner-logos/gpfsdd.jpg')]", linkUrl: ''}, 
+    { name: 'Pew Charitable Trusts', imgTag: "bg-[url('/partner-logos/grey/pew_Transparent_Grey.png')]", linkUrl: ''}, 
+//    { name: 'United Nations', imgTag: "bg-[url('/partner-logos/un_Transparent.png')]", linkUrl: ''}, 
+    { name: 'USAID', imgTag: "bg-[url('/partner-logos/grey/usaid_Transparent_Grey.png')]", linkUrl: ''}, 
+    { name: 'Walmart Foundation', imgTag: "bg-[url('/partner-logos/grey/walmart_Grey.png')]", linkUrl: ''}, 
+    { name: 'World Bank', imgTag: "bg-[url('/partner-logos/grey/worldbank_Transparent_Grey.png')]", linkUrl: ''}, 
+    { name: 'UNDP', imgTag: "bg-[url('/partner-logos/grey/undp_Transparent_Grey.png')]", linkUrl: ''}, 
+    { name: 'United Nations Foundation', imgTag: "bg-[url('/partner-logos/grey/unf_Grey.png')]", linkUrl: ''}, 
+    { name: 'UNODC', imgTag: "bg-[url('/partner-logos/grey/unodc_Grey.png')]", linkUrl: ''}, 
+    { name: 'Liberia', imgTag: "bg-[url('/partner-logos/grey/liberia_Grey.png')]", linkUrl: ''}, 
+    { name: "Children's Investment Fund Foundation", imgTag: "bg-[url('/partner-logos/grey/ciff_Transparent_Grey.png')]", linkUrl: ''}, 
+    { name: 'Global Fund to End Modern Slavery', imgTag: "bg-[url('/partner-logos/grey/gftems_Grey.png')]", linkUrl: ''}, 
+    { name: 'Global Partnership for Sustainable Development Data', imgTag: "bg-[url('/partner-logos/grey/gpfsdd_Grey.png')]", linkUrl: ''}, 
 ] 
 
 export const getLogoSized = (logo: string, imgTag: string) => {

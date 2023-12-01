@@ -9,22 +9,30 @@ export const getLogoSized = (logo: string, imgTag: string) => {
     if( logo == 'World Bank') {
         return (
             <motion.div 
-                whileHover={{ scale: 1.05 }}
-                className={ `w-[250px] h-[250px] mx-[1vw] ${imgTag} bg-center bg-contain object-fill bg-no-repeat `}
+                whileHover={{ scale: 1 }}
+                className={ `w-[250px] h-[250px] ${imgTag} bg-center bg-contain object-fill bg-no-repeat `}
             ></motion.div>
         )
     } else if( logo == "Children's Investment Fund Foundation") {
         return (
             <motion.div 
-                whileHover={{ scale: 1.05 }}
-                className={ `w-[200px] h-[200px] mx-[3vw] ${imgTag} bg-center bg-contain object-fill bg-no-repeat `}
+                whileHover={{ scale: 1 }}
+                className={ `w-[200px] h-[200px] ${imgTag} bg-center bg-contain object-fill bg-no-repeat `}
             ></motion.div>
         )
+    } else if( logo == "United Nations Foundation" ) { 
+        return (
+            <motion.div 
+                initial={{ scale: 1.9, x: -50 }}
+                whileHover={{ scale: 1.9, x: -50 }}
+                className={ `w-[100px] h-[100px] ${imgTag} bg-center bg-contain object-fill bg-no-repeat scale-150 `}
+            ></motion.div>
+        )       
     } else {
         return (
             <motion.div 
-                whileHover={{ scale: 1.05 }}
-                className={ `w-[100px] h-[100px] mx-[3vw] ${imgTag} bg-center bg-contain object-fill bg-no-repeat `}
+                whileHover={{ scale: 1 }}
+                className={ `w-[100px] h-[100px] ${imgTag} bg-center bg-contain object-fill bg-no-repeat `}
             ></motion.div>
         )
     }
@@ -44,18 +52,22 @@ const Partners = (props: Props) => {
                     Proud Partners
                 </div>
 
-                <div className='absolute h-full w-full flex justify-center items-center mb-[5%]'>
+                <div className='absolute h-full w-full grid grid-cols-6 justify-center items-center mb-[5%] px-[20vw]'>
                     {partners.slice(0, 6).map((partner, index) => (
-                        <div key={ partner.name } className='z-20'>
-                            {getLogoSized(partner.name, partner.imgTag)}
+                        <div key={ partner.name } className='z-20 flex items-center justify-center'>
+                            <div className='absolute bg-white bg-opacity-75 w-[8vw] h-[8vw] flex items-center justify-center'>
+                                {getLogoSized(partner.name, partner.imgTag)}
+                            </div>
                         </div>
                     ))}
                 </div>
 
-                <div className='absolute h-full w-full flex justify-center items-center mt-[15%] ml-[1%]'>
+                <div className='absolute h-full w-full grid grid-cols-5 justify-center items-center mt-[15%] ml-[1%] px-[23vw]'>
                     {partners.slice(6, 12).map((partner, index) => (
-                        <div key={index} className=' z-20'>
-                            {getLogoSized(partner.name, partner.imgTag)}
+                        <div key={index} className=' z-20 flex items-center justify-center p-20'>
+                            <div className='absolute bg-white bg-opacity-75 w-[8vw] h-[8vw] flex items-center justify-center'>
+                                {getLogoSized(partner.name, partner.imgTag)}
+                            </div>
                         </div>
                     ))}
                 </div>

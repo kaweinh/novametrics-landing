@@ -19,6 +19,8 @@ const PrettyMatrix = ( props: Props ) => {
 
     const [ rowNames, setRowNames ] = React.useState<Array<string>>([])
     const [ colNames, setColNames ] = React.useState<Array<string>>([])
+    const [ rowIndicators, setRowIndicators ] = React.useState<Array<string>>([])
+    const [ colIndicators, setColIndicators ] = React.useState<Array<string>>([])
 
     React.useEffect(() => {
         /*const newCellValues = Array.from({ length: numRows }, (_, r_index) => {
@@ -34,11 +36,23 @@ const PrettyMatrix = ( props: Props ) => {
     }, [])
 
     React.useEffect(() => {
-        const newColNames = indicators.slice(center[0] - 5, center[0] + 5)
-        const newRowNames = indicators.slice(center[1] - 5, center[1] + 5)
+        const newColNames = colIndicators.slice(center[0] - 5, center[0] + 5)
+        const newRowNames = rowIndicators.slice(center[1] - 5, center[1] + 5)
         setColNames( newColNames )
         setRowNames( ['', ...newRowNames ] )
-    }, [ center ])
+    }, [ center, rowIndicators, colIndicators ])
+
+    React.useEffect(() => {
+        let newRowIndicators = []
+        let newColIndicators = []
+        for ( let i = 0; i < indicators.length; i++ ) {
+            newRowIndicators.push( indicators[i].replaceAll('-replaceme-', ' ') )
+            newColIndicators.push( indicators[i].replaceAll('-replaceme-', '') )
+        } 
+
+        setRowIndicators( newRowIndicators )
+        setColIndicators( newColIndicators )
+    }, [])
 
     const getColor = ( value: number ) => {
         if ( value < -0.6) return 'bg-primary-dark';
@@ -100,7 +114,7 @@ const PrettyMatrix = ( props: Props ) => {
 
     return (
         <div className='w-full flex justify-center items-center'>
-            <div className=' w-fit relative bg-primary-light mx-auto'>
+            <div className=' w-fit relative bg-white mx-auto'>
                 <table className=' table-auto border-collapse border border-white xl:text-[0.2rem] text-[0.1rem]'>
                     <tbody onMouseLeave={ () => { setPotentialCenter( [100, 100]) }}>
                         { cellValues.map((rowValues, row ) => (
@@ -125,20 +139,20 @@ const PrettyMatrix = ( props: Props ) => {
                         <tr className=' text-white text-[0.5rem]'>
                             { rowNames.map(( name, index ) => ( 
                                 <th key={index} className=' w-[2vw] h-[8vh]'>
-                                    <div className='w-full h-full break-all'>
+                                    <div className='w-full h-full break-words'>
                                         { name }
                                     </div>
                                 </th>
                             ))}
                         </tr>
 
-                        { cellValues.slice( Math.max(0, center[0] - 5), center[0] + 5).map((rowValues, row ) => (
+                        { cellValues.slice( Math.max(0, center[0] - 4), center[0] + 6).map((rowValues, row ) => (
                             <tr key={ row }>
                                 <td className=' text-white text-[0.5rem] w-[5vw] pr-[1vw]'>
                                     { colNames[ row ] }
                                 </td>
 
-                                { rowValues.slice( Math.max(0, center[1] - 5), center[1] + 5 ).map(( value, col ) => (
+                                { rowValues.slice( Math.max(0, center[1] - 4), center[1] + 6 ).map(( value, col ) => (
                                     getDisplayCell( row, col, value ) 
                                 ))}
                             </tr>
@@ -261,110 +275,110 @@ const topics = [
 ]
 
 const indicators = [
-    'Population Undernourished, percentage',
-    'Depth of the food deficit (kilocalories per person per day)',
-    'Children under 5 moderately underweight, percentage',
-    'Prevalence of anemia among children (% of children under 5)',
-    'Prevalence of anemia among pregnant women (%)',
-    'Cereal yield (kg per hectare)',
-    'Agriculture value added per worker (constant 2005 US$)',
-    'Livestock production index (2004-2006 = 100)',
-    'Cereal production (metric tons)',
-    'Children under 5 severely underweight, percentage',
-    'Labor force participation rate, total (% of total population ages 15+)',
-    'Adolescent birth rate, per 1,000 women',
-    'Birth rate, crude (per 1,000 people)',
-    'Urban population (% of total)',
-    'Ratio of Urban to Rural Population Growth',
-    'Age dependency ratio, old (% of working-age population)',
-    'Age dependency ratio, young (% of working-age population)',
-    'Death rate, crude (per 1,000 people)',
-    'Population (Total)',
-    'Population growth (annual %)',
-    'Net migration',
-    'Refugee population by country or territory of asylum',
-    'Refugee population by country or territory of origin',
-    'Labor force participation rate for ages 15-24, total (%)',
-    'Unemployment, total (% of total labor force)',
-    'Unemployment, youth total (% of total labor force ages 15-24)',
-    'Members of Labor Force Involved in Agriculture, %',
-    'School enrollment, tertiary (% gross)',
-    'Secondary education, vocational pupils',
-    'Lower secondary completion rate, total (% of relevant age group)',
-    'School enrollment, primary, private (% of total primary)',
-    'Pupil-teacher ratio, primary',
-    'Secondary education, general pupils',
-    'School enrollment, primary (% gross)',
-    'Domestic credit provided by financial sector (% of GDP)',
-    'Scientific and technical journal articles',
-    'Trademark applications, total',
-    'Merchandise Import to Export Ratio',
-    'Total natural resources rents (% of GDP)',
-    'Manufacturing, value added (annual % growth)',
-    'Services, etc., value added (annual % growth)',
-    'Exports of goods and services (annual % growth)',
-    'Lending interest rate (%)',
-    'GDP per capita, PPP (constant 2011 international $)',
-    'GDP, PPP (constant 2011 international $)',
-    'Inflation, GDP deflator (annual %)',
-    'Nominal Interest Rate',
-    'Trade (% of GDP)',
-    'Net ODA received per capita (current US$)',
-    'Industry, value added (annual % growth)',
-    'Technical cooperation grants (BoP, current US$)',
-    'Forest area (% of land area)',
-    'Multilateral debt (% of total external debt)',
-    'Deposit interest rate (%)',
-    'Agriculture, value added (annual % growth)',
-    'Foreign direct investment, net inflows (% of GDP)',
-    'External debt stocks, total (DOD, current US$)',
-    'Interest payments on external debt (% of GNI)',
-    'Primary education, teachers (% female)',
-    'Tertiary education, teachers (% female)',
-    'Proportion of seats held by women in national parliaments (%)',
-    'Population with at least secondary education, female/male ratio',
-    'Ratio of female to male tertiary enrollment (%)',
-    'Ratio of girls to boys in primary and secondary education (%)',
-    'Secondary education, general pupils (% female)',
-    'Ratio of female to male unemployment, as % of respective labor forces',
-    'Ratio of female to male infant mortality',
-    'Ratio of female to male under-5 mortality rate',
-    'Secondary education, vocational pupils (% female)',
-    'Labor force, female (% of total labor force)',
-    'Ratio of Labor Force participation rates for females to males ages 15-24',
-    'Ratio of female to male lower secondary completion rate ',
-    'HDI',
-    'Military expenditure (% of GDP)',
-    'World Press Freedom Index',
-    'Freedom in the World',
-    'Claims on central government, etc. (% GDP)',
-    'Physicians (per 1,000 people)',
-    'Incidence of tuberculosis (per 100,000 people)',
-    'Tuberculosis prevalence rate per 100,000 population',
-    'Children (0-14) living with HIV',
-    'Tuberculosis case detection rate (%, all forms)',
-    'External resources for health (% of total expenditure on health)',
-    'Health expenditure per capita, PPP (constant 2005 international $)',
-    'Life expectancy at birth, total (years)',
-    'Immunization, DPT (% of children ages 12-23 months)',
-    'Immunization, measles (% of children ages 12-23 months)',
-    'Health expenditure, total (% of GDP)',
-    'Mortality rate, infant (per 1,000 live births)',
-    'Mortality rate, neonatal (per 1,000 live births)',
-    'Maternal mortality ratio (modeled estimate, per 100,000 live births)',
-    'AIDS deaths',
-    'Tuberculosis treatment success rate (% of registered cases)',
-    'Mortality rate, under-5 (per 1,000 live births)',
-    'Newborns protected against tetanus (%)',
-    'Ratio of Life Expectancy, Female/Male',
-    'Ratio of Mortality Rate, Female/Male (1,000 female adults/1,000 male adults)',
-    'Improved sanitation facilities (% of population with access)',
-    'Internet users (per 100 people)',
-    "Ratio of improved sanitation, rural/urban (ratio of %'s respective populations with access)",
-    "Ratio of improved water, rural/urban (ratio of %'s of respective populations with access)",
-    'Improved water source (% of population with access)',
-    'Fixed-telephone subscriptions per 100 inhabitants',
-    'Mobile cellular subscriptions (per 100 people)'
+    'Populati-replaceme-on Undernou-replaceme-rished, percenta-replaceme-ge ',
+    'Depth of the food deficit (kilocal-replaceme-ories per person per day) ',
+    'Children under 5 moderate-replaceme-ly underwei-replaceme-ght, percenta-replaceme-ge ',
+    'Prevalen-replaceme-ce of anemia among children (% of children under 5) ',
+    'Prevalen-replaceme-ce of anemia among pregnant women (%) ',
+    'Cereal yield (kg per hectare) ',
+    'Agricult-replaceme-ure value added per worker (constan-replaceme-t 2005 US$) ',
+    'Livestoc-replaceme-k producti-replaceme-on index (2004-20-replaceme-06 = 100) ',
+    'Cereal producti-replaceme-on (metric tons) ',
+    'Children under 5 severely underwei-replaceme-ght, percenta-replaceme-ge ',
+    'Labor force particip-replaceme-ation rate, total (% of total populati-replaceme-on ages 15+) ',
+    'Adolesce-replaceme-nt birth rate, per 1,000 women ',
+    'Birth rate, crude (per 1,000 people) ',
+    'Urban populati-replaceme-on (% of total) ',
+    'Ratio of Urban to Rural Populati-replaceme-on Growth ',
+    'Age dependen-replaceme-cy ratio, old (% of working--replaceme-age populati-replaceme-on) ',
+    'Age dependen-replaceme-cy ratio, young (% of working--replaceme-age populati-replaceme-on) ',
+    'Death rate, crude (per 1,000 people) ',
+    'Populati-replaceme-on (Total) ',
+    'Populati-replaceme-on growth (annual %) ',
+    'Net migratio-replaceme-n ',
+    'Refugee populati-replaceme-on by country or territor-replaceme-y of asylum ',
+    'Refugee populati-replaceme-on by country or territor-replaceme-y of origin ',
+    'Labor force particip-replaceme-ation rate for ages 15-24, total (%) ',
+    'Unemploy-replaceme-ment, total (% of total labor force) ',
+    'Unemploy-replaceme-ment, youth total (% of total labor force ages 15-24) ',
+    'Members of Labor Force Involved in Agricult-replaceme-ure, % ',
+    'School enrollme-replaceme-nt, tertiary (% gross) ',
+    'Secondar-replaceme-y educatio-replaceme-n, vocation-replaceme-al pupils ',
+    'Lower secondar-replaceme-y completi-replaceme-on rate, total (% of relevant age group) ',
+    'School enrollme-replaceme-nt, primary, private (% of total primary) ',
+    'Pupil-te-replaceme-acher ratio, primary ',
+    'Secondar-replaceme-y educatio-replaceme-n, general pupils ',
+    'School enrollme-replaceme-nt, primary (% gross) ',
+    'Domestic credit provided by financia-replaceme-l sector (% of GDP) ',
+    'Scientif-replaceme-ic and technica-replaceme-l journal articles ',
+    'Trademar-replaceme-k applicat-replaceme-ions, total ',
+    'Merchand-replaceme-ise Import to Export Ratio ',
+    'Total natural resource-replaceme-s rents (% of GDP) ',
+    'Manufact-replaceme-uring, value added (annual % growth) ',
+    'Services-replaceme-, etc., value added (annual % growth) ',
+    'Exports of goods and services (annual % growth) ',
+    'Lending interest rate (%) ',
+    'GDP per capita, PPP (constan-replaceme-t 2011 internat-replaceme-ional $) ',
+    'GDP, PPP (constan-replaceme-t 2011 internat-replaceme-ional $) ',
+    'Inflatio-replaceme-n, GDP deflator (annual %) ',
+    'Nominal Interest Rate ',
+    'Trade (% of GDP) ',
+    'Net ODA received per capita (current US$) ',
+    'Industry-replaceme-, value added (annual % growth) ',
+    'Technica-replaceme-l cooperat-replaceme-ion grants (BoP, current US$) ',
+    'Forest area (% of land area) ',
+    'Multilat-replaceme-eral debt (% of total external debt) ',
+    'Deposit interest rate (%) ',
+    'Agricult-replaceme-ure, value added (annual % growth) ',
+    'Foreign direct investme-replaceme-nt, net inflows (% of GDP) ',
+    'External debt stocks, total (DOD, current US$) ',
+    'Interest payments on external debt (% of GNI) ',
+    'Primary educatio-replaceme-n, teachers (% female) ',
+    'Tertiary educatio-replaceme-n, teachers (% female) ',
+    'Proporti-replaceme-on of seats held by women in national parliame-replaceme-nts (%) ',
+    'Populati-replaceme-on with at least secondar-replaceme-y educatio-replaceme-n, female/m-replaceme-ale ratio ',
+    'Ratio of female to male tertiary enrollme-replaceme-nt (%) ',
+    'Ratio of girls to boys in primary and secondar-replaceme-y educatio-replaceme-n (%) ',
+    'Secondar-replaceme-y educatio-replaceme-n, general pupils (% female) ',
+    'Ratio of female to male unemploy-replaceme-ment, as % of respecti-replaceme-ve labor forces ',
+    'Ratio of female to male infant mortalit-replaceme-y ',
+    'Ratio of female to male under-5 mortalit-replaceme-y rate ',
+    'Secondar-replaceme-y educatio-replaceme-n, vocation-replaceme-al pupils (% female) ',
+    'Labor force, female (% of total labor force) ',
+    'Ratio of Labor Force particip-replaceme-ation rates for females to males ages 15-24 ',
+    'Ratio of female to male lower secondar-replaceme-y completi-replaceme-on rate  ',
+    'HDI ',
+    'Military expendit-replaceme-ure (% of GDP) ',
+    'World Press Freedom Index ',
+    'Freedom in the World ',
+    'Claims on central governme-replaceme-nt, etc. (% GDP) ',
+    'Physicia-replaceme-ns (per 1,000 people) ',
+    'Incidenc-replaceme-e of tubercul-replaceme-osis (per 100,000 people) ',
+    'Tubercul-replaceme-osis prevalen-replaceme-ce rate per 100,000 populati-replaceme-on ',
+    'Children (0-14) living with HIV ',
+    'Tubercul-replaceme-osis case detectio-replaceme-n rate (%, all forms) ',
+    'External resource-replaceme-s for health (% of total expendit-replaceme-ure on health) ',
+    'Health expendit-replaceme-ure per capita, PPP (constan-replaceme-t 2005 internat-replaceme-ional $) ',
+    'Life expectan-replaceme-cy at birth, total (years) ',
+    'Immuniza-replaceme-tion, DPT (% of children ages 12-23 months) ',
+    'Immuniza-replaceme-tion, measles (% of children ages 12-23 months) ',
+    'Health expendit-replaceme-ure, total (% of GDP) ',
+    'Mortalit-replaceme-y rate, infant (per 1,000 live births) ',
+    'Mortalit-replaceme-y rate, neonatal (per 1,000 live births) ',
+    'Maternal mortalit-replaceme-y ratio (modeled estimate-replaceme-, per 100,000 live births) ',
+    'AIDS deaths ',
+    'Tubercul-replaceme-osis treatmen-replaceme-t success rate (% of register-replaceme-ed cases) ',
+    'Mortalit-replaceme-y rate, under-5 (per 1,000 live births) ',
+    'Newborns protecte-replaceme-d against tetanus (%) ',
+    'Ratio of Life Expectan-replaceme-cy, Female/M-replaceme-ale ',
+    'Ratio of Mortalit-replaceme-y Rate, Female/M-replaceme-ale (1,000 female adults/1-replaceme-,000 male adults) ',
+    'Improved sanitati-replaceme-on faciliti-replaceme-es (% of populati-replaceme-on with access) ',
+    'Internet users (per 100 people) ',
+    "Ratio of improved sanitati-replaceme-on, rural/ur-replaceme-ban (ratio of %'s respecti-replaceme-ve populati-replaceme-ons with access) ",
+    "Ratio of improved water, rural/ur-replaceme-ban (ratio of %'s of respecti-replaceme-ve populati-replaceme-ons with access) ",
+    'Improved water source (% of populati-replaceme-on with access) ',
+    'Fixed-te-replaceme-lephone subscrip-replaceme-tions per 100 inhabita-replaceme-nts ',
+    'Mobile cellular subscrip-replaceme-tions (per 100 people) '
 ]
 
 const values = [[1.0,

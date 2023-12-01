@@ -41,14 +41,14 @@ const FunList = (props: Props) => {
     })
 
     return (
-        <div className='relative w-full h-fit py-[10vh] flex flex-col justify-center items-start text-3xl text-neutral-gray-dark font-semibold px-[20vw] bg-gradient-to-b from-white to-neutral-white'>
-            <h1 className=' font-bold text-5xl text-accent-dark mb-[5vh]'>
+        <div className='relative w-full h-fit py-[10vh] flex flex-col justify-center items-start text-3xl text-black font-semibold px-[20vw] bg-gradient-to-b from-white to-neutral-white'>
+            <h1 className=' font-bold text-5xl text-primary-dull mb-[5vh]'>
                 Navigating Global Challenges with Novametrics
             </h1>
 
             <div>
                 <div> Our previous work has assisted a multitude of sectors including: </div> <br></br>
-                <ol className='list-decimal list-inside'>
+                <ul className='list-decimal list-inside'>
                     <li ref={item1} className='relative'> 
                         Security and Peacekeeping 
 
@@ -90,7 +90,7 @@ const FunList = (props: Props) => {
                         <motion.div
                             style={{ width: useTransform(item3Progress, [0.5, 1], ['0%', '100%']) }}
                             transition={{ type: 'spring', damping: 10, stiffness: 100, bounce: 0.5 }}
-                            className='absolute rounded-full bg-accent h-[70px] right-[-160%] top-0'
+                            className='absolute rounded-full bg-primary-dark h-[70px] right-[-160%] top-0'
                         ></motion.div>
                         <br></br>
                     </li>
@@ -135,10 +135,10 @@ const FunList = (props: Props) => {
                         <motion.div
                             style={{ width: useTransform(item6Progress, [0.5, 1], ['0%', '100%']) }}
                             transition={{ type: 'spring', damping: 10, stiffness: 100, bounce: 0.5 }}
-                            className='absolute rounded-full bg-accent-light h-[70px] right-[-125%] top-0'
+                            className='absolute rounded-full bg-primary-dark h-[70px] right-[-125%] top-0'
                         ></motion.div> 
                     </li>
-                </ol>
+                </ul>
             </div>
         </div>
     )

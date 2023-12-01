@@ -163,7 +163,7 @@ const Footer = ( { fadeColor }: Props) => {
     }
 
     return (
-        <div className='relative w-full h-fit font-mukta-mahee text-primary-dull'>
+        <div className='relative w-full h-fit font-mukta-mahee text-black'>
             <div className='w-full h-[60vh] flex justify-center items-center text-neutral-gray-dark'>
                 <div className="w-full h-full bg-[url('/components/oceanic.png')] bg-center bg-cover object-cover bg-no-repeat z-10">
                     <div className={ `relative w-full h-full bg-gradient-to-b ${ fadeColor == 'white' ? 'from-white': 'from-neutral-white'} to-my-white-see-thru from-[10%] to-[100%] z-30 backdrop-blur-xl`}>
@@ -199,10 +199,10 @@ const Footer = ( { fadeColor }: Props) => {
                                 </table>
                             </div>
 
-                            <div className=' ml-[40vw] flex flex-col items-start justify-center w-[30vw] p-10 bg-white text-primary-dull rounded-xl z-40'>
+                            <div className=' ml-[40vw] flex flex-col items-start justify-center w-[30vw] p-10 bg-white text-black rounded-xl z-40'>
                                 <h1 className='text-6xl font-bold mb-[2vh]'> Let us know how we can help today </h1>
 
-                                <div className='text-xl mb-[2vh]'>
+                                <div className='text-xl mb-[2vh] text-black'>
                                     Together we can make a better world one solution at a time
                                 </div>
 
@@ -271,7 +271,7 @@ const Footer = ( { fadeColor }: Props) => {
                         </div>
                     </div>
 
-                    <div className='w-full h-[2px] mt-[20px] mb-[20px] bg-primary-dull'></div>
+                    <div className='w-full h-[2px] mt-[20px] mb-[20px] bg-black'></div>
 
                     <div className='flex justify-start items-center mb-[20px] w-full'>
                         <div className=' mx-auto'> Corporate Headquarters: Bethesda. MD </div>

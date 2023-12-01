@@ -109,10 +109,10 @@ const WsaDemo = (props: Props) => {
         <div className='w-full h-fit flex flex-col items-center justify-center'>
 
             <div className='flex justify-center items-center w-full h-fit bg-white py-[10vh] px-[10vw]'>
-                <div className=' flex flex-col items-center justify-start font-mukta-mahee text-3xl text-black w-[100%]'>
+                <div className=' flex flex-col items-center justify-start font-mukta-mahee text-3xl text-primary-dull w-[100%]'>
                     <h1 className=' font-bold text-6xl mb-[5vh]'> Amplifying Signals Below the Noise </h1>
 
-                    <p>
+                    <p className=' text-black'>
                         Advanced AI and machine learning algorithms are used to amplify weak signals and distill clarity from the noise, bringing critical insights to the forefront of decision-making.
                     </p>
                 </div>
@@ -197,10 +197,10 @@ const WsaDemo = (props: Props) => {
             </div>
 
             <div className=' relative flex justify-center items-center h-fit px-[10vw] py-[10vh]'>
-                <div className=' flex flex-col font-mukta-mahee text-3xl text-black w-[60%] mr-auto'>
+                <div className=' flex flex-col font-mukta-mahee text-3xl text-primary-dull w-[60%] mr-auto'>
                     <h1 className=' font-bold text-6xl mb-[5vh]'> Geographically Targeted Interventions </h1>
 
-                    <p>
+                    <p className=' text-black'>
                         By deciphering unique local dynamics, Novametrics delivers geographically targeted interventions that inform and shape strategic policy for sustainable impact and development.
                     </p>
                 </div>
