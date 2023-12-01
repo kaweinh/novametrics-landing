@@ -55,6 +55,12 @@ export default function Home() {
 
       <Vision />
       <Commitment />
+
+      <div>
+        <Partners />
+      </div>
+
+      <div className='w-full h-[10vh] bg-neutral-white'></div>
       
       <Footer fadeColor='neutral-white' />
 

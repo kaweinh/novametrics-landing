@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Commitment = () => {
     return (
-        <div className='w-full h-fit p-[10vw] flex bg-neutral-white font-mukta-mahee text-black'>
+        <div className='w-full h-fit px-[10vw] py-[20vh] flex items-center bg-neutral-white font-mukta-mahee text-black'>
             <div className=' flex '>
                 <motion.div 
                     initial={{ opacity: 0, scale: 0.9 }}

@@ -13,10 +13,10 @@ const Vision = (props: Props) => {
 
     return (
         <div 
-            className="relative w-full h-full bg-[url('/components/mission-bg.png')] bg-cover object-cover bg-no-repeat">
+            className="relative w-full h-full bg-[url('/components/oceanic_2.png')] bg-cover object-cover bg-no-repeat">
             <motion.div 
                 ref={ ref } 
-                className='w-full h-fit p-[10vw] flex flex-col bg-primary-dull font-mukta-mahee text-neutral-white partners-circles bg-opacity-40 backdrop-blur-lg'
+                className='w-full h-fit p-[10vw] flex flex-col bg-primary-dark font-mukta-mahee text-neutral-white partners-circles bg-opacity-90 backdrop-blur-lg'
             >
                 <div className='text-6xl font-bold text-primary-light mb-10'>
                     Mission and Vision
