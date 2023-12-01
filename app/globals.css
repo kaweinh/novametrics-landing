@@ -48,7 +48,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: radial-gradient(circle, #B4B4B4 30%, transparent 40%);
+  background-image: radial-gradient(circle, #000000 30%, transparent 40%);
   background-size: 2px 2px;
   opacity: 0.1;
 }

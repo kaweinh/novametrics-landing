@@ -35,7 +35,7 @@ export default function Home() {
                         <motion.div
                             initial={{ opacity: 0 }}
                             whileHover={{ opacity: 1 }}
-                            className='absolute z-20 w-full h-full bg-accent-light cursor-pointer bg-opacity-[0.5] backdrop-blur-sm flex justify-center items-center publications-texture'
+                            className='absolute z-20 w-full h-full bg-primary-light cursor-pointer bg-opacity-[0.5] backdrop-blur-sm flex justify-center items-center publications-texture'
                         >
                             <div className="w-[40px] h-[40px] bg-[url('/components/new_tab_icon.png')] bg-contain object-fill bg-center"></div>
                         </motion.div>
@@ -52,7 +52,7 @@ export default function Home() {
                         <motion.div
                             initial={{ opacity: 0 }}
                             whileHover={{ opacity: 1 }}
-                            className='absolute z-20 w-full h-full bg-accent-light cursor-pointer bg-opacity-[0.5] backdrop-blur-sm flex justify-center items-center publications-texture'
+                            className='absolute z-20 w-full h-full bg-primary-light cursor-pointer bg-opacity-[0.5] backdrop-blur-sm flex justify-center items-center publications-texture'
                         >
                             <div className="w-[40px] h-[40px] bg-[url('/components/new_tab_icon.png')] bg-contain object-fill bg-center "></div>
                         </motion.div>
@@ -83,7 +83,7 @@ export default function Home() {
                         ref={ bg1Ref }
                         className="w-full h-full bg-[url('/components/abstract.png')] bg-center bg-cover object-cover bg-no-repeat z-20"
                     >
-                        <div className='w-full h-full bg-accent-dark bg-opacity-[0.7] backdrop-blur-lg publications-texture'></div>
+                        <div className='w-full h-full bg-primary-dull bg-opacity-[0.8] backdrop-blur-lg publications-texture'></div>
                     </motion.div>
                 </div>
 

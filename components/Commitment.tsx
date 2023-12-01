@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Commitment = () => {
     return (
-        <div className='w-full h-fit p-[10vw] flex bg-neutral-white font-mukta-mahee text-my-midnight-blue'>
+        <div className='w-full h-fit p-[10vw] flex bg-neutral-white font-mukta-mahee text-black'>
             <div className=' flex '>
                 <motion.div 
                     initial={{ opacity: 0, scale: 0.9 }}
@@ -23,16 +23,18 @@ const Commitment = () => {
             </div>
 
             <div className=' flex flex-col ml-[10vw]'>
-                <div className='text-6xl mb-10 text-accent-dark font-bold'> Values and Integrity </div>
-                <div className='w-full text-3xl'>
-                    <div className='leading-[5vh]'>
-                        <SweepReveal texts={[
-                            `Our commitment extends beyond just data; its about trust, understanding, and collaboration.`,
-                            
-                            `This commitment drives us to embrace the subtle complexities and nuances of different environments and challenges, 
-                            ensuring our analytical services remain precise and actionable.`
-                        ]}/>
-                    </div>
+                <div className='text-6xl mb-10 text-primary-dull font-bold'> Values and Integrity </div>
+                <div className='w-full text-3xl leading-[5vh]'>
+                    <p>
+                        Our commitment extends beyond just data; its about trust, understanding, and collaboration.
+                    </p>
+
+                    <br></br>
+                        This commitment drives us to embrace the subtle complexities and nuances of different environments and challenges, 
+                        ensuring our analytical services remain precise and actionable.
+                    <p>
+
+                    </p>
                 </div>
             </div>
         </div>

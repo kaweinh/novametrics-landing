@@ -42,14 +42,20 @@ const Navbar = (props: Props) => {
 
     const getIcon = () => { 
         return (
-            <Link href='/landing' className='absolute flex justify-center items-center left-0'>
+            <Link href='/landing' className='absolute flex justify-center items-center left-0 z-40'>
 
                     <div 
-                        className='w-[50px] h-[45px] ml-[200px] z-40 bg-no-repeat bg-cover cursor-pointer'
+                        className='w-[40px] h-[36px] ml-[200px] z-40 bg-no-repeat bg-cover cursor-pointer'
                         style={{ backgroundImage: `url('/components/sh-logo-black.svg')` }}
                     ></div>
 
-                    <div className='text-3xl text-white font-mukta-mahee font-semibold ml-[1vw]'> Novametrics </div>
+                    <div className='text-3xl text-black font-bold ml-[1vw]'> 
+                    
+                        Nova 
+                        <span className=' font-light'>
+                            metrics 
+                        </span>
+                    </div>
 
             </Link>
         )
@@ -74,13 +80,13 @@ const Navbar = (props: Props) => {
                     <Link href={ '/' + pageName.toLowerCase().replace(" ", "") }>
                         <div>
                             <div 
-                                className={ ` font-thin hover:font-bold text-white cursor-pointer select-none text-lg` } > 
+                                className={ ` font-thin hover:font-bold text-black cursor-pointer select-none text-lg` } > 
                                 {pageName} 
                             </div>
                         </div>
                     </Link>
                 </div>
-                <div className='ml-auto mr-0 w-[1px] h-[20px] bg-neutral-gray-dark'></div>
+                <div className='ml-auto mr-0 w-[1px] h-[20px] bg-neutral-gray-dark z-40'></div>
             </div>
         )
     }
@@ -92,12 +98,14 @@ const Navbar = (props: Props) => {
             transition={{ duration: 0.5 }}
             className='block'
         >
-            <div className={ `relative text-white flex w-full h-[70px] justify-center items-center bg-gradient-to-r to-my-black-see-thru from-my-green-blue-see-thru ease-in-out bg-opacity-20 backdrop-blur-xl font-mukta-mahee `}>
-                <div className=' navbar-circles -z-10'> </div>
+            <div className={ `relative text-black flex w-full h-[70px] justify-center items-center ease-in-out font-mukta-mahee `}>
+                <div className="absolute w-full h-full bg-[url('/components/oceanic.png')] bg-center bg-cover object-cover bg-no-repeat z-10">
+                    <div className='w-full h-full bg-neutral-gray-light bg-opacity-80 z-30 footer-circles backdrop-blur-2xl'></div>
+                </div>
 
                 { getIcon() } 
                 
-                <div className='z-50 lg:hidden text-white absolute mr-[10px] mt-[0px] right-0 hover:text-gray-500 cursor-pointer p-5' onClick={() => { setMobileMenuOpen( !mobileMenuOpen )}} >
+                <div className='z-50 lg:hidden text-black absolute mr-[10px] mt-[0px] right-0 hover:text-gray-500 cursor-pointer p-5' onClick={() => { setMobileMenuOpen( !mobileMenuOpen )}} >
                     { mobileMenuOpen ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
                 </div>
 
@@ -113,7 +121,7 @@ const Navbar = (props: Props) => {
                     <motion.div 
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.9 }}
-                        className=' bg-primary px-4 h-fit py-2 mr-[100px] rounded-sm items-center flex text-xl cursor-pointer select-none'
+                        className=' bg-primary px-4 h-fit py-2 mr-[100px] text-white rounded-sm items-center flex text-xl z-40 cursor-pointer select-none'
                     >
                         Contact Us
                     </motion.div>

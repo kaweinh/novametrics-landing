@@ -58,13 +58,16 @@ const config: Config = {
         'my-purple-medium': '#672672',
         'my-pink-very-light': '#F5F3F7',
         'my-black-see-thru': 'rgba(0,0,0, 0.3)',
+        'my-white-see-thru-nav': 'rgba(255,255,255, 0.5)',
+
         'my-midnight-blue-see-thru': 'rgba(17,17,51, 0.3)',
         'my-green-blue-see-thru': 'rgba(17,70, 70, 0.3)',
         'my-baby-yellow': '#F9F7F4',
-        'my-white-see-thru': 'rgba(255, 255, 255, 0.90)',
+        'my-white-see-thru': 'rgba(255, 255, 255, 0.4)',
+        'primary-dull-see-thru': 'rgba(49, 78, 120, 0.9)',
 
         'primary-dark': '#111133',
-        'primary-dull': '#314E78',
+        'primary-dull': '#3A506B',
         'primary': '#1A51AA',
         'primary-soft': '#5C9DFF',
         'primary-softer': '#99C2FF',

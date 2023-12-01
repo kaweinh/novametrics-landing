@@ -69,7 +69,7 @@ export default function Home() {
                         ref={ bg1Ref }
                         className="w-full h-full bg-[url('/components/team.png')] bg-center bg-cover object-cover bg-no-repeat z-20"
                     >
-                        <div className='w-full h-full bg-primary bg-opacity-[0.6] backdrop-blur-md publications-texture'></div>
+                        <div className='w-full h-full bg-primary-dull bg-opacity-[0.85] backdrop-blur-md publications-texture'></div>
                     </motion.div>
                 </div>
 

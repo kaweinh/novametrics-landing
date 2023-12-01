@@ -16,21 +16,13 @@ const Vision = (props: Props) => {
             className="relative w-full h-full bg-[url('/components/mission-bg.png')] bg-cover object-cover bg-no-repeat">
             <motion.div 
                 ref={ ref } 
-                className='w-full h-fit p-[10vw] flex flex-col bg-black font-mukta-mahee text-neutral-white partners-circles'
-                style={{ 
-                    backgroundColor: useTransform(
-                        scrollYProgress, [0, 1], 
-                        [  
-                            'rgba(0,0,0, 1)',
-                            'rgba(0,0,0, 0.5)'
-                        ])
-                }}
+                className='w-full h-fit p-[10vw] flex flex-col bg-primary-dull font-mukta-mahee text-neutral-white partners-circles bg-opacity-40 backdrop-blur-lg'
             >
                 <div className='text-6xl font-bold text-primary-light mb-10'>
                     Mission and Vision
                 </div>
 
-                <div className='text-3xl w-[60%]'>
+                <div className='text-3xl w-[60%] text-white'>
                     <div className='leading-[5vh] mb-10'>
                         Novametrics is a boutique analytics firm that provides advanced data-to-decision services for government agencies, 
                         NGOs, foundations, impact investment funds, and aid and development groups.

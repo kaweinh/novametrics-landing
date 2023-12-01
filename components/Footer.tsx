@@ -18,28 +18,28 @@ const FadeOutBox = ( { color, delay }: FadeProps ) => {
         return ( <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: delay } }}
-            className='w-full h-full bg-primary-light bg-opacity-70'>
+            className='w-full h-full bg-primary-light'>
             </motion.div> 
         );
     } else if( color == 'dark blue') {
         return ( <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: delay } }}
-            className='w-full h-full bg-primary bg-opacity-70'>
+            className='w-full h-full bg-primary'>
             </motion.div> 
         );
     } else if( color == 'green') {
         return ( <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: delay } }}
-            className='w-full h-full bg-accent bg-opacity-70'>
+            className='w-full h-full bg-primary-softer'>
             </motion.div> 
         );
     } else {
         return ( <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: delay } }}
-            className='w-full h-full bg-accent-dark bg-opacity-70'>
+            className='w-full h-full bg-primary-dark'>
             </motion.div> 
         );
     }
@@ -165,8 +165,8 @@ const Footer = ( { fadeColor }: Props) => {
     return (
         <div className='relative w-full h-fit font-mukta-mahee text-black'>
             <div className='w-full h-[60vh] flex justify-center items-center text-neutral-gray-dark'>
-                <div className="w-full h-full bg-[url('/components/midtest2.png')] bg-center bg-cover object-cover bg-no-repeat z-10">
-                    <div className={ `relative w-full h-full bg-gradient-to-b ${ fadeColor == 'white' ? 'from-white': 'from-neutral-white'} to-my-white-see-thru to-[95%] z-30 backdrop-blur-sm `}>
+                <div className="w-full h-full bg-[url('/components/oceanic.png')] bg-center bg-cover object-cover bg-no-repeat z-10">
+                    <div className={ `relative w-full h-full bg-gradient-to-b ${ fadeColor == 'white' ? 'from-white': 'from-neutral-white'} to-my-white-see-thru from-[10%] to-[100%] z-30 backdrop-blur-sm `}>
                         <div className='w-full h-full flex justify-center items-center'>
                             <div className='absolute w-[100vw] h-[30vh] bg-opacity-30 rounded-xl flex items-center justify-center overflow-hidden z-20'>
                                 <div className='relative w-full h-full'>
@@ -178,14 +178,14 @@ const Footer = ( { fadeColor }: Props) => {
                                 <table className=' table-auto border-collapse border border-white xl:text-[0.2rem] text-[0.1rem]'>
                                     <tbody>
                                         { rows.map(( _, r_index ) => ( 
-                                            <tr key={r_index} className=' backdrop-blur-md'>
+                                            <tr key={r_index} className=' backdrop-blur-sm'>
                                                 { cols.map(( _, c_index ) => ( 
-                                                    <td key={ c_index} className='w-[1vw] h-[1vw] border-1 border-white'>
+                                                    <td key={ c_index} className='w-[1vw] h-[1vw] border border-white'>
                                                         {   !greenCell.includes( r_index * numCols + c_index ) && 
                                                             !blueCell.includes( r_index * numCols + c_index ) && 
                                                             !darkGreenCell.includes( r_index * numCols + c_index ) && 
                                                             !darkBlueCell.includes( r_index * numCols + c_index ) && (
-                                                            <div key={ c_index } className=' bg-neutral-white w-full h-full bg-opacity-30'> </div>
+                                                            <div key={ c_index } className=' bg-neutral-white w-full h-full bg-opacity-90'> </div>
                                                         )}
 
                                                         <AnimatePresence>
@@ -199,7 +199,7 @@ const Footer = ( { fadeColor }: Props) => {
                                 </table>
                             </div>
 
-                            <div className=' ml-[40vw] flex flex-col items-start justify-center w-[30vw] p-10 bg-white rounded-xl z-40'>
+                            <div className=' ml-[40vw] flex flex-col items-start justify-center w-[30vw] p-10 bg-white text-black rounded-xl z-40'>
                                 <h1 className='text-6xl font-bold mb-[2vh]'> Let us know how we can help today </h1>
 
                                 <div className='text-xl mb-[2vh]'>
@@ -209,7 +209,7 @@ const Footer = ( { fadeColor }: Props) => {
                                 <motion.div 
                                     whileHover={{ scale: 0.98 }}
                                     whileTap={{ scale: 1.02 }}
-                                    className='py-4 px-8 w-full text-center bg-black rounded-sm text-neutral-white cursor-pointer select-none font-bold'>
+                                    className='py-4 px-8 w-full text-center bg-primary rounded-sm text-white cursor-pointer select-none font-bold'>
                                     Contact Us
                                 </motion.div>
                             </div>
@@ -220,7 +220,7 @@ const Footer = ( { fadeColor }: Props) => {
 
             <div className='w-full h-[23vh]'>
                 <motion.div 
-                    className="w-full h-full bg-[url('/components/midtest2.png')] bg-center bg-cover object-cover bg-no-repeat z-10"
+                    className="w-full h-full bg-[url('/components/oceanic.png')] bg-center bg-cover object-cover bg-no-repeat z-10"
                 >
                     <div className='w-full h-full bg-neutral-gray-light bg-opacity-80 z-30 footer-circles backdrop-blur-2xl'></div>
                 </motion.div>
