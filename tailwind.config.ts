@@ -68,7 +68,7 @@ const config: Config = {
 
         'primary-dark': '#111133',
         'primary-dull': '#3A506B',
-        'primary': '#1A51AA',
+        'primary': '#0066FF',
         'primary-soft': '#5C9DFF',
         'primary-softer': '#99C2FF',
         'primary-light': '#AEDFF8',
