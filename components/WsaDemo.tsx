@@ -109,12 +109,12 @@ const WsaDemo = (props: Props) => {
         <div className='w-full h-fit flex flex-col items-center justify-center'>
 
             <div className='flex justify-center items-center w-full h-fit bg-white py-[10vh] px-[10vw]'>
-                <div className=' flex flex-col items-center justify-start font-mukta-mahee text-3xl text-primary-dark w-[100%]'>
+                <div className=' flex flex-col items-center justify-start font-mukta-mahee text-3xl text-black w-[100%]'>
                     <h1 className=' font-bold text-6xl mb-[5vh]'> Amplifying Signals Below the Noise </h1>
 
-                    <SweepReveal texts={[
-                        `Advanced AI and machine learning algorithms are used to amplify weak signals and distill clarity from the noise, bringing critical insights to the forefront of decision-making.`
-                    ]}/>
+                    <p>
+                        Advanced AI and machine learning algorithms are used to amplify weak signals and distill clarity from the noise, bringing critical insights to the forefront of decision-making.
+                    </p>
                 </div>
 
                 <div className='w-full flex flex-col justify-center items-center'>
@@ -166,14 +166,11 @@ const WsaDemo = (props: Props) => {
                 </div>
             </div>
 
-            <div ref={bg1Ref} className='w-full h-[3vh] relative overflow-hidden'>
+            <div ref={bg1Ref} className='w-full h-[2vh] relative overflow-hidden'>
                 <motion.div 
-                    style={{ 
-                        scaleX: useTransform(bg1Progress, [0, 1], [1, 1.5])
-                    }}
-                    className="w-full h-full bg-[url('/components/@@@.png')] bg-center bg-cover object-cover bg-no-repeat z-20"
+                    className="w-full h-full bg-[url('/components/oceanic.png')] bg-center bg-cover object-cover bg-no-repeat z-20"
                 >
-                    <div className='w-full h-full bg-primary-dark bg-opacity-[0.6]'></div>
+                    <div className='w-full h-full bg-primary-dark bg-opacity-[0.6] backdrop-blur-md'></div>
                 </motion.div>
             </div>
 
@@ -191,32 +188,27 @@ const WsaDemo = (props: Props) => {
                 </div>
             </div>
 
-            <div ref={bg2Ref} className='w-full h-[3vh] relative overflow-hidden'>
+            <div ref={bg2Ref} className='w-full h-[2vh] relative overflow-hidden'>
                 <motion.div 
-                    style={{ 
-                        scaleX: useTransform(bg2Progress, [0, 1], [1, 1.5])
-                    }}
-                    className="w-full h-full bg-[url('/components/@@@.png')] bg-center bg-cover object-cover bg-no-repeat z-20"
+                    className="w-full h-full bg-[url('/components/oceanic.png')] bg-center bg-cover object-cover bg-no-repeat z-20"
                 >
-                    <div className='w-full h-full bg-primary-dark bg-opacity-[0.6]'></div>
+                    <div className='w-full h-full bg-primary-dark bg-opacity-[0.6] backdrop-blur-md'></div>
                 </motion.div>
             </div>
 
             <div className=' relative flex justify-center items-center h-fit px-[10vw] py-[10vh]'>
-                <div className=' flex flex-col font-mukta-mahee text-3xl text-primary-dark w-[60%] mr-auto'>
+                <div className=' flex flex-col font-mukta-mahee text-3xl text-black w-[60%] mr-auto'>
                     <h1 className=' font-bold text-6xl mb-[5vh]'> Geographically Targeted Interventions </h1>
 
-                    <SweepReveal texts={[
-                        `
+                    <p>
                         By deciphering unique local dynamics, Novametrics delivers geographically targeted interventions that inform and shape strategic policy for sustainable impact and development.
-                        `
-                    ]}/>
+                    </p>
                 </div>
 
-                <div className="absolute lg:w-[180px] bottom-0 right-0 mr-[30vw] items-center justify-center z-40 mx-auto">
-                    <div className=" relative pb-[200%] flex items-center justify-center">
+                <div className="absolute lg:w-[180px] bottom-[5vh] right-0 mr-[29vw] items-center justify-center z-40 mx-auto">
+                    <div className=" relative pb-[130%] flex items-center justify-center">
                         <div className="absolute top-0 w-full h-full items-center flex justify-center">
-                            <div className={ `w-full h-full bg-[url('/reports/${activeProvince}.png')] bg-center bg-contain object-fill bg-no-repeat `}> </div>
+                            <div className={ `w-full h-full bg-[url('/reports/${activeProvince}.png')] bg-center bg-contain object-fill bg-no-repeat `} style={{ boxShadow: '0px 0px 10px rgba(0,0,0, 0.75)' }}> </div>
                         </div>
                     </div>
                 </div>

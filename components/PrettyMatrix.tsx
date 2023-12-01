@@ -41,17 +41,17 @@ const PrettyMatrix = ( props: Props ) => {
     }, [ center ])
 
     const getColor = ( value: number ) => {
-        if ( value < -0.6) return 'bg-accent-dark';
-        if ( value < -0.4) return 'bg-accent';
-        if ( value < -0.25) return 'bg-accent-soft';
-        if ( value < -0.1) return 'bg-accent-light';
-        if ( value < 0) return 'bg-neutral-white';
-        if ( value < 0.1 ) return 'bg-neutral-brown-orange';        
-        if ( value < 0.25 ) return 'bg-neutral-brown';
-        if ( value < 0.4 ) return 'bg-primary-light';
-        if ( value < 0.6 ) return 'bg-primary';
+        if ( value < -0.6) return 'bg-primary-dark';
+        if ( value < -0.4) return 'bg-primary-dull';
+        if ( value < -0.25) return 'bg-neutral-gray-light';
+        if ( value < -0.1) return 'bg-neutral-brown-orange';
+        if ( value < 0) return 'bg-neutral-brown';
+        if ( value < 0.1 ) return 'bg-neutral-white';        
+        if ( value < 0.25 ) return 'bg-primary';
+        if ( value < 0.4 ) return 'bg-primary-soft';
+        if ( value < 0.6 ) return 'bg-primary-softer';
    
-        return 'bg-primary-dark';
+        return 'bg-primary-light';
     }
 
     const getDisplayCell = ( row: number, col: number, value: number ) => {

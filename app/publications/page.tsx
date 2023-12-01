@@ -90,18 +90,18 @@ export default function Home() {
                 <div className='w-full h-fit py-[20vh] px-[10vw] bg-neutral-white flex justify-center items-center text-white font-mukta-mahee text-3xl'>
                     <div className='w-full grid grid-cols-3 gap-8'>
                         <div className='flex flex-col gap-8 mt-[20vh]'>
-                            { getPdfObject("/publications/pdfs/tip.pdf", "bg-[url('/publications/covers/tip.png')]", 'primary-light', false) }
-                            { getPdfObject("/publications/pdfs/ctip_laos.pdf", "bg-[url('/publications/covers/ctip_laos.png')]", 'primary', false) }
+                            { getPdfObject("/publications/pdfs/tip.pdf", "bg-[url('/publications/covers/tip.png')]", 'primary-dull', false) }
+                            { getPdfObject("/publications/pdfs/ctip_laos.pdf", "bg-[url('/publications/covers/ctip_laos.png')]", 'primary-dull', false) }
                         </div>
 
                         <div className='flex flex-col gap-8'>
-                            { getPdfObject("/publications/pdfs/jid.pdf", "bg-[url('/publications/covers/jid.png')]", 'primary-soft', true) }
-                            { getPdfObject("/publications/pdfs/ctip_bangladesh.pdf", "bg-[url('/publications/covers/ctip_bangladesh.png')]", 'primary', false) }
+                            { getPdfObject("/publications/pdfs/jid.pdf", "bg-[url('/publications/covers/jid.png')]", 'primary-dull', true) }
+                            { getPdfObject("/publications/pdfs/ctip_bangladesh.pdf", "bg-[url('/publications/covers/ctip_bangladesh.png')]", 'primary-dull', false) }
                         </div>
 
                         <div className='flex flex-col gap-8 mt-[20vh]'>
-                            { getPdfObject("/publications/pdfs/ctip_philippines.pdf", "bg-[url('/publications/covers/ctip_philippines.png')]", 'primary', false) }
-                            { getPdfObject("", "", 'primary', false, true) }
+                            { getPdfObject("/publications/pdfs/ctip_philippines.pdf", "bg-[url('/publications/covers/ctip_philippines.png')]", 'primary-dull', false) }
+                            { getPdfObject("", "", 'primary-dull', false, true) }
                         </div>
                     </div>
                 </div>

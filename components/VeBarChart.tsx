@@ -120,8 +120,8 @@ const VeBarChart = (props: Props) => {
                 .map(d => d.date );
 
             const legendData = [
-                { color: "#CEDFD6", text: "Yes/Maybe" },
-                { color: "#496F5D", text: "Other" },
+                { color: "#AEDFF8", text: "Yes/Maybe" },
+                { color: "#3A506B", text: "Other" },
             ]
 
             svg
@@ -153,7 +153,7 @@ const VeBarChart = (props: Props) => {
                 .attr('y', (d: DataType ) => heightMargin)
                 .attr('width', x.bandwidth())
                 .attr('height', (d) => 0)
-                .attr('fill', '#496F5D')
+                .attr('fill', '#3A506B')
                 .attr('transform', `translate(${50}, 30)`)
                 .transition()
                 .attr('height', (d: DataType) => heightMargin - y( d.value2 ) )
@@ -170,7 +170,7 @@ const VeBarChart = (props: Props) => {
                 .attr('y', (d: DataType ) => heightMargin)
                 .attr('width', x.bandwidth())
                 .attr('height', (d) => 0)
-                .attr('fill', '#CEDFD6')
+                .attr('fill', '#AEDFF8')
                 .attr('transform', `translate(${50}, 30)`)
                 .transition()
                 .attr('height', (d: DataType) => heightMargin - y( d.value1 ) )
