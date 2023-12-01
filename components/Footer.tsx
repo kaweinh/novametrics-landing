@@ -166,7 +166,7 @@ const Footer = ( { fadeColor }: Props) => {
         <div className='relative w-full h-fit font-mukta-mahee text-black'>
             <div className='w-full h-[60vh] flex justify-center items-center text-neutral-gray-dark'>
                 <div className="w-full h-full bg-[url('/components/oceanic.png')] bg-center bg-cover object-cover bg-no-repeat z-10">
-                    <div className={ `relative w-full h-full bg-gradient-to-b ${ fadeColor == 'white' ? 'from-white': 'from-neutral-white'} to-my-white-see-thru from-[10%] to-[100%] z-30 backdrop-blur-sm `}>
+                    <div className={ `relative w-full h-full bg-gradient-to-b ${ fadeColor == 'white' ? 'from-white': 'from-neutral-white'} to-my-white-see-thru from-[10%] to-[100%] z-30 backdrop-blur-xl`}>
                         <div className='w-full h-full flex justify-center items-center'>
                             <div className='absolute w-[100vw] h-[30vh] bg-opacity-30 rounded-xl flex items-center justify-center overflow-hidden z-20'>
                                 <div className='relative w-full h-full'>
@@ -232,7 +232,7 @@ const Footer = ( { fadeColor }: Props) => {
                         <Link href='/landing'>
                             <motion.div 
                                 whileHover={{ scale: 1.1 }}
-                                className="w-[50px] h-[50px] bg-[url('/components/sh-logo-black.svg')] bg-center bg-contain object-contain bg-no-repeat z-30"
+                                className="w-[50px] h-[50px] bg-[url('/components/sh-logo-dull.svg')] bg-center bg-contain object-contain bg-no-repeat z-30"
                             ></motion.div>
                         </Link>
 
