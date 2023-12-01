@@ -72,7 +72,7 @@ export default function Home() {
                             scale: useTransform(bg1Progress, [0.9, 0], [1, 2])
                         }}
                         ref={ bg1Ref }
-                        className="w-full h-full bg-[url('/components/midtest.png')] bg-center bg-cover object-cover bg-no-repeat z-20"
+                        className="w-full h-full bg-[url('/components/map_header.png')] bg-center bg-cover object-cover bg-no-repeat z-20"
                     >
                         <div className='w-full h-full bg-primary-dull bg-opacity-[0.8] backdrop-blur-sm publications-texture'></div>
                     </motion.div>
