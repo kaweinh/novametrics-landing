@@ -115,24 +115,30 @@ const Footer = ( { fadeColor }: Props) => {
 
     const getCellDisplay = ( index: number ) => {
         if( greenCell.includes( index ) ) {
-            return ( <motion.div 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: index % 4 } }}
-                className='w-full h-full bg-primary-light'>
+            return ( 
+                <motion.div 
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: index % 4 } }}
+                    exit={{ opacity: 0 }}
+                    className='w-full h-full bg-primary-light'>
                 </motion.div> 
             );
         } else if( darkGreenCell.includes( index ) ) {
-            return ( <motion.div 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: index % 4 } }}
-                className='w-full h-full bg-primary'>
+            return ( 
+                <motion.div 
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: index % 4 } }}
+                    exit={{ opacity: 0 }}
+                    className='w-full h-full bg-primary'>
                 </motion.div> 
             );
         } else if( blueCell.includes( index ) ) {
-            return ( <motion.div 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: index % 4 } }}
-                className='w-full h-full bg-primary-softer'>
+            return ( 
+                <motion.div 
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: index % 4 } }}
+                    exit={{ opacity: 0 }}
+                    className='w-full h-full bg-primary-softer'>
                 </motion.div> 
             );
         } else if( darkBlueCell.includes( index ) ) {
@@ -140,6 +146,7 @@ const Footer = ( { fadeColor }: Props) => {
                 <motion.div 
                     initial={{ opacity: 0 }}
                     animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: index % 4 } }}
+                    exit={{ opacity: 0 }}
                     className='w-full h-full bg-primary-dark'>
                 </motion.div> 
             )
