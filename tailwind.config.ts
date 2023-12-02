@@ -68,8 +68,8 @@ const config: Config = {
 
         'primary-dark': '#111133',
         'primary-dull': '#3A506B',
-        'primary': '#86305D',
-//        'primary': '#0D5CC8',
+//        'primary': '#86305D',
+        'primary': '#0D5CC8',
         'primary-soft': '#5C9DFF',
         'primary-softer': '#99C2FF',
         'primary-light': '#AEDFF8',
