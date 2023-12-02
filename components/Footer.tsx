@@ -14,8 +14,21 @@ type FadeProps = {
 }
 
 const FadeOutBox = ( { color, delay }: FadeProps ) => {    
+    const ref = React.useRef(null);
+    const [isPresent, safeToRemove] = usePresence();
+  
+    React.useEffect(() => {
+      if (!isPresent) {
+        gsap.to(ref.current, {
+          opacity: 0,
+          onComplete: () => safeToRemove?.()
+        });
+      }
+    }, [isPresent, safeToRemove]);
+
     if( color == 'blue') {
         return ( <motion.div 
+            ref={ref}
             initial={{ opacity: 0 }}
             animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: delay } }}
             className='w-full h-full bg-primary-light'>
@@ -23,6 +36,7 @@ const FadeOutBox = ( { color, delay }: FadeProps ) => {
         );
     } else if( color == 'dark blue') {
         return ( <motion.div 
+            ref={ref}
             initial={{ opacity: 0 }}
             animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: delay } }}
             className='w-full h-full bg-primary'>
@@ -30,6 +44,7 @@ const FadeOutBox = ( { color, delay }: FadeProps ) => {
         );
     } else if( color == 'green') {
         return ( <motion.div 
+            ref={ref}
             initial={{ opacity: 0 }}
             animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: delay } }}
             className='w-full h-full bg-primary-softer'>
@@ -37,6 +52,7 @@ const FadeOutBox = ( { color, delay }: FadeProps ) => {
         );
     } else {
         return ( <motion.div 
+            ref={ref}
             initial={{ opacity: 0 }}
             animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: delay } }}
             className='w-full h-full bg-primary-dark'>
@@ -81,7 +97,7 @@ const Footer = ( { fadeColor }: Props) => {
           updateCells();
           const interval = setInterval(() => {
             updateCells();
-          }, 7000); // Change every 6 seconds
+          }, 6000); // Change every 6 seconds
     
           return () => {
             clearInterval(interval);
@@ -101,7 +117,7 @@ const Footer = ( { fadeColor }: Props) => {
           updateCells();
           const interval = setInterval(() => {
             updateCells();
-          }, 7000); // Change every 6 seconds
+          }, 6000); // Change every 6 seconds
     
           return () => {
             clearInterval(interval);
@@ -121,7 +137,7 @@ const Footer = ( { fadeColor }: Props) => {
           updateCells();
           const interval = setInterval(() => {
             updateCells();
-          }, 7000); // Change every 6 seconds
+          }, 6000); // Change every 6 seconds
     
           return () => {
             clearInterval(interval);
@@ -141,7 +157,7 @@ const Footer = ( { fadeColor }: Props) => {
           updateCells();
           const interval = setInterval(() => {
             updateCells();
-          }, 7000); // Change every 6 seconds
+          }, 6000); // Change every 6 seconds
     
           return () => {
             clearInterval(interval);
