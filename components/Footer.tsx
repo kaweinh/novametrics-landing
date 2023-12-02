@@ -81,7 +81,7 @@ const Footer = ( { fadeColor }: Props) => {
           updateCells();
           const interval = setInterval(() => {
             updateCells();
-          }, 6000); // Change every 6 seconds
+          }, 7000); // Change every 6 seconds
     
           return () => {
             clearInterval(interval);
