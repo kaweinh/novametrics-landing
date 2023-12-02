@@ -117,36 +117,36 @@ const Footer = ( { fadeColor }: Props) => {
         if( greenCell.includes( index ) ) {
             return ( 
                 <motion.div 
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: index % 4 } }}
-                    exit={{ opacity: 0 }}
+                    initial={{ opacity: 0, y: 0 }}
+                    animate={{ opacity: [0, 1, 0], y:0, transition: {duration: 3, delay: index % 4 } }}
+                    exit={{ opacity: 0, y: 0 }}
                     className='w-full h-full bg-primary-light'>
                 </motion.div> 
             );
         } else if( darkGreenCell.includes( index ) ) {
             return ( 
                 <motion.div 
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: index % 4 } }}
-                    exit={{ opacity: 0 }}
+                    initial={{ opacity: 0, y: 0 }}
+                    animate={{ opacity: [0, 1, 0], y:0, transition: {duration: 3, delay: index % 4 } }}
+                    exit={{ opacity: 0, y: 0 }}
                     className='w-full h-full bg-primary'>
                 </motion.div> 
             );
         } else if( blueCell.includes( index ) ) {
             return ( 
                 <motion.div 
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: index % 4 } }}
-                    exit={{ opacity: 0 }}
+                    initial={{ opacity: 0, y: 0 }}
+                    animate={{ opacity: [0, 1, 0], y:0, transition: {duration: 3, delay: index % 4 } }}
+                    exit={{ opacity: 0, y: 0 }}
                     className='w-full h-full bg-primary-softer'>
                 </motion.div> 
             );
         } else if( darkBlueCell.includes( index ) ) {
             return  (
                 <motion.div 
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: index % 4 } }}
-                    exit={{ opacity: 0 }}
+                    initial={{ opacity: 0, y: 0 }}
+                    animate={{ opacity: [0, 1, 0], y:0, transition: {duration: 3, delay: index % 4 } }}
+                    exit={{ opacity: 0, y: 0 }}
                     className='w-full h-full bg-primary-dark'>
                 </motion.div> 
             )
@@ -166,7 +166,7 @@ const Footer = ( { fadeColor }: Props) => {
                             </div>
 
                             <div className='absolute mx-auto h-[20vh] w-[100vw] flex items-center justify-center z-30'>
-                                <table className=' table-auto border-collapse border border-white xl:text-[0.2rem] text-[0.1rem]'>
+                                <table className=' table-fixed border-collapse border border-white xl:text-[0.2rem] text-[0.1rem]'>
                                     <tbody>
                                         { rows.map(( _, r_index ) => ( 
                                             <tr key={r_index} className=' backdrop-blur-sm'>
@@ -176,7 +176,10 @@ const Footer = ( { fadeColor }: Props) => {
                                                             !blueCell.includes( r_index * numCols + c_index ) && 
                                                             !darkGreenCell.includes( r_index * numCols + c_index ) && 
                                                             !darkBlueCell.includes( r_index * numCols + c_index ) && (
-                                                            <div key={ c_index } className=' bg-neutral-white w-full h-full bg-opacity-90'> </div>
+                                                            <div 
+                                                                key={ c_index } 
+                                                                className=' bg-neutral-white w-full h-full bg-opacity-90'
+                                                            > </div>
                                                         )}
 
                                                         <AnimatePresence>
