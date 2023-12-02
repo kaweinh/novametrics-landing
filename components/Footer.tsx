@@ -5,7 +5,8 @@ import { gsap } from 'gsap';
 import Link from 'next/link';
 
 type Props = {
-    fadeColor: string
+    fadeColor: string,
+    setContactOpen: React.Dispatch<React.SetStateAction<boolean>>,
 }
 
 type AnimatedSquareProps = {
@@ -13,7 +14,7 @@ type AnimatedSquareProps = {
     color: string,
 }
 
-const Footer = ( { fadeColor }: Props) => {
+const Footer = ( { fadeColor, setContactOpen }: Props) => {
     const numRows = 10;
     const numCols = 100;
 
@@ -186,6 +187,7 @@ const Footer = ( { fadeColor }: Props) => {
                                 <motion.div 
                                     whileHover={{ scale: 0.98 }}
                                     whileTap={{ scale: 1.02 }}
+                                    onClick={ () => { setContactOpen( true ) }}
                                     className='py-4 px-8 w-full text-center bg-primary rounded-sm text-white cursor-pointer select-none font-bold'>
                                     Contact Us
                                 </motion.div>

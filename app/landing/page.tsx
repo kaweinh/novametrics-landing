@@ -12,9 +12,11 @@ import Partners from '@/components/Partners';
 import TestAnimation from '@/components/TestAnimation';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Footer from '@/components/Footer';
+import ContactForm from '@/components/ContactForm';
 
 export default function Home() {
   const [activePage, setActivePage] = React.useState('Home')
+  const [contactOpen, setContactOpen] = React.useState( false )
   
   const bg1Ref = React.useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({ 
@@ -23,15 +25,21 @@ export default function Home() {
   })
 
   return (
-    <div className='flex-col justify-center items-center h-fit w-screen overflow-x-hidden overflow-y-scroll'>
+    <div className='relative flex-col justify-center items-center h-fit w-screen overflow-x-hidden overflow-y-scroll'>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta+Mahee:200,300,400,500,600,700"></link>
       
       <div className='w-full fixed z-50 top-0'>
-        <Navbar activePage={ activePage } setActivePage={ setActivePage } rootPage='home' />
+        <Navbar activePage={ activePage } setActivePage={ setActivePage } rootPage='home' contactOpen={contactOpen} setContactOpen={ setContactOpen } />
       </div>
 
+      { contactOpen && (
+        <div className='w-full h-full fixed top-0 z-40'>
+          <ContactForm contactOpen={contactOpen} setContactOpen={ setContactOpen } />
+        </div>
+      )}
+
       <div className='z-30 relative bg-primary-dull bg-opacity-90 publications-texture'>
-        <Splash />
+        <Splash setContactOpen={ setContactOpen } />
       </div>
 
       <div ref={ bg1Ref }>
@@ -62,7 +70,7 @@ export default function Home() {
 
       <div className='w-full h-[30vh] bg-neutral-white'></div>
       
-      <Footer fadeColor='neutral-white' />
+      <Footer fadeColor='neutral-white' setContactOpen={ setContactOpen } />
 
     </div>  
   )

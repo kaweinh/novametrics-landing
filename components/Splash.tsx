@@ -2,7 +2,9 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 
-type Props = {}
+type Props = {
+    setContactOpen: React.Dispatch<React.SetStateAction<boolean>>,
+}
 
 const Splash = (props: Props) => {
     return (
@@ -38,6 +40,7 @@ const Splash = (props: Props) => {
                         <motion.div
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.9 }}
+                            onClick={ () => { props.setContactOpen( true ) }}
                             className='py-4 px-4 bg-primary text-white rounded cursor-pointer select-none text-xl w-[210px] font-medium'
                         >
                             Book a Consultation 

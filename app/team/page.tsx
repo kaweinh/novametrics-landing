@@ -4,6 +4,7 @@ import React from 'react'
 import Navbar from '@/components/Navbar';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Footer from '@/components/Footer';
+import ContactForm from '@/components/ContactForm';
 
 type MemberInfo = {
     name: string,
@@ -22,6 +23,7 @@ const members: Array<MemberInfo> = [
 
 export default function Home() {
     const [activePage, setActivePage] = React.useState('Team')
+    const [contactOpen, setContactOpen] = React.useState( false )
 
     const bg1Ref = React.useRef<HTMLDivElement>(null)
     const { scrollYProgress: bg1Progress } = useScroll({ 
@@ -53,8 +55,14 @@ export default function Home() {
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta+Mahee:200,300,400,500,600,700"></link>
       
             <div className='w-full fixed z-50 top-0'>
-                <Navbar activePage={ activePage } setActivePage={ setActivePage } rootPage='home' />
+                <Navbar activePage={ activePage } setActivePage={ setActivePage } rootPage='home' contactOpen={contactOpen} setContactOpen={ setContactOpen } />
             </div>
+
+            { contactOpen && (
+                <div className='w-full h-full fixed top-0 z-[49]'>
+                    <ContactForm contactOpen={contactOpen} setContactOpen={ setContactOpen } />
+                </div>
+            )}
 
             <div className='relative w-screen h-fit flex flex-col justify-center items-center font-mukta-mahee'>
                 <div className='w-full h-[40vh] relative overflow-hidden'>
@@ -95,7 +103,8 @@ export default function Home() {
                     </div>
                 </div>
 
-                <Footer fadeColor='neutral-white' />
+                <Footer fadeColor='neutral-white' setContactOpen={ setContactOpen } />
+
             </div>
         </div>  
     )

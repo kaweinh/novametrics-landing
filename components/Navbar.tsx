@@ -7,6 +7,8 @@ type Props = {
     activePage: string,
     setActivePage: React.Dispatch<React.SetStateAction<string>>,
     rootPage: string,
+    contactOpen: boolean,
+    setContactOpen: React.Dispatch<React.SetStateAction<boolean>>,
 }
 
 const Navbar = (props: Props) => {
@@ -123,7 +125,8 @@ const Navbar = (props: Props) => {
                     <motion.div 
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.9 }}
-                        className=' bg-primary px-4 h-fit py-2 mr-[100px] text-white rounded-sm items-center flex text-xl z-40 cursor-pointer select-none'
+                        onClick={() => { props.setContactOpen( !props.contactOpen ) }}
+                        className=' bg-primary px-4 h-fit py-2 mr-[100px] text-white rounded-sm items-center flex text-xl z-40 cursor-pointer select-none ignore-click'
                     >
                         Contact Us
                     </motion.div>

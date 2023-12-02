@@ -10,9 +10,11 @@ import FunList from '@/components/FunList';
 import Partners from '@/components/Partners';
 import Footer from '@/components/Footer';
 import DropInWords from '@/components/DropInWords';
+import ContactForm from '@/components/ContactForm';
 
 export default function Home() {
   const [activePage, setActivePage] = React.useState('Our Work')
+  const [contactOpen, setContactOpen] = React.useState( false )
 
   const flowLayers = [
     {
@@ -59,8 +61,14 @@ export default function Home() {
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta+Mahee:200,300,400,500,600,700"></link>
       
             <div className='w-full fixed z-50 top-0'>
-                <Navbar activePage={ activePage } setActivePage={ setActivePage } rootPage='home' />
+                <Navbar activePage={ activePage } setActivePage={ setActivePage } rootPage='home' contactOpen={contactOpen} setContactOpen={ setContactOpen } />
             </div>
+
+            { contactOpen && (
+                <div className='w-full h-full fixed top-0 z-[49]'>
+                    <ContactForm contactOpen={contactOpen} setContactOpen={ setContactOpen } />
+                </div>
+            )}
 
             <div className='relative w-screen h-fit flex flex-col justify-center items-center font-mukta-mahee'>
                 <div className='w-full h-[40vh] relative overflow-hidden'>
@@ -132,7 +140,7 @@ export default function Home() {
                     <WsaDemo />
                 </div>
 
-                <Footer fadeColor='white' />
+                <Footer fadeColor='white' setContactOpen={ setContactOpen } />
                 
             </div>
         </div>  
