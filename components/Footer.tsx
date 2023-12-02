@@ -8,6 +8,11 @@ type Props = {
     fadeColor: string
 }
 
+type AnimatedSquareProps = {
+    delay: number,
+    color: string,
+}
+
 const Footer = ( { fadeColor }: Props) => {
     const numRows = 10;
     const numCols = 100;
@@ -39,7 +44,7 @@ const Footer = ( { fadeColor }: Props) => {
           setDarkGreenCell(getRandomSet());
         };
       
-        const initialDelay = 3000;
+        const initialDelay = 0;
         const timeout = setTimeout(() => {
           updateCells();
           const interval = setInterval(() => {
@@ -116,41 +121,21 @@ const Footer = ( { fadeColor }: Props) => {
     const getCellDisplay = ( index: number ) => {
         if( greenCell.includes( index ) ) {
             return ( 
-                <motion.div 
-                    initial={{ opacity: 0, y: 0 }}
-                    animate={{ opacity: [0, 1, 0], y:0, transition: {duration: 3, delay: index % 4 } }}
-                    exit={{ opacity: 0, y: 0 }}
-                    className='w-full h-full bg-primary-light'>
-                </motion.div> 
+                <div className='w-full h-full bg-primary-light opacity-0' style={{ animation: 'fadeInThenOut 3s ease-in-out forwards', animationDelay: (index % 4 ).toString() + 's' }}></div> 
             );
         } else if( darkGreenCell.includes( index ) ) {
             return ( 
-                <motion.div 
-                    initial={{ opacity: 0, y: 0 }}
-                    animate={{ opacity: [0, 1, 0], y:0, transition: {duration: 3, delay: index % 4 } }}
-                    exit={{ opacity: 0, y: 0 }}
-                    className='w-full h-full bg-primary'>
-                </motion.div> 
+                <div className='w-full h-full bg-primary-soft opacity-0' style={{ animation: 'fadeInThenOut 3s ease-in-out forwards', animationDelay: (index % 4 ).toString() + 's' }}></div> 
             );
         } else if( blueCell.includes( index ) ) {
             return ( 
-                <motion.div 
-                    initial={{ opacity: 0, y: 0 }}
-                    animate={{ opacity: [0, 1, 0], y:0, transition: {duration: 3, delay: index % 4 } }}
-                    exit={{ opacity: 0, y: 0 }}
-                    className='w-full h-full bg-primary-softer'>
-                </motion.div> 
+                <div className='w-full h-full bg-primary-softer opacity-0' style={{ animation: 'fadeInThenOut 3s ease-in-out forwards', animationDelay: (index % 4 ).toString() + 's' }}></div> 
             );
         } else if( darkBlueCell.includes( index ) ) {
             return  (
-                <motion.div 
-                    initial={{ opacity: 0, y: 0 }}
-                    animate={{ opacity: [0, 1, 0], y:0, transition: {duration: 3, delay: index % 4 } }}
-                    exit={{ opacity: 0, y: 0 }}
-                    className='w-full h-full bg-primary-dark'>
-                </motion.div> 
+                <div className='w-full h-full bg-primary-dark opacity-0' style={{ animation: 'fadeInThenOut 3s ease-in-out forwards', animationDelay: (index % 4 ).toString() + 's' }}></div> 
             )
-        } 
+        }
     }
 
     return (
@@ -182,9 +167,7 @@ const Footer = ( { fadeColor }: Props) => {
                                                             > </div>
                                                         )}
 
-                                                        <AnimatePresence>
-                                                            { getCellDisplay( r_index * numCols + c_index ) }
-                                                        </AnimatePresence>
+                                                        { getCellDisplay( r_index * numCols + c_index ) }
                                                     </td>
                                                 ))}
                                             </tr>

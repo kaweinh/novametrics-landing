@@ -21,10 +21,7 @@ const Splash = (props: Props) => {
                             transition={{ duration: 1, delay: 0.3 }}
                             className='mb-4'> 
 
-                            Enhancing 
-                            <span className=' text-primary-dull'>
-                                &nbsp; Insights 
-                            </span> 
+                            Enhancing <span className=' text-primary-soft'>Insights</span>
                         </motion.div>
 
 
@@ -33,11 +30,7 @@ const Splash = (props: Props) => {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 1 }}
                             className='mb-4'> 
-
-                            Elevating &nbsp;
-                            <span className=' text-primary-softer'>
-                                Actions 
-                            </span> 
+                            Elevating <span className=' text-primary-softer'>Actions</span>
                         </motion.div>
                     </motion.div>
 
@@ -54,7 +47,7 @@ const Splash = (props: Props) => {
                             <motion.div 
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.9 }}
-                                className='py-4 px-4 bg-primary-dark text-white text-xl cursor-pointer select-none rounded ml-[50px] w-[210px] font-medium text-center'
+                                className='py-4 px-4 bg-white text-black text-xl cursor-pointer select-none rounded ml-[50px] w-[210px] font-medium text-center'
                             > 
                                 Learn More 
                             </motion.div>

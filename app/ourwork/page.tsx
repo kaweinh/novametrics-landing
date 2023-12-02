@@ -9,6 +9,7 @@ import WsaDemo from '@/components/WsaDemo';
 import FunList from '@/components/FunList';
 import Partners from '@/components/Partners';
 import Footer from '@/components/Footer';
+import DropInWords from '@/components/DropInWords';
 
 export default function Home() {
   const [activePage, setActivePage] = React.useState('Our Work')
@@ -78,24 +79,8 @@ export default function Home() {
                     </motion.div>
                 </div>
 
-                <div className='w-full h-[40vh] flex justify-center items-center text-3xl text-neutral-gray-dark font-semibold px-[20vw] bg-neutral-white'>
-                    <div className=''>
-                        Central to our approach is the recognition that every population has a complex &nbsp;
-                        <span className='bg-gradient-to-r from-my-midnight-blue to-my-purple-medium lg:to-70% bg-clip-text text-transparent'> 
-                            mosaic &nbsp;
-                        </span> 
-                        of characteristics derived from its 
-                        <span className=' text-primary-dull'> demographics </span>, 
-                        <span className=' text-primary-soft'> geographical location </span>, 
-                        <span className=' text-accent-dark'> natural resources </span>, 
-                        <span className=' text-accent'> economic activity </span>, 
-                        <span className=' text-my-purple-medium'> religious sects </span>, 
-                        <span className=' text-orange-300'> ethnic history </span>, 
-                        <span className=' text-rose-400'> education levels </span>, 
-                        <span className=' text-amber-700'> access to markets </span>, 
-                        <span className=' text-sky-400'> sociocultural landscape </span>
-                        [unique fabrics].
-                    </div>
+                <div className='w-full h-[40vh] flex justify-center items-center text-3xl text-black font-semibold px-[20vw] bg-neutral-white'>
+                    <DropInWords />
                 </div>
 
                 <FunList />
