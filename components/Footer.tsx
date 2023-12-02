@@ -8,59 +8,6 @@ type Props = {
     fadeColor: string
 }
 
-type FadeProps = {
-    color: string,
-    delay: number
-}
-
-const FadeOutBox = ( { color, delay }: FadeProps ) => {    
-    const ref = React.useRef(null);
-    const [isPresent, safeToRemove] = usePresence();
-  
-    React.useEffect(() => {
-      if (!isPresent) {
-        gsap.to(ref.current, {
-          opacity: 0,
-          onComplete: () => safeToRemove?.()
-        });
-      }
-    }, [isPresent, safeToRemove]);
-
-    if( color == 'blue') {
-        return ( <motion.div 
-            ref={ref}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: delay } }}
-            className='w-full h-full bg-primary-light'>
-            </motion.div> 
-        );
-    } else if( color == 'dark blue') {
-        return ( <motion.div 
-            ref={ref}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: delay } }}
-            className='w-full h-full bg-primary'>
-            </motion.div> 
-        );
-    } else if( color == 'green') {
-        return ( <motion.div 
-            ref={ref}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: delay } }}
-            className='w-full h-full bg-primary-softer'>
-            </motion.div> 
-        );
-    } else {
-        return ( <motion.div 
-            ref={ref}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: delay } }}
-            className='w-full h-full bg-primary-dark'>
-            </motion.div> 
-        );
-    }
-}
-
 const Footer = ( { fadeColor }: Props) => {
     const numRows = 10;
     const numCols = 100;
@@ -168,13 +115,34 @@ const Footer = ( { fadeColor }: Props) => {
 
     const getCellDisplay = ( index: number ) => {
         if( greenCell.includes( index ) ) {
-            return <FadeOutBox color='green' delay={index % 4}/>
+            return ( <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: index % 4 } }}
+                className='w-full h-full bg-primary-light'>
+                </motion.div> 
+            );
         } else if( darkGreenCell.includes( index ) ) {
-            return <FadeOutBox color='dark green' delay={index % 4}/>
+            return ( <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: index % 4 } }}
+                className='w-full h-full bg-primary'>
+                </motion.div> 
+            );
         } else if( blueCell.includes( index ) ) {
-            return <FadeOutBox color='blue' delay={index % 4}/>
+            return ( <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: index % 4 } }}
+                className='w-full h-full bg-primary-softer'>
+                </motion.div> 
+            );
         } else if( darkBlueCell.includes( index ) ) {
-            return <FadeOutBox color='dark blue' delay={index % 4}/>
+            return  (
+                <motion.div 
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: [0, 1, 0], transition: {duration: 3, delay: index % 4 } }}
+                    className='w-full h-full bg-primary-dark'>
+                </motion.div> 
+            )
         } 
     }
 
