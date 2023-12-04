@@ -9,13 +9,12 @@ type Props = {
 const Splash = (props: Props) => {
     return (
         <div 
-            className='relative w-screen h-[100vh] rounded-b-[2rem] bg-neutral-white flex flex-col justify-center items-start text-black font-mukta-mahee px-[300px]'   
-            style={{ clipPath: 'ellipse(100% 95% at 50% 0%)' }}     
+            className='relative w-screen lg:h-screen h-[90vh] rounded-b-[2rem] bg-neutral-white flex flex-col justify-center lg:items-start items-center text-black font-mukta-mahee lg:px-[300px] px-[10px] curve-bottom-mobile lg:curve-bottom-desktop'      
         >
-            <div className=' flex justify-center items-center'>
-                <div className='flex flex-col mr-[5vw]'>
+            <div className=' flex flex-col lg:flex-row justify-center items-center mb-8 lg:mb-0'>
+                <div className='flex flex-col lg:mr-[5vw]'>
                     <motion.div
-                        className='text-6xl font-bold text-left mb-20 flex flex-col'
+                        className='lg:text-6xl text-3xl font-bold text-left lg:mb-20 flex flex-col'
                     >
                         <motion.div
                             initial={{ opacity: 0, x: -100 }}
@@ -36,12 +35,12 @@ const Splash = (props: Props) => {
                         </motion.div>
                     </motion.div>
 
-                    <div className='flex justify-center items-center z-40'>
+                    <div className='lg:flex justify-center items-center z-40 hidden'>
                         <motion.div
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.9 }}
                             onClick={ () => { props.setContactOpen( true ) }}
-                            className='py-4 px-4 bg-primary text-white rounded cursor-pointer select-none text-xl w-[210px] font-medium'
+                            className='py-4 px-4 bg-primary text-white rounded cursor-pointer select-none text-base lg:w-[210px] w-[160px] font-medium text-center'
                         >
                             Book a Consultation 
                         </motion.div>
@@ -50,7 +49,7 @@ const Splash = (props: Props) => {
                             <motion.div 
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.9 }}
-                                className='py-4 px-4 bg-white text-black text-xl cursor-pointer select-none rounded ml-[50px] w-[210px] font-medium text-center'
+                                className='py-4 px-4 bg-white text-black text-base cursor-pointer select-none rounded lg:ml-[50px] lg:w-[210px] w-[160px] font-medium text-center'
                             > 
                                 Learn More 
                             </motion.div>
@@ -63,7 +62,7 @@ const Splash = (props: Props) => {
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, delay: 0.3 }}
-                    className="lg:w-[700px] items-center justify-center z-30 mx-auto"
+                    className="lg:w-[700px] w-[250px] items-center justify-center z-30 mx-auto mb-[20px] lg:mb-0"
                 >
                     <div className=" relative pb-[100%] flex items-center justify-center">
                         <div className="absolute top-0 w-full h-full items-center flex justify-center">
@@ -73,6 +72,28 @@ const Splash = (props: Props) => {
                         </div>
                     </div>                     
                 </motion.div>
+
+
+                <div className='flex justify-center items-center z-40 lg:hidden'>
+                    <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={ () => { props.setContactOpen( true ) }}
+                        className='py-4 px-4 bg-primary lg:hidden text-white rounded cursor-pointer select-none text-base lg:w-[210px] w-[160px] mr-[20px] font-medium text-center'
+                    >
+                        Contact Us 
+                    </motion.div>
+
+                    <Link href="/ourwork">
+                        <motion.div 
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.9 }}
+                            className='py-4 px-4 bg-white text-black text-base cursor-pointer select-none rounded lg:ml-[50px] lg:w-[210px] w-[160px] font-medium text-center'
+                        > 
+                            Learn More 
+                        </motion.div>
+                    </Link>
+                </div>
 
             </div>
         </div>

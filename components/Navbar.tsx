@@ -46,18 +46,18 @@ const Navbar = (props: Props) => {
         return (
             <Link href='/landing' className='absolute flex justify-center items-center left-0 z-40'>
 
-                    <div 
-                        className='w-[40px] h-[36px] ml-[200px] z-40 bg-no-repeat bg-cover cursor-pointer'
-                        style={{ backgroundImage: `url('/components/sh-logo-dull.svg')` }}
-                    ></div>
+                <div 
+                    className='w-[40px] h-[36px] ml-[20px] lg:ml-[200px] z-40 bg-no-repeat bg-cover cursor-pointer'
+                    style={{ backgroundImage: `url('/components/sh-logo-dull.svg')` }}
+                ></div>
 
-                    <div className='text-3xl text-black font ml-[1vw]'> 
-                    
-                        Nova 
-                        <span className=''>
-                            metrics 
-                        </span>
-                    </div>
+                <div className='text-3xl text-black font ml-[1vw] hidden lg:flex'> 
+                
+                    Nova 
+                    <span className=''>
+                        metrics 
+                    </span>
+                </div>
 
             </Link>
         )
@@ -65,11 +65,13 @@ const Navbar = (props: Props) => {
 
     const getMobileLinkObject = (pageName: string) => {
         return (
-            <Link href={ '/' + pageName.toLowerCase().replace(" ", "") }>
+            <Link href={ '/' + pageName.toLowerCase().replace(" ", "") } className='relative h-[3vh] w-full'>
                 <div
                     onClick={() => { setMobileMenuOpen( false ) }} 
-                    className={ `relative z-50 p-[4vh] pl-[70px]  text-left bg-gradient-to-r from-my-black-see-thru to-my-green-blue-see-thru ease-in-out bg-opacity-20 backdrop-blur-xl border-b-[0.1px] border-my-gray-dark font-open-sans hover:bg-zinc-800 cursor-pointer ${ pageName == props.activePage ? 'text-my-purple-light' : 'text-my-white'}` } > 
-                    {pageName} 
+                    className={ `bg-[url('/components/oceanic.png')] bg-center bg-cover object-cover bg-no-repeat relative z-50 w-full h-full text-left ease-in-out bg-opacity-20 backdrop-blur-xl border-b-[0.1px] border-my-gray-dark font-open-sans hover:bg-zinc-800 cursor-pointer ${ pageName == props.activePage ? 'text-primary-dull font-bold' : 'text-black'}` } >
+                    <div className='w-full h-full bg-neutral-gray-light bg-opacity-80 z-30 footer-circles backdrop-blur-2xl p-[4vh] pl-[70px]'>
+                        {pageName} 
+                    </div>
                 </div>
             </Link>
         )

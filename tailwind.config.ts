@@ -87,9 +87,21 @@ const config: Config = {
       },
       fontFamily: {
         'mukta-mahee': ['Mukta Mahee']
-      }
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities } : { addUtilities: Function }) {
+      const newUtilities = {
+        '.curve-bottom-desktop': {
+          clipPath: 'ellipse(100% 95% at 50% 0%);',
+        },
+        '.curve-bottom-mobile': {
+          clipPath: 'ellipse(180% 90% at 50% 0%)',
+        },
+      }
+      addUtilities(newUtilities, ["responsive", "hover"])
+    }
+  ],
 }
 export default config
