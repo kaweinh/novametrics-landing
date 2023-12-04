@@ -22,7 +22,7 @@ const Commitment = () => {
                 </motion.div>
             </div>
 
-            <div className=' flex flex-col ml-[10vw] p-10 bg-white rounded-xl'>
+            <div className=' flex flex-col ml-[10vw] p-10 bg-white rounded-xl font-thin'>
                 <div className='text-6xl mb-10 text-primary-dull font-bold'> Values and Integrity </div>
                 <div className='w-full text-3xl leading-[5vh]'>
                     <p>

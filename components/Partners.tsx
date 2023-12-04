@@ -56,7 +56,7 @@ const Partners = (props: Props) => {
     return (
         <div className='w-full h-fit relative'>
             <div ref={bg1Ref} className='w-full h-[60vh] relative overflow-hidden flex flex-col justify-center items-center'>
-                <div className=' absolute text-6xl bold text-white z-30 top-0 mt-[5vh]'>
+                <div className=' absolute text-6xl font-bold text-white z-30 top-0 mt-[5vh]'>
                     Proud Partners
                 </div>
 

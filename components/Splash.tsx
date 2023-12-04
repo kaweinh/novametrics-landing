@@ -68,7 +68,7 @@ const Splash = (props: Props) => {
                     <div className=" relative pb-[100%] flex items-center justify-center">
                         <div className="absolute top-0 w-full h-full items-center flex justify-center">
                             <div className="absolute z-30 w-full h-full">
-                                <div className="absolute w-full h-full bg-[url('/components/maze_purr.png')] bg-center bg-contain object-contain bg-no-repeat z-30" ></div>
+                                <div className="absolute w-full h-full bg-[url('/components/maze_purr_better.png')] bg-center bg-contain object-contain bg-no-repeat z-30" ></div>
                             </div>
                         </div>
                     </div>                     

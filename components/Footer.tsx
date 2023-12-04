@@ -180,7 +180,7 @@ const Footer = ( { fadeColor, setContactOpen }: Props) => {
                             <div className=' ml-[40vw] flex flex-col items-start justify-center w-[30vw] p-10 bg-white text-black rounded-xl z-40'>
                                 <h1 className='text-6xl font-bold mb-[2vh]'> Let us know how we can help today </h1>
 
-                                <div className='text-xl mb-[2vh] text-black'>
+                                <div className='text-2xl mb-[2vh] font-thin text-black'>
                                     Together we can make a better world one solution at a time
                                 </div>
 

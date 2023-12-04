@@ -103,13 +103,13 @@ export default function Home() {
                     </div>
                     <FlowDiagram layers={ flowLayers } text_color='white'/>
 
-                    <div className=' text-3xl text-black px-[10vw] mt-[5vh]'>
+                    <div className=' text-3xl text-black font-thin px-[10vw] mt-[5vh]'>
                         Explore our innovative Data-to-Decision Architecture, where sophisticated analysis and insightful modeling converge to empower decision-making with precision-targeted interventions.
                     </div>
                 </div>
 
                 <div ref={bg2Ref} className='w-full h-[120vh] relative overflow-hidden'>
-                    <div className='absolute h-full w-full flex flex-col justify-center items-center z-40'>
+                    <div className='absolute h-full w-full flex flex-col justify-center items-center z-40 font-thin'>
                         <h1 className=' text-white text-6xl font-bold '>
                             Weak Signal Analysis
                         </h1>

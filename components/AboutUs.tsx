@@ -14,14 +14,14 @@ const AboutUs = (props: Props) => {
             clipPath: 'ellipse(100% 95% at 50% 95%)'
         }}   
     >
-        <div className='w-[40%] relative mt-[8%]'>
+        <div className='w-[40%] relative mt-[7%]'>
             <div className="absolute mix-blend-luminosity rounded-full w-[25vw] h-[50vh] bg-[url('/components/clipartppt.png')] bg-cover object-cover bg-no-repeat z-10"></div>
         </div>
 
         <div className='w-[60%] flex flex-col bg-white rounded-xl p-10'>
             <div className=' text-6xl font-bold text-primary-dull mb-10'> About Us </div>
 
-            <div className='flex text-3xl mt-[0px]'>
+            <div className='flex text-3xl mt-[0px] font-thin'>
                 <div className='w-full leading-[5vh]' >
                     <p>
                         Our journey began at Princeton University, where innovative ideas met real-world challenges. Ever-adapting, 

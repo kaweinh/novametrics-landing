@@ -106,10 +106,10 @@ const WsaDemo = (props: Props) => {
     }
 
     return (
-        <div className='w-full h-fit flex flex-col items-center justify-center'>
+        <div className='w-full h-fit flex flex-col items-center justify-center font-thin font-mukta-mahee'>
 
             <div className='flex justify-center items-center w-full h-fit bg-white py-[10vh] px-[10vw]'>
-                <div className=' flex flex-col items-center justify-start font-mukta-mahee text-3xl text-primary-dull w-[100%]'>
+                <div className=' flex flex-col items-center justify-start text-3xl text-primary-dull w-[100%]'>
                     <h1 className=' font-bold text-6xl mb-[5vh]'> Amplifying Signals Below the Noise </h1>
 
                     <p className=' text-black'>

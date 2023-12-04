@@ -41,7 +41,7 @@ const FunList = (props: Props) => {
     })
 
     return (
-        <div className='relative w-full h-fit py-[10vh] flex flex-col justify-center items-start text-3xl text-black font-semibold px-[20vw] bg-gradient-to-b from-white to-neutral-white'>
+        <div className='relative w-full h-fit py-[10vh] flex flex-col justify-center font-thin items-start text-3xl text-black px-[20vw] bg-gradient-to-b from-white to-neutral-white'>
             <h1 className=' font-bold text-5xl text-primary-dull mb-[5vh]'>
                 Navigating Global Challenges with Novametrics
             </h1>
@@ -49,10 +49,10 @@ const FunList = (props: Props) => {
             <div>
                 <div> Our previous work has assisted a multitude of sectors including: </div> <br></br>
                 <ul className='list-decimal list-inside'>
-                    <li ref={item1} className='relative'> 
+                    <li ref={item1} className='relative font-semibold'> 
                         Security and Peacekeeping 
 
-                        <ul className='list-disc list-inside'>
+                        <ul className='list-disc list-inside font-thin'>
                             <li className=' indent-12'> Countering Violent Extremism </li>
                             <li className=' indent-12'> Conflict Mitigation </li>
                         </ul>
@@ -64,10 +64,10 @@ const FunList = (props: Props) => {
                             className='absolute rounded-full bg-primary h-[70px] right-[-120%] top-0'
                         ></motion.div>
                     </li>
-                    <li ref={item2} className='relative'> 
+                    <li ref={item2} className='relative font-semibold'> 
                         Human Rights and Social Welfare 
 
-                        <ul className='list-disc list-inside'>
+                        <ul className='list-disc list-inside font-thin'>
                             <li className=' indent-12'> Countering Human Trafficking </li>
                             <li className=' indent-12'> Combating Child Labor </li>
                         </ul>
@@ -79,10 +79,10 @@ const FunList = (props: Props) => {
                             className='absolute rounded-full bg-primary-soft h-[70px] right-[-140%] top-0'
                         ></motion.div>
                     </li>
-                    <li ref={item3} className='relative'> 
+                    <li ref={item3} className='relative font-semibold'> 
                         Environmental Conservation and Sustainability
 
-                        <ul className='list-disc list-inside'>
+                        <ul className='list-disc list-inside font-thin'>
                             <li className=' indent-12'> Preventing Illegal Fishing </li>
                             <li className=' indent-12'> Fostering Environmentally Sustainable Emerging Markets </li>
                         </ul>
@@ -94,10 +94,10 @@ const FunList = (props: Props) => {
                         ></motion.div>
                         <br></br>
                     </li>
-                    <li ref={item4} className='relative'> 
+                    <li ref={item4} className='relative font-semibold'> 
                         Infrastructure and Development 
 
-                        <ul className='list-disc list-inside'>
+                        <ul className='list-disc list-inside font-thin'>
                             <li className=' indent-12'> Optimizing Rural Road Systems </li>
                             <li className=' indent-12'> Promoting Ethical Supply Chains </li>
                         </ul>
@@ -109,10 +109,10 @@ const FunList = (props: Props) => {
                         ></motion.div>
                         <br></br>
                     </li>
-                    <li ref={item5} className='relative'> 
+                    <li ref={item5} className='relative font-semibold'> 
                         Public Health and Safety 
 
-                        <ul className='list-disc list-inside'>
+                        <ul className='list-disc list-inside font-thin'>
                             <li className=' indent-12'> Managing Outbreaks of Infectious Disease </li>
                             <li className=' indent-12'> Alleviating Child Malnutrition </li>
                         </ul>
@@ -124,10 +124,10 @@ const FunList = (props: Props) => {
                         ></motion.div>
                         <br></br>
                     </li>
-                    <li ref={item6} className='relative'> 
+                    <li ref={item6} className='relative font-semibold'> 
                         Economic Empowerment 
 
-                        <ul className='list-disc list-inside'>
+                        <ul className='list-disc list-inside font-thin'>
                             <li className=' indent-12'> Identifying Vulnerabilities to Poverty Traps </li>
                             <li className=' indent-12'> Optimizing Social impact Investment </li>
                         </ul>   
