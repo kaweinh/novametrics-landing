@@ -20,7 +20,7 @@ const Navbar = (props: Props) => {
     const [y, setY] = React.useState(0);
 
     const handleScroll = () => {
-        if (window.scrollY > y) {
+        if (window.scrollY > y && window.scrollY > 10) {
             setScrollingDown(true);
         } else {
             setScrollingDown(false);
@@ -47,11 +47,11 @@ const Navbar = (props: Props) => {
             <Link href='/landing' className='absolute flex justify-center items-center left-0 z-40'>
 
                 <div 
-                    className='w-[40px] h-[36px] ml-[20px] lg:ml-[200px] z-40 bg-no-repeat bg-cover cursor-pointer'
+                    className='w-[40px] h-[36px] ml-[20px] lg:ml-[50px] xl:ml-[200px] z-40 bg-no-repeat bg-cover cursor-pointer'
                     style={{ backgroundImage: `url('/components/sh-logo-dull.svg')` }}
                 ></div>
 
-                <div className='text-3xl text-black font ml-[1vw] hidden lg:flex'> 
+                <div className='lg:text-3xl text-2xl text-black font lg:ml-[1vw] ml-[10px] flex'> 
                 
                     Nova 
                     <span className=''>
@@ -111,7 +111,7 @@ const Navbar = (props: Props) => {
 
                 { getIcon() } 
                 
-                <div className='z-50 lg:hidden text-primary-dull absolute mr-[10px] mt-[0px] right-0 hover:text-gray-500 cursor-pointer p-5' onClick={() => { setMobileMenuOpen( !mobileMenuOpen )}} >
+                <div className='z-50 lg:hidden text-primary-dull absolute mr-[10px] mt-[0px] right-0 hover:text-primary-dull cursor-pointer p-5' onClick={() => { setMobileMenuOpen( !mobileMenuOpen )}} >
                     { mobileMenuOpen ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
                 </div>
 
@@ -128,7 +128,7 @@ const Navbar = (props: Props) => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.9 }}
                         onClick={() => { props.setContactOpen( !props.contactOpen ) }}
-                        className=' bg-primary px-4 h-fit py-2 mr-[100px] text-white rounded-sm items-center flex text-xl z-40 cursor-pointer select-none ignore-click'
+                        className=' bg-primary px-4 h-fit py-2 lg:mr-[50px] xl:mr-[100px] text-white rounded-sm items-center flex text-xl z-40 cursor-pointer select-none ignore-click'
                     >
                         Contact Us
                     </motion.div>

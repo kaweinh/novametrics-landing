@@ -41,8 +41,8 @@ const FunList = (props: Props) => {
     })
 
     return (
-        <div className='relative w-full h-fit py-[10vh] flex flex-col justify-center font-thin items-start text-3xl text-black px-[20vw] bg-gradient-to-b from-white to-neutral-white'>
-            <h1 className=' font-bold text-5xl text-primary-dull mb-[5vh]'>
+        <div className='relative w-full h-fit py-[10vh] flex flex-col justify-center font-thin items-start text-xl lg:text-3xl text-black px-[10vw] lg:px-[20vw] bg-gradient-to-b from-white to-neutral-white'>
+            <h1 className=' font-bold text-3xl lg:text-5xl text-primary-dull mb-[5vh]'>
                 Navigating Global Challenges with Novametrics
             </h1>
 

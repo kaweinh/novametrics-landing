@@ -14,6 +14,8 @@ const VeBarChart = (props: Props) => {
     const [data, setData] = React.useState(Array<DataType>)
     const d3Container = React.useRef(null)
     const inView = useInView( d3Container, { once: false, amount: 0.1 } )
+    const [width, setWidth] = React.useState( 600 )
+    const [height, setHeight] = React.useState( 400 )
     
     React.useEffect(() => {
         if( inView ) {
@@ -23,8 +25,23 @@ const VeBarChart = (props: Props) => {
         }
     }, [inView])
 
-    const width = 600
-    const height = 400
+    const handleResize = () => {
+        const lgBreakpoint = 1024; 
+        if( window.innerWidth < lgBreakpoint ) {
+            setWidth( 380 ) 
+            setHeight( 250 )
+        } else {
+            setWidth( 600 ) 
+            setHeight( 400 )
+        }
+    };
+
+    React.useEffect(() => {
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const createEmptyDataSet = () => {
         let data = []
@@ -116,8 +133,8 @@ const VeBarChart = (props: Props) => {
             const heightMargin = height - margin.top - margin.bottom
 
             const tickDates = data
-                .filter((_, i) => i % 12 === 5) // Select every 10th element
-                .map(d => d.date );
+                .filter((_, i) => i % 12 === 5) 
+                .map( d => d.date );
 
             const legendData = [
                 { color: "#AEDFF8", text: "Yes/Maybe" },
@@ -137,6 +154,7 @@ const VeBarChart = (props: Props) => {
             svg.append('g')
                 .attr('transform', `translate(50, ${heightMargin + 30})`)
                 .call(d3.axisBottom(x).tickValues(tickDates))
+                .style('font-size', '8px')
 
             const y = d3.scaleLinear()
                 .domain([0, 800])
@@ -225,7 +243,7 @@ const VeBarChart = (props: Props) => {
                     .attr('alignment-baseline', 'middle')
             })
         }
-    }, [data])
+    }, [data, width, height])
 
 
     return (
@@ -237,15 +255,15 @@ const VeBarChart = (props: Props) => {
                 ref={d3Container}
             />
 
-            <div className='absolute font-mukta-mahee text-right text-[0.6rem] w-[70px] text-neutral-brown-orange mr-[300px] mb-[200px]'>
+            <div className='absolute font-mukta-mahee text-right lg:text-[0.6rem] text-[0.4rem] w-[70px] text-neutral-brown-orange mr-[190px] mb-[100px] lg:mr-[300px] lg:mb-[200px]'>
                 President Duterte takes office and begins his &quot;war on drugs&quot;
             </div>
 
-            <div className='absolute font-mukta-mahee text-right text-[0.6rem] w-[70px] text-neutral-brown-orange  mr-[30px] mb-[150px]'>
+            <div className='absolute font-mukta-mahee text-right lg:text-[0.6rem] text-[0.4rem] w-[70px] text-neutral-brown-orange mr-[40px] mb-[90px] lg:mr-[30px] lg:mb-[150px]'>
                 Battle of Marawi 
             </div>
 
-            <div className='absolute font-mukta-mahee text-right text-[0.6rem] w-[150px] text-neutral-brown-orange  ml-[320px] mt-[30px]'>
+            <div className='absolute font-mukta-mahee text-right lg:text-[0.6rem] text-[0.4rem] w-[100px] lg:w-[150px] text-neutral-brown-orange ml-[170px] lg:ml-[320px] lg:mt-[30px]'>
                 BARMM is established between the Philippines government and the Moro Islamic Liberation Front (MILF)
             </div>
         </div>

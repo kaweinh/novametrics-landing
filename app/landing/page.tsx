@@ -17,12 +17,6 @@ import ContactForm from '@/components/ContactForm';
 export default function Home() {
   const [activePage, setActivePage] = React.useState('Home')
   const [contactOpen, setContactOpen] = React.useState( false )
-  
-  const bg1Ref = React.useRef<HTMLDivElement>(null)
-  const { scrollYProgress } = useScroll({ 
-    target: bg1Ref, 
-    offset: ["start end", "end start"] 
-  })
 
   return (
     <div className='relative flex-col justify-center items-center h-fit w-screen overflow-x-hidden overflow-y-scroll'>
@@ -42,7 +36,7 @@ export default function Home() {
         <Splash setContactOpen={ setContactOpen } />
       </div>
 
-      <div ref={ bg1Ref }>
+      <div>
         <motion.div 
           className="absolute w-screen h-screen bg-[url('/components/midtest3.png')] bg-cover object-cover bg-no-repeat z-10"
           style={{ 
@@ -68,7 +62,7 @@ export default function Home() {
         <Partners />
       </div>
 
-      <div className='w-full h-[30vh] bg-neutral-white'></div>
+      <div className='w-full lg:h-[20vh] h-[10vh] bg-neutral-white'></div>
       
       <Footer fadeColor='neutral-white' setContactOpen={ setContactOpen } />
 

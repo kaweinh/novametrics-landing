@@ -72,7 +72,7 @@ const PrettyMatrix = ( props: Props ) => {
         return (
             <td 
                 key={ col } 
-                className={ `border w-[20px] h-[20px] xl:w-[2vw] xl:h-[2vw] cursor-default border-white ${ getColor( value ) } text-center `}>
+                className={ `border w-[40px] h-[40px] lg:w-[2vw] lg:h-[2vw] cursor-default border-white ${ getColor( value ) } text-center `}>
                 { value.toFixed(2) }
             </td>
         )
@@ -113,13 +113,23 @@ const PrettyMatrix = ( props: Props ) => {
     }
 
     return (
-        <div className='w-full flex justify-center items-center'>
-            <div className=' w-fit relative bg-white mx-auto'>
-                <table className=' table-auto border-collapse border border-white xl:text-[0.2rem] text-[0.1rem]'>
-                    <tbody onMouseLeave={ () => { setPotentialCenter( [100, 100]) }}>
+        <div className='w-full flex flex-col lg:flex-row justify-center items-center'>
+            <div className=' w-fit relative bg-white mx-auto lg:mb-0 mb-[10vh]'>
+                <table className='mx-auto table-auto border-collapse border border-white xl:text-[0.2rem] text-[0.1rem]'>
+                    <tbody className='hidden lg:table' onMouseLeave={ () => { setPotentialCenter( [100, 100]) }}>
                         { cellValues.map((rowValues, row ) => (
                             <tr key={ row }>
                                 { rowValues.map(( value, col ) => (
+                                    getFixedCell( row, col, value ) 
+                                ))}
+                            </tr>
+                        ))}
+                    </tbody>
+
+                    <tbody className='lg:hidden' onMouseLeave={ () => { setPotentialCenter( [100, 100]) }}>
+                        { cellValues.map((rowValues, row ) => (
+                            <tr key={ row }>
+                                { rowValues.slice(0, 55).map(( value, col ) => (
                                     getFixedCell( row, col, value ) 
                                 ))}
                             </tr>
@@ -129,16 +139,14 @@ const PrettyMatrix = ( props: Props ) => {
 
                 <div className='absolute bottom-0 bg-gradient-to-b from-transparent to-white h-[4vh] w-full'> </div>
                 <div className='absolute right-0 top-0 bg-gradient-to-r from-transparent to-white w-[2vw] h-full'> </div>
-
-                <div className='absolute bottom-[-5vh] text-center xl:text-sm text-[0.6rem] italic text-neutral-gray-light w-full'> * Please note these values are randomly generated and do not represent actual correlations </div>
             </div>
 
-            <div className='relative bg-white mx-auto p-10 bg-opacity-30 rounded-3xl'>
+            <div className='relative bg-white mx-auto p-4 lg:p-10 bg-opacity-30 rounded-3xl'>
                 <table className=' table-fixed border-collapse text-[0.5rem] xl:text-[0.8rem]'>
-                    <tbody>
+                    <tbody className=' hidden lg:table'>
                         <tr className=' text-white text-[0.5rem]'>
                             { rowNames.map(( name, index ) => ( 
-                                <th key={index} className=' w-[2vw] h-[8vh]'>
+                                <th key={index} className=' w-[1vw] h-[10vh] lg:w-[2vw] lg:h-[8vh]'>
                                     <div className='w-full h-full break-words'>
                                         { name }
                                     </div>
@@ -148,11 +156,35 @@ const PrettyMatrix = ( props: Props ) => {
 
                         { cellValues.slice( Math.max(0, center[0] - 4), center[0] + 6).map((rowValues, row ) => (
                             <tr key={ row }>
-                                <td className=' text-white text-[0.5rem] w-[5vw] pr-[1vw]'>
+                                <td className=' text-white text-[0.5rem] lg:w-[5vw] pr-[1vw]'>
                                     { colNames[ row ] }
                                 </td>
 
                                 { rowValues.slice( Math.max(0, center[1] - 4), center[1] + 6 ).map(( value, col ) => (
+                                    getDisplayCell( row, col, value ) 
+                                ))}
+                            </tr>
+                        ))}
+                    </tbody>
+
+                    <tbody className=' lg:hidden'>
+                        <tr className=' text-white text-[0.5rem]'>
+                            { rowNames.slice(0, 7).map(( name, index ) => ( 
+                                <th key={index} className=' w-[40px] h-[80px]'>
+                                    <div className='w-full h-full break-words'>
+                                        { name }
+                                    </div>
+                                </th>
+                            ))}
+                        </tr>
+
+                        { cellValues.slice( Math.max(0, center[0] - 3), center[0] + 3).map((rowValues, row ) => (
+                            <tr key={ row }>
+                                <td className=' text-white text-[0.5rem] w-[100px] h-[40px] pr-[1vw]'>
+                                    { colNames[ row ] }
+                                </td>
+
+                                { rowValues.slice( Math.max(0, center[1] - 3), center[1] + 3 ).map(( value, col ) => (
                                     getDisplayCell( row, col, value ) 
                                 ))}
                             </tr>

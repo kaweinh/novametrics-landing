@@ -56,6 +56,7 @@ const FlowDiagram = (props: Props) => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1, ease: 'easeInOut' }}
                         key={ index } 
+                        viewport={{ once: true }}
                         className={ `relative w-full min-h-[10vh] bg-opacity-50 flex flex-col justify-center py-[5vh] items-center bg-${ layer.color }`}
                     >
                         <div className='text-sm italic absolute top-0 mt-[10px] text-center'>
@@ -67,6 +68,7 @@ const FlowDiagram = (props: Props) => {
                                 initial={{ opacity: 0.5, scale: 0.9 }}
                                 whileInView={{ opacity: 1, scale: 1.2 }}
                                 transition={{ duration: 1, ease: 'easeInOut' }}
+                                viewport={{ once: true }}
                                 className={` absolute text-4xl z-30 bottom-0 text-${ props.text_color } `}>
                                 &#x21e3;
                             </motion.div>

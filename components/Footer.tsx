@@ -151,13 +151,13 @@ const Footer = ( { fadeColor, setContactOpen }: Props) => {
                                 </div>
                             </div>
 
-                            <div className='absolute mx-auto h-[20vh] w-[100vw] flex items-center justify-center z-30'>
+                            <div className='absolute mx-auto lg:h-[20vh] h-[50vh] w-[100vw] flex items-center justify-center z-30'>
                                 <table className=' table-fixed border-collapse border border-white xl:text-[0.2rem] text-[0.1rem]'>
-                                    <tbody>
+                                    <tbody className='hidden lg:table'>
                                         { rows.map(( _, r_index ) => ( 
                                             <tr key={r_index} className=' backdrop-blur-sm'>
                                                 { cols.map(( _, c_index ) => ( 
-                                                    <td key={ c_index} className='w-[1vw] h-[1vw] border border-white'>
+                                                    <td key={ c_index} className='lg:w-[1vw] lg:h-[1vw] w-[2vw] h-[2vw] border border-white'>
                                                         {   !greenCell.includes( r_index * numCols + c_index ) && 
                                                             !blueCell.includes( r_index * numCols + c_index ) && 
                                                             !darkGreenCell.includes( r_index * numCols + c_index ) && 
@@ -177,10 +177,10 @@ const Footer = ( { fadeColor, setContactOpen }: Props) => {
                                 </table>
                             </div>
 
-                            <div className=' ml-[40vw] flex flex-col items-start justify-center w-[30vw] p-10 bg-white text-black rounded-xl z-40'>
-                                <h1 className='text-6xl font-bold mb-[2vh]'> Let us know how we can help today </h1>
+                            <div className=' lg:ml-[30vw] xl:ml-[40vw] flex flex-col items-start justify-center lg:w-[50vw] xl:w-[30vw] md:w-[60%] w-[90%] p-6 lg:p-10 bg-white text-black rounded-xl z-40'>
+                                <h1 className='lg:text-6xl text-3xl font-bold mb-[2vh]'> Let us know how we can help today </h1>
 
-                                <div className='text-2xl mb-[2vh] font-thin text-black'>
+                                <div className='lg:text-2xl text-xl mb-[2vh] font-thin text-black'>
                                     Together we can make a better world one solution at a time
                                 </div>
 
@@ -197,7 +197,7 @@ const Footer = ( { fadeColor, setContactOpen }: Props) => {
                 </div>
             </div>
 
-            <div className='w-full h-[23vh]'>
+            <div className='w-full h-[23vh] lg:h-[230px]'>
                 <motion.div 
                     className="w-full h-full bg-[url('/components/oceanic.png')] bg-center bg-cover object-cover bg-no-repeat z-10"
                 >
@@ -205,17 +205,17 @@ const Footer = ( { fadeColor, setContactOpen }: Props) => {
                 </motion.div>
             </div>
 
-            <div className='absolute bottom-0 w-full px-[10vw]'>
+            <div className='absolute bottom-0 w-full px-[10vw] lg:px-[5vw] xl:px-[10vw]'>
                 <div className='flex flex-col'>
                     <div className=' flex justify-center items-center'>
                         <Link href='/landing'>
                             <motion.div 
                                 whileHover={{ scale: 1.1 }}
-                                className="w-[50px] h-[50px] bg-[url('/components/sh-logo-dull.svg')] bg-center bg-contain object-contain bg-no-repeat z-30"
+                                className="lg:w-[50px] lg:h-[50px] h-[40px] w-[40px] bg-[url('/components/sh-logo-dull.svg')] bg-center bg-contain object-contain bg-no-repeat z-30"
                             ></motion.div>
                         </Link>
 
-                        <div className='absolute w-[20%] mr-[10vw] right-0 flex justify-end text-xl font-thin'>
+                        <div className='absolute xl:w-[20%] lg:w-[30%] lg:mr-[5vw] xl:mr-[10vw] right-0 lg:flex justify-end text-xl font-thin hidden'>
                             <div className='flex mr-[0.5vw] items-end'>
                                 <Link href='ourwork'>
                                     <motion.div 
@@ -250,16 +250,16 @@ const Footer = ( { fadeColor, setContactOpen }: Props) => {
                         </div>
                     </div>
 
-                    <div className='w-full h-[2px] mt-[20px] mb-[20px] bg-black'></div>
+                    <div className='w-full h-[2px] lg:mt-[20px] lg:mb-[20px] mt-[10px] mb-[10px] bg-black'></div>
 
-                    <div className='flex justify-start items-center mb-[20px] w-full'>
+                    <div className='flex justify-start items-center lg:mb-[20px] mb-[10px] w-full'>
                         <div className=' mx-auto'> Corporate Headquarters: Bethesda. MD </div>
                     </div>
 
-                    <div className='flex mb-[20px] items-center'>
+                    <div className='flex mb-[10px] lg:mb-[20px] items-center'>
                         <div className='ml-0 mr-auto flex'>
                             <div className="w-[20px] h-[20px] bg-[url('/components/copyright.svg')] bg-center bg-contain object-contain bg-no-repeat z-30"></div>
-                            <div className=' text-sm font-thin'> Novametrics LLC. All rights reserved </div>
+                            <div className=' text-xs lg:text-sm font-thin'> Novametrics LLC. All rights reserved </div>
                         </div>
 
                         <a href='https://www.linkedin.com/company/novametricsllc/' target='_blank'>

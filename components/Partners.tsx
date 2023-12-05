@@ -25,7 +25,7 @@ export const getLogoSized = (logo: string, imgTag: string) => {
             <motion.div 
                 initial={{ scale: 1.2 }}
                 whileHover={{ scale: 1.2 }}
-                className={ `w-[100px] h-[100px] ${imgTag} bg-center bg-contain object-fill bg-no-repeat scale-150 `}
+                className={ `lg:w-[100px] lg:h-[100px] w-[60px] h-[60px] ${imgTag} bg-center bg-contain object-fill bg-no-repeat scale-150 `}
             ></motion.div>
         )       
     } if ( logo == 'UNODC' ) { 
@@ -40,7 +40,7 @@ export const getLogoSized = (logo: string, imgTag: string) => {
         return (
             <motion.div 
                 whileHover={{ scale: 1 }}
-                className={ `w-[100px] h-[100px] ${imgTag} bg-center bg-contain object-fill bg-no-repeat `}
+                className={ `lg:w-[100px] lg:h-[100px] w-[60px] h-[60px] ${imgTag} bg-center bg-contain object-fill bg-no-repeat `}
             ></motion.div>
         )
     }
@@ -55,25 +55,35 @@ const Partners = (props: Props) => {
 
     return (
         <div className='w-full h-fit relative'>
-            <div ref={bg1Ref} className='w-full h-[60vh] relative overflow-hidden flex flex-col justify-center items-center'>
-                <div className=' absolute text-6xl font-bold text-white z-30 top-0 mt-[5vh]'>
+            <div ref={bg1Ref} className='w-full h-[90vh] md:h-[120vh] lg:h-[60vh] relative overflow-hidden flex flex-col justify-center items-center'>
+                <div className=' absolute text-3xl lg:text-6xl font-bold text-white z-30 top-0 mt-[5vh]'>
                     Proud Partners
                 </div>
 
-                <div className='absolute h-full w-full grid grid-cols-6 justify-center items-center mb-[5%] px-[20vw]'>
+                <div className='absolute h-full w-full grid-cols-6 justify-center items-center mb-[5%] px-[20vw] hidden lg:grid'>
                     {partners.slice(0, 6).map((partner, index) => (
                         <div key={ partner.name } className='z-20 flex items-center justify-center'>
-                            <div className='absolute bg-white bg-opacity-75 w-[8vw] h-[8vw] flex items-center justify-center p-2'>
+                            <div className='absolute bg-white bg-opacity-75 lg:w-[110px] lg:h-[110px] xl:w-[8vw] xl:h-[8vw] flex items-center justify-center p-4'>
                                 {getLogoSized(partner.name, partner.imgTag)}
                             </div>
                         </div>
                     ))}
                 </div>
 
-                <div className='absolute h-full w-full grid grid-cols-5 justify-center items-center mt-[15%] ml-[1%] px-[23vw]'>
+                <div className='absolute h-full w-full grid-cols-5 justify-center items-center mt-[15%] ml-[1%] pl-[22.5vw] pr-[22.5vw] hidden lg:grid'>
                     {partners.slice(6, 12).map((partner, index) => (
                         <div key={index} className=' z-20 flex items-center justify-center p-20'>
-                            <div className='absolute bg-white bg-opacity-75 w-[8vw] h-[8vw] flex items-center justify-center p-2'>
+                            <div className='absolute bg-white bg-opacity-75 lg:w-[110px] lg:h-[110px] xl:w-[8vw] xl:h-[8vw] flex items-center justify-center p-4'>
+                                {getLogoSized(partner.name, partner.imgTag)}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                <div className='absolute h-full grid grid-cols-3 justify-center items-center lg:hidden z-20 py-[100px] w-[90%]'>
+                    {partners.map((partner, index) => (
+                        <div key={index} className=' z-20 flex items-center justify-center h-fit'>
+                            <div className='bg-white bg-opacity-75 w-[25vw] h-[25vw] md:w-[20vw] md:h-[20vw] flex items-center justify-center p-2'>
                                 {getLogoSized(partner.name, partner.imgTag)}
                             </div>
                         </div>

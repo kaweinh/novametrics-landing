@@ -13,7 +13,7 @@ const Vision = (props: Props) => {
 
     return (
         <div 
-            className="relative w-full h-[80vh] flex justify-center items-center bg-[url('/components/@@@.png')] bg-cover object-cover bg-center bg-no-repeat">
+            className="relative w-full md:h-[100vh] lg:h-[100vh] xl:h-[80vh] h-[130vh] flex justify-center items-center bg-[url('/components/@@@.png')] bg-cover object-cover bg-center bg-no-repeat">
             <motion.div 
                 className="absolute w-full h-full bg-[url('/components/@@@.png')] bg-center bg-cover object-cover bg-no-repeat z-10 "
             >
@@ -22,10 +22,10 @@ const Vision = (props: Props) => {
 
             <motion.div 
                 ref={ ref } 
-                className='absolute w-full h-fit px-[10vw] py-[10vh] flex font-mukta-mahee text-neutral-white z-20'
+                className='absolute w-full h-fit md:px-[5vw] xl:px-[10vw] lg:py-[10vh] flex justify-items-center items-center font-mukta-mahee text-neutral-white z-20'
             >
-                <div className='text-3xl text-black w-[75%] p-10 bg-white rounded-xl font-thin'>
-                    <div className='text-6xl font-bold text-primary-dull mb-10'>
+                <div className='lg:text-3xl text-xl text-black lg:w-[75%] w-[90%] mx-auto lg:mx-0 p-10 bg-white rounded-xl font-thin'>
+                    <div className='lg:text-6xl text-3xl font-bold text-primary-dull mb-10'>
                         Mission and Vision
                     </div>
 

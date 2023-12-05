@@ -17,8 +17,8 @@ const members: Array<MemberInfo> = [
     { name: 'James Phillips', title: 'CEO', imgTag: "bg-[url('/team/james.png')]", linkUrl: 'https://www.linkedin.com/in/james-phillips8/'},
     { name: 'Dr. Gregory van der Vink', title: 'FOUNDER / SENIOR ADVISOR', imgTag: "bg-[url('/team/greg.jpg')]", linkUrl: 'https://www.linkedin.com/in/gregory-van-der-vink-2808228b/'},
     { name: 'Dr. Jeffrey Park', title: 'SENIOR ADVISOR', imgTag: "bg-[url('/team/jeffrey.jpg')]", linkUrl: 'https://www.linkedin.com/in/jeffreyparkyalegeo/'},
-    { name: 'Kurt Weinheimer', title: 'SENIOR SCIENTIST', imgTag: "bg-[url('/team/kurt.jpg')]", linkUrl: 'https://www.linkedin.com/in/kurtweinheimer/'},
     { name: 'Katherine Carlson', title: 'SENIOR DATA ANALYST', imgTag: "bg-[url('/team/katie.jpg')]", linkUrl: 'https://www.linkedin.com/in/katie-carlson-65447412a/'},
+    { name: 'Kurt Weinheimer', title: 'SENIOR SCIENTIST', imgTag: "bg-[url('/team/kurt.jpg')]", linkUrl: 'https://www.linkedin.com/in/kurtweinheimer/'},
 ]
 
 export default function Home() {
@@ -31,21 +31,19 @@ export default function Home() {
         offset: ["start end", "end start"] 
     })
 
-    const getPersonObject = ( linkedInUrl: string, coverUrl: string, borderColor: string ) => {
+    const getPersonObject = (  coverUrl: string, borderColor: string ) => {
         return (
             <div 
                 className={ `relative h-[100px] w-[100px] rounded-full ${coverUrl} border-2 border-${borderColor} rounded-2xl overflow-hidden bg-cover object-cover bg-no-repeat `}
                 style={{ boxShadow: 'inset 0 0 10px rgba(0,0,0, 1)' }}
             >
-                <a href={`${linkedInUrl}`} target='_blank'>
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        whileHover={{ opacity: 1 }}
-                        className='absolute z-20 w-full h-full bg-primary-light cursor-pointer bg-opacity-[0.5] backdrop-blur-sm flex justify-center items-center publications-texture'
-                    >
-                        <div className="w-[40px] h-[40px] bg-[url('/components/linkedin-black.svg')] bg-contain object-fill bg-center "></div>
-                    </motion.div>
-                </a>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileHover={{ opacity: 1 }}
+                    className='absolute z-20 w-full h-full bg-primary-light cursor-pointer bg-opacity-[0.5] backdrop-blur-sm flex justify-center items-center publications-texture'
+                >
+                    <div className="w-[40px] h-[40px] bg-[url('/components/linkedin-black.svg')] bg-contain object-fill bg-center "></div>
+                </motion.div>
             </div>
         )
     }
@@ -65,8 +63,8 @@ export default function Home() {
             )}
 
             <div className='relative w-screen h-fit flex flex-col justify-center items-center font-mukta-mahee'>
-                <div className='w-full h-[40vh] relative overflow-hidden'>
-                    <div className='absolute text-6xl text-white z-40 top-[50%] left-[20%]'>
+                <div className='w-full h-[30vh] lg:h-[40vh] relative overflow-hidden'>
+                    <div className='absolute text-3xl lg:text-6xl text-white z-40 top-[50%] left-[20%]'>
                         Team
                     </div>
 
@@ -81,24 +79,27 @@ export default function Home() {
                     </motion.div>
                 </div>
 
-                <div className='w-full h-fit py-[20vh] px-[18vw] bg-neutral-white flex justify-center items-center text-black font-mukta-mahee text-3xl'>
-                    <div className='w-full grid grid-cols-3 gap-y-20 justify-center items-center'>
+                <div className='w-full h-fit lg:py-[20vh] lg:px-[10vw] xl:px-[18vw] py-[10vh] pl-[5vw] pr-[10vw] bg-neutral-white flex justify-center items-center text-black font-mukta-mahee text-3xl'>
+                    <div className='w-full grid lg:grid-cols-3 grid-cols-1 gap-y-20 justify-center items-center'>
                         { members.map((member) => (
-                            <div key={member.name} className='grid grid-cols-2'>
-                                <div className='flex justify-center items-center'>
-                                    { getPersonObject(member.linkUrl, member.imgTag, 'neutral-white') }
-                                </div>
-
-                                <div className='flex flex-col justify-center items-center'>
-                                    <div className='text-center text-xl font-semibold my-4'>
-                                        { member.name }
+                            <a key={member.name} href={`${member.linkUrl}`} target='_blank'>
+                                <div className='grid grid-cols-2 cursor-pointer'>
+                                    
+                                    <div className='flex justify-center items-center'>
+                                        { getPersonObject(member.imgTag, 'neutral-white') }
                                     </div>
 
-                                    <div className='text-center text-lg font-light tracking-[0.3rem]'>
-                                        { member.title }
+                                    <div className='flex flex-col justify-center items-center'>
+                                        <div className='text-center text-xl font-semibold my-4'>
+                                            { member.name }
+                                        </div>
+
+                                        <div className='text-center text-lg font-light tracking-[0.3rem]'>
+                                            { member.title }
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         ))}
                     </div>
                 </div>

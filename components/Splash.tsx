@@ -9,12 +9,12 @@ type Props = {
 const Splash = (props: Props) => {
     return (
         <div 
-            className='relative w-screen lg:h-screen h-[90vh] rounded-b-[2rem] bg-neutral-white flex flex-col justify-center lg:items-start items-center text-black font-mukta-mahee lg:px-[300px] px-[10px] curve-bottom-mobile lg:curve-bottom-desktop'      
+            className='relative w-screen lg:h-screen h-[90vh] rounded-b-[2rem] bg-neutral-white flex flex-col justify-center lg:items-start items-center text-black font-mukta-mahee lg:px-[10vw] 2xl:px-[16vw] px-[10px] curve-bottom-mobile lg:curve-bottom-desktop'      
         >
             <div className=' flex flex-col lg:flex-row justify-center items-center mb-8 lg:mb-0'>
                 <div className='flex flex-col lg:mr-[5vw]'>
                     <motion.div
-                        className='lg:text-6xl text-3xl font-bold text-left lg:mb-20 flex flex-col'
+                        className='xl:text-6xl lg:text-5xl text-3xl font-bold text-left lg:mb-20 flex flex-col'
                     >
                         <motion.div
                             initial={{ opacity: 0, x: -100 }}
@@ -62,7 +62,7 @@ const Splash = (props: Props) => {
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, delay: 0.3 }}
-                    className="lg:w-[700px] w-[250px] items-center justify-center z-30 mx-auto mb-[20px] lg:mb-0"
+                    className="2xl:w-[700px] xl:w-[600px] lg:w-[500px] md:w-[350px] w-[250px] items-center justify-center z-30 mx-auto mb-[20px] lg:mb-0"
                 >
                     <div className=" relative pb-[100%] flex items-center justify-center">
                         <div className="absolute top-0 w-full h-full items-center flex justify-center">

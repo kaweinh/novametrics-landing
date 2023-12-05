@@ -79,8 +79,8 @@ export default function Home() {
             )}
 
             <div className='relative w-screen h-fit flex flex-col justify-center items-center font-mukta-mahee'>
-                <div className='w-full h-[40vh] relative overflow-hidden'>
-                    <div className='absolute text-6xl text-white z-40 top-[50%] left-[20%]'>
+                <div className='w-full h-[30vh] lg:h-[40vh] relative overflow-hidden'>
+                    <div className='absolute text-3xl lg:text-6xl text-white z-40 top-[50%] left-[20%]'>
                         Publications
                     </div>
 
@@ -95,7 +95,7 @@ export default function Home() {
                     </motion.div>
                 </div>
 
-                <div className='w-full h-fit py-[20vh] px-[10vw] bg-neutral-white flex justify-center items-center text-white font-mukta-mahee text-3xl'>
+                <div className='w-full h-fit py-[20vh] px-[10vw] bg-neutral-white justify-center items-center text-white font-mukta-mahee text-3xl hidden lg:flex'>
                     <div className='w-full grid grid-cols-3 gap-8'>
                         <div className='flex flex-col gap-8 mt-[20vh]'>
                             { getPdfObject("/publications/pdfs/tip.pdf", "bg-[url('/publications/covers/tip.png')]", 'primary-dull', false) }
@@ -108,6 +108,19 @@ export default function Home() {
                         </div>
 
                         <div className='flex flex-col gap-8 mt-[20vh]'>
+                            { getPdfObject("/publications/pdfs/ctip_philippines.pdf", "bg-[url('/publications/covers/ctip_philippines.png')]", 'primary-dull', false) }
+                            { getPdfObject("/publications/pdfs/geotimes.pdf", "bg-[url('/publications/covers/geotimes.png')]", 'primary-dull', false) }
+                        </div>
+                    </div>
+                </div>
+
+                <div className='w-full h-fit py-[10vh] px-[10vw] bg-neutral-white justify-center items-center text-white font-mukta-mahee text-3xl flex lg:hidden'>
+                    <div className='w-full grid grid-cols-1 gap-8'>
+                        <div className='flex flex-col gap-8'>
+                            { getPdfObject("/publications/pdfs/jid.pdf", "bg-[url('/publications/covers/jid.png')]", 'primary-dull', true) }
+                            { getPdfObject("/publications/pdfs/ctip_bangladesh.pdf", "bg-[url('/publications/covers/ctip_bangladesh.png')]", 'primary-dull', false) }
+                            { getPdfObject("/publications/pdfs/tip.pdf", "bg-[url('/publications/covers/tip.png')]", 'primary-dull', false) }
+                            { getPdfObject("/publications/pdfs/ctip_laos.pdf", "bg-[url('/publications/covers/ctip_laos.png')]", 'primary-dull', false) }
                             { getPdfObject("/publications/pdfs/ctip_philippines.pdf", "bg-[url('/publications/covers/ctip_philippines.png')]", 'primary-dull', false) }
                             { getPdfObject("/publications/pdfs/geotimes.pdf", "bg-[url('/publications/covers/geotimes.png')]", 'primary-dull', false) }
                         </div>

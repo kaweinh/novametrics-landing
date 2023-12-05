@@ -99,6 +99,12 @@ const config: Config = {
         '.curve-bottom-mobile': {
           clipPath: 'ellipse(180% 90% at 50% 0%)',
         },
+        '.curve-top-desktop': {
+          clipPath: 'ellipse(100% 95% at 50% 95%)'
+        },
+        '.curve-top-mobile': {
+          clipPath: 'ellipse(380% 95% at 50% 95%)'
+        },
       }
       addUtilities(newUtilities, ["responsive", "hover"])
     }
