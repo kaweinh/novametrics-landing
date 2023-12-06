@@ -142,6 +142,14 @@ const Navbar = (props: Props) => {
                             { getMobileLinkObject(pageName) }
                         </div>
                     )}
+                    <div
+                        onClick={() => { setMobileMenuOpen( false ); props.setContactOpen( !props.contactOpen ) }} 
+                        className={ `bg-[url('/components/oceanic.png')] bg-center bg-cover object-cover bg-no-repeat relative z-50 w-full h-full text-left ease-in-out bg-opacity-20 backdrop-blur-xl border-b-[0.1px] border-my-gray-dark font-open-sans hover:bg-zinc-800 cursor-pointer font-bold text-primary` } >
+                        <div className='w-full h-full bg-neutral-gray-light bg-opacity-80 z-30 footer-circles backdrop-blur-2xl p-[4vh] pl-[70px]'>
+                            Contact Us
+                        </div>
+                    </div>
+                    
                 </div>
             )}
        </motion.div>

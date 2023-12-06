@@ -14,20 +14,26 @@ export const POST = async ( req: Request ) => {
         return new Response( 'invalid length', { status: 400 } )
     }
 
+    if ( body.country && body.country.length > 100 ) {
+        return new Response( 'invalid length', { status: 400 } )
+    }
+
     try {
         await transporter.sendMail({
             ...mailOptions,
-            subject: 'New Novametrics Contact -' + body.organization,
+            subject: 'New Novametrics Website Contact -' + body.organization,
             text: `
                 Name: ${ body.name }
                 Email: ${ body.email }
                 Organization: ${ body.organization }
+                Country: ${ body.country }
                 Message: ${ body.message }
             `,
             html: `<h1> New Novametrics Contact </h1>
                 <p> Name: ${ body.name } </p>
                 <p> Email: ${ body.email } </p>
                 <p> Organization: ${ body.organization } </p>
+                <p> Country: ${ body.country } </p>
                 <p> Message: ${ body.message } </p>
             `
         })

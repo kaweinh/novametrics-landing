@@ -112,8 +112,13 @@ const WsaDemo = (props: Props) => {
                 <div className=' flex flex-col items-center justify-start text-xl lg:text-3xl text-primary-dull w-[100%]'>
                     <h1 className=' font-bold text-3xl lg:text-6xl mb-[5vh]'> Amplifying Signals Below the Noise </h1>
 
-                    <p className=' text-black'>
-                        Advanced AI and machine learning algorithms are used to amplify weak signals and distill clarity from the noise, bringing critical insights to the forefront of decision-making.
+                    <p className=' text-black mb-[5vh]'>
+                        Advanced AI and machine learning algorithms are used to amplify weak signals and separate the most influential factors out from the noise of data, 
+                        bringing critical insights to the forefront of decision-making. 
+                    </p>
+
+                    <p className=' text-neutral-gray-dark italic'>
+                        Weak-Signals separated from the noise to identify vulnerable regions to Boko Haram breeding grounds in Nigeria.
                     </p>
                 </div>
 
@@ -175,9 +180,14 @@ const WsaDemo = (props: Props) => {
                 <div className='px-[10vw] mb-10 lg:hidden flex flex-col font-mukta-mahee justify-center items-center text-xl lg:text-3xl text-white w-full lg:w-[50%] mr-auto'>
                     <h1 className=' font-bold text-3xl lg:text-6xl mb-[5vh]'> Predictive Power for Proactive Strategies </h1>
 
-                    <div className=' text-white'>
-                        Hindcasting sharpens our predictive models, instilling confidence with historical validation to shape strategic foresight.
+                    <div className=' text-white mb-[5vh]'>
+                        Hindcasting sharpens our predictive models, instilling confidence through analytical validation and adding historical context that shapes 
+                        strategic foresight.
                     </div>
+
+                    <p className=' italic text-neutral-gray-light'>
+                        Open-source data on violent extremism in the Philippines used to validate Novametrics predictive models
+                    </p>
                 </div>
 
                 <div className='lg:mr-auto mx-auto'>
@@ -187,9 +197,14 @@ const WsaDemo = (props: Props) => {
                 <div className=' flex-col font-mukta-mahee text-xl lg:text-3xl text-white w-full lg:w-[50%] mr-auto hidden lg:flex'>
                     <h1 className=' font-bold text-3xl lg:text-6xl mb-[5vh]'> Predictive Power for Proactive Strategies </h1>
 
-                    <div className=' text-white'>
-                        Hindcasting sharpens our predictive models, instilling confidence with historical validation to shape strategic foresight.
+                    <div className=' text-white mb-[5vh]'>
+                        Hindcasting sharpens our predictive models, instilling confidence through analytical validation and adding historical context that shapes 
+                        strategic foresight.
                     </div>
+
+                    <p className=' italic text-neutral-gray-light'>
+                        Open-source data on violent extremism in the Philippines used to validate Novametrics predictive models
+                    </p>
                 </div>
             </div>
 
@@ -205,8 +220,14 @@ const WsaDemo = (props: Props) => {
                 <div className=' flex flex-col font-mukta-mahee text-xl lg:text-3xl text-primary-dull w-full lg:w-[60%] mr-auto'>
                     <h1 className=' font-bold text-3xl lg:text-6xl mb-[5vh]'> Geographically Targeted Interventions </h1>
 
-                    <p className=' text-black'>
-                        By deciphering unique local dynamics, Novametrics delivers geographically targeted interventions that inform and shape strategic policy for sustainable impact and development.
+                    <p className=' text-black mb-[5vh]'>
+                        Through analysis that outlines the interconnected factors of a community, Novametrics delivers geographically targeted interventions that inform and 
+                        shape strategic policy for sustainable impact and development.
+                    </p>
+
+                    <p className=' text-neutral-gray-dark italic'>
+                        Click through an interactive map of Bangladesh to unveil province-specific policy reports, informed by predictive vulnerability insights and historic trafficking 
+                        routes, for geographically-targeted interventions.
                     </p>
                 </div>
 

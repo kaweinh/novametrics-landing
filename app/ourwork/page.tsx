@@ -104,11 +104,12 @@ export default function Home() {
                     <FlowDiagram layers={ flowLayers } text_color='white'/>
 
                     <div className=' text-xl lg:text-3xl text-black font-thin px-[10vw] mt-[5vh]'>
-                        Explore our innovative Data-to-Decision Architecture, where sophisticated analysis and insightful modeling converge to empower decision-making with precision-targeted interventions.
+                        Explore our innovative Data-to-Decision Architecture, where sophisticated analysis and insightful modeling converge to deliver empowering results. 
+                        With precise synthesis of a problem&apos;s components, this methodology drives impactful decision-making.
                     </div>
                 </div>
 
-                <div ref={bg2Ref} className='w-full h-[170vh] lg:h-[150vh] xl:h-[120vh] relative overflow-hidden'>
+                <div ref={bg2Ref} className='w-full h-[170vh] lg:h-[150vh] xl:h-[140vh] relative overflow-hidden'>
                     <div className='absolute h-full w-full flex lg:text-3xl text-xl flex-col lg:px-0 px-[10vw] justify-center items-center z-40 font-thin'>
                         <h1 className=' text-white text-3xl lg:text-6xl font-bold '>
                             Weak Signal Analysis
@@ -116,12 +117,16 @@ export default function Home() {
 
                         <p className='text-white mt-[5vh] mb-[5vh] lg:px-[20vw]'>
                             Adapted from cutting-edge methodologies originally developed for detecting foreign submarines and clandestine underground nuclear weapon tests, 
-                            our proprietary Weak-Signal Analysis is an innovative method to uncovering hidden patterns and predictive insights across vast open-source data. 
+                            our proprietary Weak-Signal Analysis is an innovative method that uncovers intricate patterns to deliver predictive insights across vast open-source data.
                         </p>
 
                         <p className='text-white mb-[5vh] lg:px-[20vw]'>
-                            Following data acquisition to rigorous processing and quality assurance, the creation of Pearson Correlation Matrices reveal the intricate 
-                            interplay of indicators that represent populations, regions, and their environments.
+                            Vast arrays of data is collected, cleaned, verified, and used to generate Pearson Correlation Matrices to reveal the intricate interplay of 
+                            indicators that represent populations, regions, and their environments.
+                        </p>
+
+                        <p className=' italic mb-[5vh] lg:px-[20vw] text-neutral-gray-light'>
+                            Explore the myriad of indicators that characterize a successful environmentally-sustainable business venture in Liberia
                         </p>
 
                         <div className='w-full flex justify-center items-center text-8xl text-white'>
