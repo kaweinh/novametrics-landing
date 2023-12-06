@@ -14,7 +14,7 @@ const Splash = (props: Props) => {
             <div className=' flex flex-col lg:flex-row justify-center items-center mb-8 lg:mb-0'>
                 <div className='flex flex-col lg:mr-[5vw]'>
                     <motion.div
-                        className='xl:text-6xl lg:text-5xl text-3xl font-bold text-left lg:mb-20 flex flex-col'
+                        className='xl:text-6xl lg:text-5xl text-3xl font-bold text-left lg:mb-12 flex flex-col justify-center items-center lg:items-start lg:w-[400px] xl:w-[600px]'
                     >
                         <motion.div
                             initial={{ opacity: 0, x: -100 }}
@@ -33,9 +33,13 @@ const Splash = (props: Props) => {
                             className='mb-4'> 
                             Elevating <span className=' text-primary-softer'>Actions</span>
                         </motion.div>
+
+                        <div className='xl:text-3xl lg:text-xl text-base text-center lg:text-start text-neutral-gray-dark lg:mt-8'>
+                            &quot;Generate impactful solutions targeted to the nuances of the community you serve.&quot;
+                        </div>
                     </motion.div>
 
-                    <div className='lg:flex justify-center items-center z-40 hidden'>
+                    <div className='lg:flex justify-center items-center z-40 hidden xl:w-[600px]'>
                         <motion.div
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.9 }}
@@ -62,7 +66,7 @@ const Splash = (props: Props) => {
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, delay: 0.3 }}
-                    className="2xl:w-[700px] xl:w-[600px] lg:w-[500px] md:w-[350px] w-[250px] items-center justify-center z-30 mx-auto mb-[20px] lg:mb-0"
+                    className="2xl:w-[700px] xl:w-[600px] lg:w-[500px] md:w-[350px] w-[250px] items-center justify-center z-30 mx-auto mb-[20px] lg:mb-[20px]"
                 >
                     <div className=" relative pb-[100%] flex items-center justify-center">
                         <div className="absolute top-0 w-full h-full items-center flex justify-center">

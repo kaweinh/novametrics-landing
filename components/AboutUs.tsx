@@ -11,7 +11,7 @@ const AboutUs = (props: Props) => {
   return (
     <div className='w-full h-fit relative lg:px-[5vw] xl:px-[10vw] py-[100px] lg:pt-[30vh] xl:py-[30vh] flex flex-col lg:flex-row lg:items-start items-center justify-center bg-neutral-white font-mukta-mahee text-black lg:curve-top-desktop curve-top-mobile'>
         <div className='lg:w-[40%] mx-auto relative lg:mt-[14%] xl:mt-[7%] mb-10 lg:mb-0'>
-            <div className="mix-blend-luminosity rounded-full w-[200px] h-[220px] lg:w-[400px] lg:h-[400px] xl:w-[500px] xl:h-[500px] bg-[url('/components/clipartppt.png')] bg-cover object-cover bg-no-repeat z-10"></div>
+            <div className=" rounded-full w-[200px] h-[220px] lg:w-[400px] lg:h-[400px] xl:w-[500px] xl:h-[500px] bg-[url('/components/clip_art.png')] bg-cover object-cover bg-no-repeat z-10"></div>
         </div>
 
         <div className='w-[90%] lg:w-[60%] flex flex-col bg-white rounded-xl p-10'>
