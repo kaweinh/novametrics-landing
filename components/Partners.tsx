@@ -21,7 +21,7 @@ export const getLogoSized = (logo: string, imgTag: string) => {
     } else if( logo == "United Nations Foundation" ) { 
         return (
             <motion.div 
-                className={ `lg:w-[100px] lg:h-[100px] w-[60px] h-[60px] ${imgTag} bg-center bg-contain object-fill bg-no-repeat scale-150 `}
+                className={ `lg:w-[80px] lg:h-[80px] w-[60px] h-[60px] ${imgTag} bg-center bg-contain object-fill bg-no-repeat scale-150 `}
             ></motion.div>
         )       
     } else if ( logo == 'UNODC' ) { 
