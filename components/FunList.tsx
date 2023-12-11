@@ -53,8 +53,8 @@ const FunList = (props: Props) => {
                         Security and Peacekeeping 
 
                         <ul className='list-disc list-inside font-thin'>
-                            <li className=' indent-12'> Countering Violent Extremism </li>
-                            <li className=' indent-12'> Conflict Mitigation </li>
+                            <li className=' indent-12'> Countering violent extremism </li>
+                            <li className=' indent-12'> Conflict mitigation </li>
                         </ul>
                         <br></br>
 
@@ -68,8 +68,8 @@ const FunList = (props: Props) => {
                         Human Rights and Social Welfare 
 
                         <ul className='list-disc list-inside font-thin'>
-                            <li className=' indent-12'> Countering Human Trafficking </li>
-                            <li className=' indent-12'> Combating Child Labor </li>
+                            <li className=' indent-12'> Countering human trafficking </li>
+                            <li className=' indent-12'> Combating child labor </li>
                         </ul>
                         <br></br>
 
@@ -83,8 +83,8 @@ const FunList = (props: Props) => {
                         Environmental Conservation and Sustainability
 
                         <ul className='list-disc list-inside font-thin'>
-                            <li className=' indent-12'> Preventing Illegal Fishing </li>
-                            <li className=' indent-12'> Fostering Environmentally Sustainable Emerging Markets </li>
+                            <li className=' indent-12'> Preventing illegal fishing </li>
+                            <li className=' indent-12'> Fostering environmentally sustainable emerging markets </li>
                         </ul>
 
                         <motion.div
@@ -98,8 +98,8 @@ const FunList = (props: Props) => {
                         Infrastructure and Development 
 
                         <ul className='list-disc list-inside font-thin'>
-                            <li className=' indent-12'> Optimizing Rural Road Systems </li>
-                            <li className=' indent-12'> Promoting Ethical Supply Chains </li>
+                            <li className=' indent-12'> Optimizing rural road systems </li>
+                            <li className=' indent-12'> Promoting ethical supply chains </li>
                         </ul>
 
                         <motion.div
@@ -113,8 +113,8 @@ const FunList = (props: Props) => {
                         Public Health and Safety 
 
                         <ul className='list-disc list-inside font-thin'>
-                            <li className=' indent-12'> Managing Outbreaks of Infectious Disease </li>
-                            <li className=' indent-12'> Alleviating Child Malnutrition </li>
+                            <li className=' indent-12'> Managing outbreaks of infectious disease </li>
+                            <li className=' indent-12'> Alleviating child malnutrition </li>
                         </ul>
 
                         <motion.div
@@ -128,8 +128,8 @@ const FunList = (props: Props) => {
                         Economic Empowerment 
 
                         <ul className='list-disc list-inside font-thin'>
-                            <li className=' indent-12'> Identifying Vulnerabilities to Poverty Traps </li>
-                            <li className=' indent-12'> Optimizing Social impact Investment </li>
+                            <li className=' indent-12'> Identifying vulnerabilities to poverty traps </li>
+                            <li className=' indent-12'> Optimizing social impact investment </li>
                         </ul>   
 
                         <motion.div

@@ -47,11 +47,11 @@ const Navbar = (props: Props) => {
             <Link href='/landing' className='absolute flex justify-center items-center left-0 z-40'>
 
                 <div 
-                    className='w-[40px] h-[36px] ml-[20px] lg:ml-[50px] xl:ml-[200px] z-40 bg-no-repeat bg-cover cursor-pointer'
+                    className='w-[29px] h-[26.2px] ml-[20px] lg:ml-[50px] xl:ml-[200px] z-40 bg-no-repeat bg-cover cursor-pointer'
                     style={{ backgroundImage: `url('/components/sh-logo-dull.svg')` }}
                 ></div>
 
-                <div className='lg:text-3xl text-2xl text-black font lg:ml-[1vw] ml-[10px] flex'> 
+                <div className='lg:text-3xl text-2xl text-black font ml-[10px] flex'> 
                 
                     Nova 
                     <span className=''>

@@ -181,8 +181,7 @@ const WsaDemo = (props: Props) => {
                     <h1 className=' font-bold text-3xl lg:text-6xl mb-[5vh]'> Predictive Power for Proactive Strategies </h1>
 
                     <div className=' text-white mb-[5vh]'>
-                        Hindcasting sharpens our predictive models, instilling confidence through analytical validation and adding historical context that shapes 
-                        strategic foresight.
+                        Hindcasting allows us to evaluate the uncertainty associated with our predictive capabilities and provide quantitative assessments of confidence levels.
                     </div>
 
                     <p className=' italic text-neutral-gray-light'>
@@ -198,8 +197,7 @@ const WsaDemo = (props: Props) => {
                     <h1 className=' font-bold text-3xl lg:text-6xl mb-[5vh]'> Predictive Power for Proactive Strategies </h1>
 
                     <div className=' text-white mb-[5vh]'>
-                        Hindcasting sharpens our predictive models, instilling confidence through analytical validation and adding historical context that shapes 
-                        strategic foresight.
+                        Hindcasting allows us to evaluate the uncertainty associated with our predictive capabilities and provide quantitative assessments of confidence levels.
                     </div>
 
                     <p className=' italic text-neutral-gray-light'>

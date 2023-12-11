@@ -14,8 +14,8 @@ type MemberInfo = {
 }
 
 const members: Array<MemberInfo> = [
+    { name: 'Dr. Gregory van der Vink', title: 'FOUNDER', imgTag: "bg-[url('/team/greg.jpg')]", linkUrl: 'https://www.linkedin.com/in/gregory-van-der-vink-2808228b/'},
     { name: 'James Phillips', title: 'CEO', imgTag: "bg-[url('/team/james.png')]", linkUrl: 'https://www.linkedin.com/in/james-phillips8/'},
-    { name: 'Dr. Gregory van der Vink', title: 'FOUNDER / SENIOR ADVISOR', imgTag: "bg-[url('/team/greg.jpg')]", linkUrl: 'https://www.linkedin.com/in/gregory-van-der-vink-2808228b/'},
     { name: 'Dr. Jeffrey Park', title: 'SENIOR ADVISOR', imgTag: "bg-[url('/team/jeffrey.jpg')]", linkUrl: 'https://www.linkedin.com/in/jeffreyparkyalegeo/'},
     { name: 'Katherine Carlson', title: 'SENIOR DATA ANALYST', imgTag: "bg-[url('/team/katie.jpg')]", linkUrl: 'https://www.linkedin.com/in/katie-carlson-65447412a/'},
     { name: 'Kurt Weinheimer', title: 'SENIOR SCIENTIST', imgTag: "bg-[url('/team/kurt.jpg')]", linkUrl: 'https://www.linkedin.com/in/kurtweinheimer/'},

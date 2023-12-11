@@ -65,7 +65,7 @@ const Features = (props: Props) => {
                     <div className=' text-3xl font-semibold mt-[20px] '> Holistic </div>
                     <div className=' lg:text-2xl text-xl font-thin mt-[20px]'>
                         Empowered by our proprietary Weak-Signal Analysis and modern artificial intelligence, Novametrics is able to bring a holistic approach to predictive analytics, 
-                        allowing clients to respect the nuances of diverse communities 
+                        allowing you to identify customized solutions for complex challenges.
                     </div>
                 </div>
 
@@ -84,7 +84,7 @@ const Features = (props: Props) => {
 
                     <div className=' text-3xl font-semibold mt-[20px] '> Open-Source </div>
                     <div className=' lg:text-2xl text-xl font-thin mt-[20px] mb-[55px]'>
-                        Leveraging AI/ML and Large Language Models, Novametrics enables clients to tap into the vast sea of open-source data
+                        Leveraging AI/ML and Large Language Models, Novametrics enables you to tap into the vast sea of open-source data and identify new opportunities and innovative strategies. 
                     </div>
                 </div>
 
@@ -103,7 +103,7 @@ const Features = (props: Props) => {
 
                     <div className=' text-3xl font-semibold mt-[20px] '> End-to-End </div>
                     <div className=' lg:text-2xl text-xl font-thin mt-[20px] mb-[65px]'>
-                        From data to decision (D2D) Novametrics provides clients with an end-to-end solution, alleviating the burden of intensive data collections and processing
+                        From data to decision (D2D) Novametrics provides clients with an end-to-end solution, alleviating the burden of intensive data collection and processing to support your decision-making processes
                     </div>
                 </div>
             </div>

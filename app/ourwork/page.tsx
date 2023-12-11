@@ -87,7 +87,7 @@ export default function Home() {
                     </motion.div>
                 </div>
 
-                <div className='w-full h-[40vh] flex justify-center items-center text-xl lg:text-3xl text-black font-semibold lg:px-[20vw] px-[10vw] bg-neutral-white'>
+                <div className='w-full h-[30vh] flex justify-center items-center text-xl lg:text-3xl text-black font-semibold lg:px-[20vw] px-[10vw] bg-neutral-white'>
                     <DropInWords />
                 </div>
 
@@ -116,13 +116,12 @@ export default function Home() {
                         </h1>
 
                         <p className='text-white mt-[5vh] mb-[5vh] lg:px-[20vw]'>
-                            Adapted from cutting-edge methodologies originally developed for detecting foreign submarines and clandestine underground nuclear weapon tests, 
+                            Adapted from advanced methodologies originally developed for detecting foreign submarines and clandestine underground nuclear weapon tests, 
                             our proprietary Weak-Signal Analysis is an innovative method that uncovers intricate patterns to deliver predictive insights across vast open-source data.
                         </p>
 
                         <p className='text-white mb-[5vh] lg:px-[20vw]'>
-                            Vast arrays of data is collected, cleaned, verified, and used to generate Pearson Correlation Matrices to reveal the intricate interplay of 
-                            indicators that represent populations, regions, and their environments.
+                            Vast arrays of data are collected, cleaned, and verified to reveal the intricate interplay of indicators that represent populations, regions, and their environments.
                         </p>
 
                         <p className=' italic mb-[5vh] lg:px-[20vw] text-neutral-gray-light'>

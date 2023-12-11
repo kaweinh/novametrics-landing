@@ -15,21 +15,20 @@ const AboutUs = (props: Props) => {
         </div>
 
         <div className='w-[90%] lg:w-[60%] flex flex-col bg-white rounded-xl p-10'>
-            <div className=' lg:text-6xl text-3xl font-bold text-primary-dull mb-10'> About Us </div>
+            <div className=' lg:text-6xl text-3xl font-bold text-primary-dull mb-10'> Novametrics </div>
 
             <div className='flex lg:text-3xl text-xl mt-[0px] font-thin'>
                 <div className='w-full leading-[5vh]' >
                     <p>
-                        Our journey began at Princeton University, where innovative ideas met real-world challenges. Ever-adapting, 
-                        our holistic approach harnesses the power of AI and Weak-Signal Analysis to provide the next generation of predictive analytics. 
-                        Our data-to-decision (D2D) capabilities ensure that you are always a step ahead, leveraging something. 
+                        An advanced analytics firm that provides sophisticated data-to-decision services for government agencies, NGOs, foundations, impact investment funds, and aid and development groups.
                     </p>
 
                     <br></br>
 
                     <p>
-                        Novametrics is a boutique analytics firm that provides advanced data-to-decision services for government agencies, NGOs, foundations, 
-                        impact investment funds, and aid and development groups.
+                        Our journey began through a series of advanced research seminars taught at Princeton University. Ever-adapting, our holistic approach exploits 
+                        the vast sea of open-source data with the power of AI and Weak-Signal Analysis to provide the next generation of predictive analytics. 
+                        Our data-to-decision (D2D) capabilities provide you with the most advanced tools for your decision-making needs. 
                     </p>
                 </div>
             </div>

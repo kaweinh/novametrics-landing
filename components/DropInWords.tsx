@@ -39,7 +39,7 @@ const AnimatedWord = ( { word, color } : WordColor ) => {
     };
   
     return (
-      <span className={` ${ color } inline-block font-bold cursor-pointer`} style={animationStyle}>
+      <span className={` ${ color } inline-block font-bold`} style={animationStyle}>
         { word }
       </span>
     );
@@ -70,9 +70,7 @@ const DropInWords = (props: Props) => {
 
     return (
         <div className=' leading-[5vh]'>
-            Central to our approach is the recognition that every population can be represented by a complex <span className='bg-gradient-to-r from-my-midnight-blue to-my-purple-medium lg:to-70% bg-clip-text text-transparent'> 
-                mosaic
-            </span> of characteristics derived from its &nbsp;
+            Central to our approach is the recognition that every population has a complex mosaic of characteristics derived from its &nbsp;
 
             { words.map((word, index) => {
                 if ( index == currentWordIndex ) {

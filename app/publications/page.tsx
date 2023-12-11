@@ -95,15 +95,20 @@ export default function Home() {
                     </motion.div>
                 </div>
 
-                <div className='w-full h-fit py-[20vh] px-[10vw] bg-neutral-white justify-center items-center text-white font-mukta-mahee text-3xl hidden lg:flex'>
+                <div className='w-full h-[30vh] flex justify-center items-center text-xl lg:text-3xl text-black font-semibold lg:px-[20vw] px-[10vw] bg-neutral-white'>
+                    &quot;Discover a glimpse into Novametrics&apos; expertise through our featured publications, showcasing a snapshot of our extensive research 
+                    and innovative analytical solutions&quot;
+                </div>
+
+                <div className='w-full h-fit py-[20vh] px-[10vw] bg-gradient-to-b from-white to-neutral-white justify-center items-center text-white font-mukta-mahee text-3xl hidden lg:flex'>
                     <div className='w-full grid grid-cols-3 gap-8'>
                         <div className='flex flex-col gap-8 mt-[20vh]'>
-                            { getPdfObject("/publications/pdfs/tip.pdf", "bg-[url('/publications/covers/tip.png')]", 'primary-dull', false) }
+                            { getPdfObject("/publications/pdfs/tip.pdf", "bg-[url('/publications/covers/tip.jpg')]", 'primary-dull', false) }
                             { getPdfObject("/publications/pdfs/ctip_laos.pdf", "bg-[url('/publications/covers/ctip_laos.png')]", 'primary-dull', false) }
                         </div>
 
                         <div className='flex flex-col gap-8'>
-                            { getPdfObject("/publications/pdfs/jid.pdf", "bg-[url('/publications/covers/jid.png')]", 'primary-dull', true) }
+                            { getPdfObject("/publications/pdfs/jid.pdf", "bg-[url('/publications/covers/jid.jpg')]", 'primary-dull', false) }
                             { getPdfObject("/publications/pdfs/ctip_bangladesh.pdf", "bg-[url('/publications/covers/ctip_bangladesh.png')]", 'primary-dull', false) }
                         </div>
 

@@ -9,38 +9,40 @@ export const getLogoSized = (logo: string, imgTag: string) => {
     if( logo == 'World Bank') {
         return (
             <motion.div 
-                whileHover={{ scale: 1 }}
-                className={ `w-[250px] h-[250px] ${imgTag} bg-center bg-contain object-fill bg-no-repeat `}
+                className={ `w-[260px] h-[260px] ${imgTag} bg-center bg-contain object-fill bg-no-repeat `}
             ></motion.div>
         )
     } else if( logo == "Children's Investment Fund Foundation") {
         return (
             <motion.div 
-                whileHover={{ scale: 1 }}
                 className={ `w-[200px] h-[200px] ${imgTag} bg-center bg-contain object-fill bg-no-repeat `}
             ></motion.div>
         )
     } else if( logo == "United Nations Foundation" ) { 
         return (
             <motion.div 
-                initial={{ scale: 1.2 }}
-                whileHover={{ scale: 1.2 }}
                 className={ `lg:w-[100px] lg:h-[100px] w-[60px] h-[60px] ${imgTag} bg-center bg-contain object-fill bg-no-repeat scale-150 `}
             ></motion.div>
         )       
-    } if ( logo == 'UNODC' ) { 
+    } else if ( logo == 'UNODC' ) { 
         return (
             <motion.div 
-                initial={{ scale: 1.5 }}
-                whileHover={{ scale: 1.5 }}
                 className={ `w-[100px] h-[100px] ${imgTag} bg-center bg-contain object-fill bg-no-repeat scale-150 `}
             ></motion.div>
         )      
+    } else if ( logo == 'Liberia' ) {
+        return (
+            <div className='relative flex justify-center items-center'>
+                <div 
+                    className={ `w-[120px] h-[120px] ${imgTag} mb-8 bg-center bg-contain object-fill bg-no-repeat `}
+                ></div>
+                <div className='absolute top-[100px] text-black'> Liberia </div>
+            </div>
+        )   
     } else {
         return (
             <motion.div 
-                whileHover={{ scale: 1 }}
-                className={ `lg:w-[100px] lg:h-[100px] w-[60px] h-[60px] ${imgTag} bg-center bg-contain object-fill bg-no-repeat `}
+                className={ `lg:w-[120px] lg:h-[120px] w-[60px] h-[60px] ${imgTag} bg-center bg-contain object-fill bg-no-repeat `}
             ></motion.div>
         )
     }

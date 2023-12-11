@@ -197,7 +197,7 @@ const Footer = ( { fadeColor, setContactOpen }: Props) => {
                 </div>
             </div>
 
-            <div className='w-full h-[23vh] lg:h-[230px]'>
+            <div className='w-full h-[23vh] lg:h-[220px]'>
                 <motion.div 
                     className="w-full h-full bg-[url('/components/oceanic.png')] bg-center bg-cover object-cover bg-no-repeat z-10"
                 >
@@ -211,7 +211,7 @@ const Footer = ( { fadeColor, setContactOpen }: Props) => {
                         <Link href='/landing'>
                             <motion.div 
                                 whileHover={{ scale: 1.1 }}
-                                className="lg:w-[50px] lg:h-[50px] h-[40px] w-[40px] bg-[url('/components/sh-logo-dull.svg')] bg-center bg-contain object-contain bg-no-repeat z-30"
+                                className="lg:w-[35px] lg:h-[32px] h-[40px] w-[40px] bg-[url('/components/sh-logo-dull.svg')] bg-center bg-contain object-contain bg-no-repeat z-30"
                             ></motion.div>
                         </Link>
 

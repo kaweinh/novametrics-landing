@@ -22,7 +22,7 @@ const Splash = (props: Props) => {
                             transition={{ duration: 1, delay: 0.3 }}
                             className='mb-4'> 
 
-                            Enhancing <span className=' text-primary-soft'>Insights</span>
+                            Discovering <span className=' text-primary-soft'>Insights</span>
                         </motion.div>
 
 
@@ -31,11 +31,11 @@ const Splash = (props: Props) => {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 1 }}
                             className='mb-4'> 
-                            Elevating <span className=' text-primary-softer'>Actions</span>
+                            Identifying <span className=' text-primary-softer'>Solutions</span>
                         </motion.div>
 
                         <div className='xl:text-3xl lg:text-xl text-base text-center lg:text-start text-neutral-gray-dark lg:mt-8'>
-                            &quot;Generate impactful solutions targeted to the nuances of the community you serve.&quot;
+                            &quot;Harnessing vast open-source data to support your strategic decision-making.&quot;
                         </div>
                     </motion.div>
 
