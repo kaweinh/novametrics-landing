@@ -150,18 +150,28 @@ const VeBarChart = (props: Props) => {
             const x = d3.scaleBand()
                 .range([0, widthMargin])
                 .domain(data.map(d => d.date))
-                .padding(0.1)
+                .padding(0.5)
             svg.append('g')
                 .attr('transform', `translate(50, ${heightMargin + 30})`)
                 .call(d3.axisBottom(x).tickValues(tickDates))
                 .style('font-size', '8px')
-
+                .selectAll('text')
+                .style("fill", "white")
+            
             const y = d3.scaleLinear()
                 .domain([0, 800])
                 .range([heightMargin, 0])
             svg.append('g')
                 .attr('transform', `translate(${50}, 30)`)
                 .call(d3.axisLeft(y))
+                .selectAll('text')
+                .style("fill", "white")
+
+            svg.selectAll('.tick line')
+                .style('stroke', 'white')
+
+            svg.selectAll('.domain')
+                .style('stroke', 'white')
 
             svg.selectAll('bar')
                 .data(data)

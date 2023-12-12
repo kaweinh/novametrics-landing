@@ -119,7 +119,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className='w-full h-fit py-[10vh] px-[10vw] bg-neutral-white justify-center items-center text-white font-mukta-mahee text-3xl flex lg:hidden'>
+                <div className='w-full h-fit py-[10vh] px-[10vw] bg-gradient-to-b from-white to-neutral-white justify-center items-center text-white font-mukta-mahee text-3xl flex lg:hidden'>
                     <div className='w-full grid grid-cols-1 gap-8'>
                         <div className='flex flex-col gap-8'>
                             { getPdfObject("/publications/pdfs/jid.pdf", "bg-[url('/publications/covers/jid.png')]", 'primary-dull', true) }

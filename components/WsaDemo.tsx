@@ -117,8 +117,8 @@ const WsaDemo = (props: Props) => {
                         bringing critical insights to the forefront of decision-making. 
                     </p>
 
-                    <p className=' text-neutral-gray-dark italic'>
-                        Weak-Signals separated from the noise to identify vulnerable regions to Boko Haram breeding grounds in Nigeria.
+                    <p className=' text-primary-soft italic text-lg'>
+                        See here how the Weak-Signals are separated from the noise to identify vulnerable regions to Boko Haram breeding grounds in Nigeria.
                     </p>
                 </div>
 
@@ -184,8 +184,8 @@ const WsaDemo = (props: Props) => {
                         Hindcasting allows us to evaluate the uncertainty associated with our predictive capabilities and provide quantitative assessments of confidence levels.
                     </div>
 
-                    <p className=' italic text-neutral-gray-light'>
-                        Open-source data on violent extremism in the Philippines used to validate Novametrics predictive models
+                    <p className=' italic text-primary-light text-lg'>
+                        See here how open-source data on violent extremism in the Philippines is used to validate Novametrics predictive models
                     </p>
                 </div>
 
@@ -200,8 +200,8 @@ const WsaDemo = (props: Props) => {
                         Hindcasting allows us to evaluate the uncertainty associated with our predictive capabilities and provide quantitative assessments of confidence levels.
                     </div>
 
-                    <p className=' italic text-neutral-gray-light'>
-                        Open-source data on violent extremism in the Philippines used to validate Novametrics predictive models
+                    <p className=' italic text-primary-light text-lg'>
+                        See here how open-source data on violent extremism in the Philippines is used to validate Novametrics predictive models
                     </p>
                 </div>
             </div>
@@ -223,7 +223,7 @@ const WsaDemo = (props: Props) => {
                         shape strategic policy for sustainable impact and development.
                     </p>
 
-                    <p className=' text-neutral-gray-dark italic'>
+                    <p className=' text-lg text-black font-semibold bg-gradient-to-r from-primary-soft to-primary-light p-10 rounded-xl'>
                         Click through an interactive map of Bangladesh to unveil province-specific policy reports, informed by predictive vulnerability insights and historic trafficking 
                         routes, for geographically-targeted interventions.
                     </p>

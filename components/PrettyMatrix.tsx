@@ -1,7 +1,6 @@
 import React from 'react'
-import fs from 'fs'
-import path from 'path'
-import Papa from 'papaparse'
+import { motion } from 'framer-motion';
+
 
 type Props = {}
 
@@ -21,6 +20,7 @@ const PrettyMatrix = ( props: Props ) => {
     const [ colNames, setColNames ] = React.useState<Array<string>>([])
     const [ rowIndicators, setRowIndicators ] = React.useState<Array<string>>([])
     const [ colIndicators, setColIndicators ] = React.useState<Array<string>>([])
+    const [ hasMoved, setHasMoved ] = React.useState( false )
 
     React.useEffect(() => {
         /*const newCellValues = Array.from({ length: numRows }, (_, r_index) => {
@@ -80,22 +80,45 @@ const PrettyMatrix = ( props: Props ) => {
 
     const getFixedCell = ( row: number, col: number, value: number ) => {
         if ( row > center[0] - 5 && col > center[1] - 5 && row < center[0] + 5 && col < center[1] + 5 ) {
-            return (
-                <td 
-                    key={ col } 
-                    onMouseEnter={() => { setPotentialCenter([ Math.max(5, row) , Math.max(5, col) ]) }} 
-                    onClick={() => { setCenter([ Math.max(5, row) , Math.max(5, col) ]) } }
-                    className={ `border cursor-default opacity-10 border-white ${ getColor( value ) } text-center `}>
-                    { value.toFixed(2) }
-                </td>
-            )
+            if ( row == center[0] && col == center[1]) {
+                return (
+                    <td 
+                        key={ col } 
+                        onMouseEnter={() => { setPotentialCenter([ Math.max(5, row) , Math.max(5, col) ]) }} 
+                        onClick={() => { setCenter([ Math.max(5, row) , Math.max(5, col) ]) } }
+                        className={ `border cursor-default bg-opacity-10 border-white relative ${ getColor( value ) } text-center `}>
+                        { value.toFixed(2) }
+                        <div className="absolute hidden lg:flex lg:w-[400px] lg:h-[200px] pointer-events-none bottom-0 left-0 bg-[url('/components/left-right-pyramid.svg')] bg-contain object-contain bg-no-repeat "></div>
+                        <div className="absolute lg:hidden w-[70px] h-[200px] right-[-35px] pointer-events-none top-0 bg-[url('/components/top-down-pyramid.svg')] bg-contain object-contain bg-no-repeat "></div>
+
+                        { !hasMoved && (
+                            <motion.div 
+                                initial={{ opacity: 0.25, scale: 0.75 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 2, delay: 0.3, repeat: Infinity, repeatType: 'reverse' }}
+                                className={ `absolute w-[100px] h-[100px] top-[0px] left-0 pointer-events-none bg-[url('/components/movable.svg')] bg-contain object-contain bg-no-repeat ${ hasMoved ? 'hidden': 'flex'} `}
+                            ></motion.div>
+                        )}
+                    </td>
+                )
+            } else {
+                return (
+                    <td 
+                        key={ col } 
+                        onMouseEnter={() => { setPotentialCenter([ Math.max(5, row) , Math.max(5, col) ]) }} 
+                        onClick={() => { setCenter([ Math.max(5, row) , Math.max(5, col) ]) } }
+                        className={ `border cursor-default opacity-10 border-white ${ getColor( value ) } text-center `}>
+                        { value.toFixed(2) }
+                    </td>
+                )
+            }
         } else if( row > potentialCenter[0] - 5 && col > potentialCenter[1] - 5 && row < potentialCenter[0] + 5 && col < potentialCenter[1] + 5 ) {
             return (
                 <td 
                     key={ col } 
                     onMouseEnter={() => { setPotentialCenter([ Math.max(5, row) , Math.max(5, col) ]) }} 
-                    onClick={() => { setCenter([ Math.max(5, row) , Math.max(5, col) ]) } }
-                    className={ `border cursor-default opacity-40 border-white ${ getColor( value ) } text-center `}>
+                    onClick={() => { setCenter([ Math.max(5, row) , Math.max(5, col) ]); setHasMoved(true) } }
+                    className={ `border cursor-default opacity-30 border-white ${ getColor( value ) } text-center `}>
                     { value.toFixed(2) }
                 </td>
             )
@@ -138,7 +161,7 @@ const PrettyMatrix = ( props: Props ) => {
                 </table>
 
                 <div className='absolute bottom-0 bg-gradient-to-b from-transparent to-white h-[4vh] w-full'> </div>
-                <div className='absolute right-0 top-0 bg-gradient-to-r from-transparent to-white w-[2vw] h-full'> </div>
+                <div className='absolute right-0 top-0 bg-gradient-to-r from-transparent to-white w-[3vw] h-full'> </div>
             </div>
 
             <div className='relative bg-white mx-auto p-4 lg:p-10 bg-opacity-30 rounded-3xl'>

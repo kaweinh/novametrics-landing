@@ -109,7 +109,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div ref={bg2Ref} className='w-full h-[170vh] lg:h-[150vh] xl:h-[140vh] relative overflow-hidden'>
+                <div ref={bg2Ref} className='w-full h-[200vh] lg:h-[150vh] xl:h-[140vh] relative overflow-hidden'>
                     <div className='absolute h-full w-full flex lg:text-3xl text-xl flex-col lg:px-0 px-[10vw] justify-center items-center z-40 font-thin'>
                         <h1 className=' text-white text-3xl lg:text-6xl font-bold '>
                             Weak Signal Analysis
@@ -124,9 +124,11 @@ export default function Home() {
                             Vast arrays of data are collected, cleaned, and verified to reveal the intricate interplay of indicators that represent populations, regions, and their environments.
                         </p>
 
-                        <p className=' italic mb-[5vh] lg:px-[20vw] text-neutral-gray-light'>
-                            Explore the myriad of indicators that characterize a successful environmentally-sustainable business venture in Liberia
-                        </p>
+                        <div className=' mb-[5vh] lg:px-[20vw]'>
+                            <p className=' bg-gradient-to-r from-primary-soft to-primary-light p-10 text-lg font-semibold text-black rounded-xl w-full'>
+                                Click through the myriad of indicators that characterize a successful environmentally-sustainable business venture in Liberia
+                            </p>
+                        </div>
 
                         <div className='w-full flex justify-center items-center text-8xl text-white'>
                             <PrettyMatrix />
