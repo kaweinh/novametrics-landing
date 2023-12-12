@@ -96,8 +96,8 @@ export default function Home() {
                 </div>
 
                 <div className='w-full h-[30vh] flex justify-center items-center text-xl lg:text-3xl text-black font-semibold lg:px-[20vw] px-[10vw] bg-neutral-white'>
-                    &quot;Discover a glimpse into Novametrics&apos; expertise through our featured publications, showcasing a snapshot of our extensive research 
-                    and innovative analytical solutions&quot;
+                    Discover a glimpse into Novametrics&apos; expertise through our featured publications, showcasing a snapshot of our extensive research 
+                    and innovative analytical solutions
                 </div>
 
                 <div className='w-full h-fit py-[20vh] px-[10vw] bg-gradient-to-b from-white to-neutral-white justify-center items-center text-white font-mukta-mahee text-3xl hidden lg:flex'>

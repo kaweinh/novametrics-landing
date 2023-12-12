@@ -88,15 +88,15 @@ const PrettyMatrix = ( props: Props ) => {
                         onClick={() => { setCenter([ Math.max(5, row) , Math.max(5, col) ]) } }
                         className={ `border cursor-default bg-opacity-10 border-white relative ${ getColor( value ) } text-center `}>
                         { value.toFixed(2) }
-                        <div className="absolute hidden lg:flex lg:w-[400px] lg:h-[200px] pointer-events-none bottom-0 left-0 bg-[url('/components/left-right-pyramid.svg')] bg-contain object-contain bg-no-repeat "></div>
-                        <div className="absolute lg:hidden w-[70px] h-[200px] right-[-35px] pointer-events-none top-0 bg-[url('/components/top-down-pyramid.svg')] bg-contain object-contain bg-no-repeat "></div>
+                        <div className="absolute hidden lg:flex z-50 lg:w-[400px] lg:h-[200px] pointer-events-none bottom-0 left-0 bg-[url('/components/left-right-pyramid.png')] bg-contain object-contain bg-no-repeat "></div>
+                        <div className="absolute lg:hidden z-50 w-[70px] h-[200px] right-[-35px] pointer-events-none top-0 bg-[url('/components/top-down-pyramid.svg')] bg-contain object-contain bg-no-repeat "></div>
 
                         { !hasMoved && (
                             <motion.div 
                                 initial={{ opacity: 0.25, scale: 0.75 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 2, delay: 0.3, repeat: Infinity, repeatType: 'reverse' }}
-                                className={ `absolute w-[100px] h-[100px] top-[0px] left-0 pointer-events-none bg-[url('/components/movable.svg')] bg-contain object-contain bg-no-repeat ${ hasMoved ? 'hidden': 'flex'} `}
+                                className={ `absolute w-[100px] h-[100px] z-[51] top-[-50px] left-[-45px] pointer-events-none bg-[url('/components/movable.svg')] bg-contain object-contain bg-no-repeat ${ hasMoved ? 'hidden': 'flex'} `}
                             ></motion.div>
                         )}
                     </td>

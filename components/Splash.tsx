@@ -35,7 +35,7 @@ const Splash = (props: Props) => {
                         </motion.div>
 
                         <div className='xl:text-3xl lg:text-xl text-base text-center lg:text-start text-neutral-gray-dark lg:mt-8'>
-                            &quot;Harnessing vast open-source data to support your strategic decision-making.&quot;
+                            Harnessing vast open-source data to support your strategic decision-making.
                         </div>
                     </motion.div>
 
