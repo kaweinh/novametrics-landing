@@ -16,7 +16,7 @@ type AnimatedSquareProps = {
 
 const Footer = ( { fadeColor, setContactOpen }: Props) => {
     const numRows = 10;
-    const numCols = 100;
+    const numCols = 135;
 
     const rows = Array.from({ length: numRows }, (_, index) => index + 1);
     const cols = Array.from({ length: numCols }, (_, index) => index + 1);
@@ -141,8 +141,8 @@ const Footer = ( { fadeColor, setContactOpen }: Props) => {
 
     return (
         <div className='relative w-full h-fit font-mukta-mahee text-black'>
-            <div className='w-full h-[60vh] flex justify-center items-center text-neutral-gray-dark'>
-                <div className="w-full h-full bg-[url('/components/oceanic.png')] bg-center bg-cover object-cover bg-no-repeat z-10">
+            <div className='w-full h-fit flex justify-center items-center text-neutral-gray-dark'>
+                <div className="w-full h-[60vh] bg-[url('/components/oceanic.png')] bg-center bg-cover object-cover bg-no-repeat z-10">
                     <div className={ `relative w-full h-full bg-gradient-to-b ${ fadeColor == 'white' ? 'from-white': 'from-neutral-white'} to-my-white-see-thru from-[10%] to-[100%] z-30 backdrop-blur-xl`}>
                         <div className='w-full h-full flex justify-center items-center'>
                             <div className='absolute w-[100vw] h-[30vh] bg-opacity-30 rounded-xl flex items-center justify-center overflow-hidden z-20'>
@@ -157,7 +157,7 @@ const Footer = ( { fadeColor, setContactOpen }: Props) => {
                                         { rows.map(( _, r_index ) => ( 
                                             <tr key={r_index} className=' backdrop-blur-sm'>
                                                 { cols.map(( _, c_index ) => ( 
-                                                    <td key={ c_index} className='lg:w-[1vw] lg:h-[1vw] w-[2vw] h-[2vw] border border-white'>
+                                                    <td key={ c_index} className='lg:w-[0.75vw] lg:h-[0.75vw] border border-white'>
                                                         {   !greenCell.includes( r_index * numCols + c_index ) && 
                                                             !blueCell.includes( r_index * numCols + c_index ) && 
                                                             !darkGreenCell.includes( r_index * numCols + c_index ) && 
@@ -177,10 +177,10 @@ const Footer = ( { fadeColor, setContactOpen }: Props) => {
                                 </table>
                             </div>
 
-                            <div className=' lg:ml-[30vw] xl:ml-[40vw] flex flex-col items-start justify-center lg:w-[50vw] xl:w-[30vw] md:w-[60%] w-[90%] p-6 lg:p-10 bg-white text-black rounded-xl z-40'>
-                                <h1 className='lg:text-6xl text-3xl font-bold mb-[2vh]'> Let us know how we can help today </h1>
+                            <div className=' lg:ml-[40vw] flex flex-col items-start justify-center lg:w-[35vw] xl:w-[30vw] p-6 lg:p-8 bg-white text-black rounded-xl z-40'>
+                                <h1 className='xl:text-3xl text-xl font-bold mb-[2vh]'> Let us know how we can help today </h1>
 
-                                <div className='lg:text-2xl text-xl mb-[2vh] font-thin text-black'>
+                                <div className='xl:text-xl text-base mb-[2vh] font-thin text-black'>
                                     Together we can make a better world one solution at a time
                                 </div>
 
@@ -197,83 +197,94 @@ const Footer = ( { fadeColor, setContactOpen }: Props) => {
                 </div>
             </div>
 
-            <div className='w-full h-[23vh] lg:h-[220px]'>
-                <motion.div 
-                    className="w-full h-full bg-[url('/components/oceanic.png')] bg-center bg-cover object-cover bg-no-repeat z-10"
-                >
-                    <div className='w-full h-full bg-neutral-gray-light bg-opacity-80 z-30 footer-circles backdrop-blur-2xl'></div>
-                </motion.div>
-            </div>
+            <div className='bottom-0 w-full'>
+                <div className='relative'>
+                    <motion.div 
+                        className="absolute w-full h-full bg-[url('/components/oceanic.png')] bg-center bg-cover object-cover bg-no-repeat z-10"
+                    >
+                        <div className='w-full h-full bg-neutral-gray-light bg-opacity-80 z-30 footer-circles backdrop-blur-2xl'></div>
+                    </motion.div>
+                    
+                    <div className='flex flex-col z-30 py-[2vh] px-[10vw] lg:px-[5vw] xl:px-[10vw]'>
+                        <div className=' flex justify-center items-center z-30'>
+                            <Link href='/landing'>
+                                <motion.div 
+                                    whileHover={{ scale: 1.1 }}
+                                    className="lg:w-[35px] lg:h-[32px] h-[40px] w-[40px] bg-[url('/components/sh-logo-dull.svg')] bg-center bg-contain object-contain bg-no-repeat z-30"
+                                ></motion.div>
+                            </Link>
 
-            <div className='absolute bottom-0 w-full px-[10vw] lg:px-[5vw] xl:px-[10vw]'>
-                <div className='flex flex-col'>
-                    <div className=' flex justify-center items-center'>
-                        <Link href='/landing'>
-                            <motion.div 
-                                whileHover={{ scale: 1.1 }}
-                                className="lg:w-[35px] lg:h-[32px] h-[40px] w-[40px] bg-[url('/components/sh-logo-dull.svg')] bg-center bg-contain object-contain bg-no-repeat z-30"
-                            ></motion.div>
-                        </Link>
+                            <div className='absolute xl:w-[30%] lg:w-[30%] lg:mr-[5vw] xl:mr-[10vw] right-0 mt-4 lg:flex justify-end text-base font-thin hidden'>
+                                <div className='flex mr-[0.5vw] items-end z-30'>
+                                    <Link href='landing'>
+                                        <motion.div 
+                                            whileHover={{
+                                                fontWeight: "bold",
+                                                color: "#6E7173"
+                                            }}
+                                            className=' cursor-pointer mr-[2vw]'
+                                        > Home </motion.div>
+                                    </Link>
 
-                        <div className='absolute xl:w-[20%] lg:w-[30%] lg:mr-[5vw] xl:mr-[10vw] right-0 lg:flex justify-end text-xl font-thin hidden'>
-                            <div className='flex mr-[0.5vw] items-end'>
-                                <Link href='ourwork'>
-                                    <motion.div 
-                                        whileHover={{
-                                            fontWeight: "bold",
-                                            color: "#6E7173"
-                                        }}
-                                        className=' cursor-pointer'
-                                    > Our Work </motion.div>
-                                </Link>
+                                    <Link href='ourwork'>
+                                        <motion.div 
+                                            whileHover={{
+                                                fontWeight: "bold",
+                                                color: "#6E7173"
+                                            }}
+                                            className=' cursor-pointer mr-[2vw]'
+                                        > Our Work </motion.div>
+                                    </Link>
 
-                                <Link href='publications'>
-                                    <motion.div 
-                                        whileHover={{
-                                            fontWeight: "bold",
-                                            color: "#6E7173"
-                                        }}
-                                        className=' cursor-pointer mx-[2vw]'
-                                    > Publications </motion.div>
-                                </Link>
+                                    <Link href='publications'>
+                                        <motion.div 
+                                            whileHover={{
+                                                fontWeight: "bold",
+                                                color: "#6E7173"
+                                            }}
+                                            className=' cursor-pointer mr-[2vw]'
+                                        > Publications </motion.div>
+                                    </Link>
 
-                                <Link href='team'>
-                                    <motion.div 
-                                        whileHover={{
-                                            fontWeight: "bold",
-                                            color: "#6E7173"
-                                        }}
-                                        className=' cursor-pointer'
-                                    > Team </motion.div>
-                                </Link>
-                            </div>                  
-                        </div>
-                    </div>
-
-                    <div className='w-full h-[2px] lg:mt-[20px] lg:mb-[20px] mt-[10px] mb-[10px] bg-black'></div>
-
-                    <div className='flex justify-start items-center lg:mb-[20px] mb-[10px] w-full'>
-                        <div className=' mx-auto'> Corporate Headquarters: Bethesda. MD </div>
-                    </div>
-
-                    <div className='flex mb-[10px] lg:mb-[20px] items-center'>
-                        <div className='ml-0 mr-auto flex'>
-                            <div className="w-[20px] h-[20px] bg-[url('/components/copyright.svg')] bg-center bg-contain object-contain bg-no-repeat z-30"></div>
-                            <div className=' text-xs lg:text-sm font-thin'> Novametrics LLC. All rights reserved </div>
+                                    <Link href='team'>
+                                        <motion.div 
+                                            whileHover={{
+                                                fontWeight: "bold",
+                                                color: "#6E7173"
+                                            }}
+                                            className=' cursor-pointer'
+                                        > Team </motion.div>
+                                    </Link>
+                                </div>                  
+                            </div>
                         </div>
 
-                        <a href='https://www.linkedin.com/company/novametricsllc/' target='_blank'>
-                            <motion.div
-                                whileHover={{ scale: 1.1 }}
-                                whileTap={{ scale: 0.9 }}
-                                className='ml-auto mr-0 cursor-pointer select-none'
-                            >
-                                <div className=" w-[50px] h-[50px] bg-[url('/components/linkedin-black.svg')] bg-center bg-contain object-contain bg-no-repeat z-30"></div>
-                            </motion.div>
-                        </a>
+                        <div className='w-full h-[2px] lg:mt-[20px] lg:mb-[20px] mt-[10px] mb-[10px] bg-black z-30'></div>
+
+                        <div className='flex justify-start items-center lg:mb-[20px] mb-[10px] w-full text-base z-30'>
+                            <div className=' mx-auto'> Corporate Headquarters: Bethesda. MD </div>
+                        </div>
+
+                        <div className='flex items-center z-30'>
+                            <div className='ml-0 mr-auto flex'>
+                                <div className="w-[20px] h-[20px] bg-[url('/components/copyright.svg')] bg-center bg-contain object-contain bg-no-repeat z-30"></div>
+                                <div className=' text-xs lg:text-sm font-thin'> Novametrics LLC. All rights reserved </div>
+                            </div>
+
+                            <a href='https://www.linkedin.com/company/novametricsllc/' target='_blank'>
+                                <motion.div
+                                    whileHover={{ scale: 1.1 }}
+                                    whileTap={{ scale: 0.9 }}
+                                    className='ml-auto mr-0 cursor-pointer select-none'
+                                >
+                                    <div className=" w-[50px] h-[50px] bg-[url('/components/linkedin-black.svg')] bg-center bg-contain object-contain bg-no-repeat z-30"></div>
+                                </motion.div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
     )
 }

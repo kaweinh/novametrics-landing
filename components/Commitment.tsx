@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 
 const Commitment = () => {
     return (
-        <div className='w-full h-fit lg:px-[5vw] xl:px-[10vw] xl:py-[20vh] lg:py-[10vh] py-[60px] flex flex-col lg:flex-row items-center bg-neutral-white font-mukta-mahee text-black'>
-            <div className=' flex '>
+        <div className='w-full h-fit px-[3vw] lg:px-[5vw] xl:px-[10vw] py-[10vh] flex flex-col lg:flex-row items-center bg-neutral-white font-mukta-mahee text-black'>
+            <div className=' flex lg:mr-20'>
                 <motion.div 
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, delay: 0.3 }}
-                    className="xl:w-[600px] md:w-[400px] w-[300px] items-center justify-center z-30"
+                    className="xl:w-[400px] lg:w-[300px] md:w-[400px] w-[300px] items-center justify-center z-30"
                 >
                     <div className=" relative pb-[100%] flex items-center justify-center">
                         <div className="absolute top-0 w-full h-full items-center flex justify-center">
@@ -22,18 +22,17 @@ const Commitment = () => {
                 </motion.div>
             </div>
 
-            <div className=' flex flex-col w-[90%] lg:w-full lg:ml-[5vw] xl:ml-[10vw] p-10 bg-white rounded-xl font-thin'>
-                <div className='lg:text-6xl text-3xl mb-10 text-primary-dull font-bold'> Values and Integrity </div>
-                <div className='w-full lg:text-3xl text-xl lg:leading-[5vh] leading-[5vh]'>
-                    <p>
+            <div className=' flex flex-col lg:w-full p-6 md:p-10 bg-white rounded-xl font-thin'>
+                <div className='xl:text-3xl text-xl mb-10 text-primary-dull font-bold'> Values and Integrity </div>
+                <div className='w-full xl:text-xl text-base '>
+                    <p className='leading-8 lg:leading-10'>
                         Our commitment extends beyond just data; its about trust, understanding, and collaboration.
                     </p>
 
                     <br></br>
+                    <p className='leading-8 lg:leading-10'>
                         This commitment drives us to embrace the subtle complexities and nuances of different environments and challenges, 
                         ensuring our analytical services remain precise and actionable.
-                    <p>
-
                     </p>
                 </div>
             </div>

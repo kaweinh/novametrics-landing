@@ -57,14 +57,14 @@ const Partners = (props: Props) => {
 
     return (
         <div className='w-full h-fit relative'>
-            <div ref={bg1Ref} className='w-full h-[90vh] md:h-[120vh] lg:h-[60vh] relative overflow-hidden flex flex-col justify-center items-center'>
-                <div className=' absolute text-3xl lg:text-6xl font-bold text-white z-30 top-0 mt-[5vh]'>
+            <div ref={bg1Ref} className='w-full px-[3vw] lg:px-[5vw] xl:px-[10vw] py-[10vh] relative overflow-hidden flex flex-col justify-center items-center'>
+                <div className='text-xl xl:text-3xl font-bold text-white z-30 mb-10'>
                     Proud Partners
                 </div>
 
-                <div className='absolute lg:flex lg:flex-col hidden h-full w-full z-30 xl:px-[10vw] 2xl:px-[20vw]'>
+                <div className='lg:flex lg:flex-col hidden h-full w-full z-30'>
 
-                    <div className=' w-full flex justify-center items-center mt-[15%] '>
+                    <div className=' w-full flex justify-center items-center '>
                         {partners.slice(0, 6).map((partner, index) => (
                             <div key={ partner.name } className='z-20 flex items-center justify-center'>
                                 <div className='p-4'>
@@ -90,7 +90,7 @@ const Partners = (props: Props) => {
 
                 </div>
 
-                <div className='absolute h-full grid grid-cols-3 justify-center items-center lg:hidden z-20 py-[100px] w-[90%]'>
+                <div className='h-full grid grid-cols-3 grid-rows-4 gap-6 justify-center items-center lg:hidden z-20'>
                     {partners.map((partner, index) => (
                         <div key={index} className=' z-20 flex items-center justify-center h-fit'>
                             <div className='bg-white bg-opacity-75 w-[25vw] h-[25vw] md:w-[20vw] md:h-[20vw] flex items-center justify-center p-2'>
@@ -101,7 +101,7 @@ const Partners = (props: Props) => {
                 </div>
 
                 <motion.div 
-                    className="w-full h-full bg-[url('/components/0_0.png')] bg-center bg-cover object-cover bg-no-repeat z-10 "
+                    className="absolute w-full h-full bg-[url('/components/0_0.png')] bg-center bg-cover object-cover bg-no-repeat z-10 "
                 >
                     <div className='w-full h-full bg-primary-dark bg-opacity-[0.8] backdrop-blur-lg z-30 partners-circles'></div>
                 </motion.div>

@@ -62,8 +62,8 @@ const Features = (props: Props) => {
                         </div>
                     </div>
 
-                    <div className=' text-3xl font-semibold mt-[20px] '> Holistic </div>
-                    <div className=' lg:text-2xl text-xl font-thin mt-[20px]'>
+                    <div className=' text-xl xl:text-3xl font-semibold mt-[20px] '> Holistic </div>
+                    <div className=' xl:text-xl text-base font-thin mt-[20px]'>
                         Empowered by our proprietary Weak-Signal Analysis and modern artificial intelligence, Novametrics is able to bring a holistic approach to predictive analytics, 
                         allowing you to identify customized solutions for complex challenges.
                     </div>
@@ -82,8 +82,8 @@ const Features = (props: Props) => {
                         </div>
                     </div>
 
-                    <div className=' text-3xl font-semibold mt-[20px] '> Open-Source </div>
-                    <div className=' lg:text-2xl text-xl font-thin mt-[20px] mb-[55px]'>
+                    <div className=' text-xl xl:text-3xl font-semibold mt-[20px] '> Open-Source </div>
+                    <div className=' xl:text-xl text-base font-thin mt-[20px] mb-[55px]'>
                         Leveraging AI/ML and Large Language Models, Novametrics enables you to tap into the vast sea of open-source data and identify new opportunities and innovative strategies. 
                     </div>
                 </div>
@@ -101,8 +101,8 @@ const Features = (props: Props) => {
                         </div>
                     </div>
 
-                    <div className=' text-3xl font-semibold mt-[20px] '> End-to-End </div>
-                    <div className=' lg:text-2xl text-xl font-thin mt-[20px] mb-[65px]'>
+                    <div className=' text-xl xl:text-3xl font-semibold mt-[20px] '> End-to-End </div>
+                    <div className=' xl:text-xl text-base font-thin mt-[20px] mb-[65px]'>
                         From data to decision (D2D) Novametrics provides clients with an end-to-end solution, alleviating the burden of intensive data collection and processing to support your decision-making processes
                     </div>
                 </div>
