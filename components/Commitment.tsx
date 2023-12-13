@@ -23,7 +23,7 @@ const Commitment = () => {
             </div>
 
             <div className=' flex flex-col lg:w-full p-6 md:p-10 bg-white rounded-xl font-thin'>
-                <div className='xl:text-3xl text-xl mb-10 text-primary-dull font-bold'> Values and Integrity </div>
+                <div className='xl:text-4xl text-2xl mb-10 text-primary-dull font-bold'> Values and Integrity </div>
                 <div className='w-full xl:text-xl text-base '>
                     <p className='leading-8 lg:leading-10'>
                         Our commitment extends beyond just data; its about trust, understanding, and collaboration.

@@ -25,7 +25,7 @@ const Vision = (props: Props) => {
                 className='w-full h-fit px-[3vw] lg:px-[5vw] xl:px-[10vw] py-[10vh] flex justify-items-center items-center font-mukta-mahee z-20'
             >
                 <div className='xl:text-xl text-base text-black lg:w-[75%] mx-auto lg:mx-0 p-6 md:p-10 bg-white rounded-xl font-thin'>
-                    <div className='xl:text-3xl text-xl font-bold text-primary-dull mb-10'>
+                    <div className='xl:text-4xl text-2xl font-bold text-primary-dull mb-10'>
                         Mission and Vision
                     </div>
 

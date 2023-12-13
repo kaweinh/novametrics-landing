@@ -15,15 +15,13 @@ const AboutUs = (props: Props) => {
         </div>
 
         <div className='flex flex-col bg-white rounded-xl p-6 md:p-10'>
-            <div className=' xl:text-3xl text-xl font-bold text-primary-dull mb-10'> Novametrics </div>
+            <div className=' xl:text-4xl text-2xl font-bold text-primary-dull mb-10'> Novametrics </div>
 
             <div className='flex xl:text-xl text-base mt-[0px] font-thin'>
                 <div className='w-full leading-8 lg:leading-10' >
-                    <p>
+                    <p className='mb-10'>
                         An advanced analytics firm that provides sophisticated data-to-decision services for government agencies, NGOs, foundations, impact investment funds, and aid and development groups.
                     </p>
-
-                    <br></br>
 
                     <p>
                         Our journey began through a series of advanced research seminars taught at Princeton University. Ever-adapting, our holistic approach exploits 

@@ -41,15 +41,15 @@ const FunList = (props: Props) => {
     })
 
     return (
-        <div className='relative w-full h-fit py-[10vh] flex flex-col justify-center font-thin items-start text-xl lg:text-3xl text-black px-[10vw] lg:px-[20vw] bg-gradient-to-b from-white to-neutral-white'>
-            <h1 className=' font-bold text-3xl lg:text-5xl text-primary-dull mb-[5vh]'>
+        <div className='relative w-full h-fit py-[10vh] flex flex-col justify-center font-thin items-start text-base xl:text-xl text-black px-[10vw] lg:px-[20vw] bg-gradient-to-b from-white to-neutral-white'>
+            <h1 className=' font-bold text-2xl xl:text-4xl text-primary-dull mb-[5vh]'>
                 Navigating Global Challenges with Novametrics
             </h1>
 
-            <div>
+            <div className='w-full'>
                 <div> Our previous work has assisted a multitude of sectors including: </div> <br></br>
-                <ul className='list-decimal list-inside'>
-                    <li ref={item1} className='relative font-semibold'> 
+                <ul className='list-decimal list-inside w-full'>
+                    <li ref={item1} className='relative font-semibold w-full'> 
                         Security and Peacekeeping 
 
                         <ul className='list-disc list-inside font-thin'>
@@ -61,7 +61,7 @@ const FunList = (props: Props) => {
                         <motion.div
                             style={{ width: useTransform(item1Progress, [0, 1], ['0%', '100%']) }}
                             transition={{ type: 'spring', damping: 10, stiffness: 100, bounce: 0.5 }}
-                            className='absolute rounded-full bg-primary h-[70px] right-[-120%] top-0'
+                            className='absolute rounded-full bg-primary h-[50px] right-[-90%] top-0 hidden lg:flex'
                         ></motion.div>
                     </li>
                     <li ref={item2} className='relative font-semibold'> 
@@ -76,7 +76,7 @@ const FunList = (props: Props) => {
                         <motion.div
                             style={{ width: useTransform(item2Progress, [0.25, 1], ['0%', '100%']) }}
                             transition={{ type: 'spring', damping: 10, stiffness: 100, bounce: 0.5 }}
-                            className='absolute rounded-full bg-primary-soft h-[70px] right-[-140%] top-0'
+                            className='absolute rounded-full bg-primary-soft h-[50px] right-[-99%] top-0 hidden lg:flex'
                         ></motion.div>
                     </li>
                     <li ref={item3} className='relative font-semibold'> 
@@ -90,7 +90,7 @@ const FunList = (props: Props) => {
                         <motion.div
                             style={{ width: useTransform(item3Progress, [0.5, 1], ['0%', '100%']) }}
                             transition={{ type: 'spring', damping: 10, stiffness: 100, bounce: 0.5 }}
-                            className='absolute rounded-full bg-primary-dark h-[70px] right-[-160%] top-0'
+                            className='absolute rounded-full bg-primary-dark h-[50px] right-[-110%] top-0 hidden lg:flex'
                         ></motion.div>
                         <br></br>
                     </li>
@@ -105,7 +105,7 @@ const FunList = (props: Props) => {
                         <motion.div
                             style={{ width: useTransform(item4Progress, [0.5, 1], ['0%', '100%']) }}
                             transition={{ type: 'spring', damping: 10, stiffness: 100, bounce: 0.5 }}
-                            className='absolute rounded-full bg-primary-softer h-[70px] right-[-150%] top-0'
+                            className='absolute rounded-full bg-primary-softer h-[50px] right-[-100%] top-0 hidden lg:flex'
                         ></motion.div>
                         <br></br>
                     </li>
@@ -120,7 +120,7 @@ const FunList = (props: Props) => {
                         <motion.div
                             style={{ width: useTransform(item5Progress, [0.5, 1], ['0%', '100%']) }}
                             transition={{ type: 'spring', damping: 10, stiffness: 100, bounce: 0.5 }}
-                            className='absolute rounded-full bg-primary-light h-[70px] right-[-135%] top-0'
+                            className='absolute rounded-full bg-primary-light h-[50px] right-[-95%] top-0 hidden lg:flex'
                         ></motion.div>
                         <br></br>
                     </li>
@@ -135,7 +135,7 @@ const FunList = (props: Props) => {
                         <motion.div
                             style={{ width: useTransform(item6Progress, [0.5, 1], ['0%', '100%']) }}
                             transition={{ type: 'spring', damping: 10, stiffness: 100, bounce: 0.5 }}
-                            className='absolute rounded-full bg-primary-dark h-[70px] right-[-125%] top-0'
+                            className='absolute rounded-full bg-primary-dark h-[50px] right-[-105%] top-0 hidden lg:flex'
                         ></motion.div> 
                     </li>
                 </ul>

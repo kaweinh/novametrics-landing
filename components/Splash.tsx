@@ -34,7 +34,7 @@ const Splash = (props: Props) => {
                             Identifying <span className=' text-primary-softer'>Solutions</span>
                         </motion.div>
 
-                        <div className='xl:text-xl text-base text-center lg:text-start text-neutral-gray-dark lg:mt-8'>
+                        <div className='xl:text-2xl text-base text-center lg:text-start text-neutral-gray-dark lg:mt-8'>
                             Harnessing vast open-source data to support your strategic decision-making.
                         </div>
                     </motion.div>

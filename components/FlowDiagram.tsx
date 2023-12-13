@@ -22,7 +22,7 @@ const FlowDiagram = (props: Props) => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1, delay: 0.1 * index, ease: 'easeInOut' }}
                         key={ index } 
-                        className={ `relative w-full min-h-[60vh] bg-opacity-50 flex flex-col justify-center py-[30%] items-center bg-${ layer.color }`}
+                        className={ `relative w-full bg-opacity-50 flex flex-col justify-center py-[30%] items-center bg-${ layer.color }`}
                     >
                         <div className='text-sm italic absolute top-0 mt-[10px] text-center'>
                             { layer.name }
@@ -40,7 +40,7 @@ const FlowDiagram = (props: Props) => {
 
 
                         { layer.nodes.map((node: string) => (
-                            <div key={ node } className={`border-2 border-${ props.text_color } break-words overflow-hidden py-[10px] px-[10px] lg:w-[70%] xl:w-[60%] 2xl:w-[50%] my-auto rounded-xl text-center `}>
+                            <div key={ node } className={`border-2 border-${ props.text_color } break-words overflow-hidden lg:my-[5px] 2xl:my-[10px] py-[10px] px-[10px] lg:w-[70%] xl:w-[60%] 2xl:w-[50%] rounded-xl text-center `}>
                                 { node }
                             </div>
                         ))}

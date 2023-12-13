@@ -109,15 +109,15 @@ const WsaDemo = (props: Props) => {
         <div className='w-full h-fit flex flex-col items-center justify-center font-thin font-mukta-mahee'>
 
             <div className='flex flex-col lg:flex-row justify-center items-center w-full h-fit bg-white py-[10vh] px-[10vw]'>
-                <div className=' flex flex-col items-center justify-start text-xl lg:text-3xl text-primary-dull w-[100%]'>
-                    <h1 className=' font-bold text-3xl lg:text-6xl mb-[5vh]'> Amplifying Signals Below the Noise </h1>
+                <div className=' flex flex-col items-start justify-start text-base xl:text-xl text-primary-dull w-[100%]'>
+                    <h1 className=' font-bold text-2xl xl:text-4xl'> Amplifying Signals Below the Noise </h1>
 
-                    <p className=' text-black mb-[5vh]'>
+                    <p className=' text-black leading-8 lg:leading-10 mt-10'>
                         Advanced AI and machine learning algorithms are used to amplify weak signals and separate the most influential factors out from the noise of data, 
                         bringing critical insights to the forefront of decision-making. 
                     </p>
 
-                    <p className=' text-primary-soft italic text-lg'>
+                    <p className=' text-primary-soft text-base mt-10'>
                         See here how the Weak-Signals are separated from the noise to identify vulnerable regions to Boko Haram breeding grounds in Nigeria.
                     </p>
                 </div>
@@ -144,7 +144,7 @@ const WsaDemo = (props: Props) => {
                         </div>                     
                     </div>
 
-                    <div className="xl:w-[700px] lg:w-[400px] lg:mr-[-100px] mr-[-50px] w-[300px] items-center justify-center z-30 mt-[-50px] xl:mt-[-150px]" style={{ clipPath: 'polygon(20% 38.5%, 70% 38.5%, 70% 98%, 15% 98%)' }} >
+                    <div className="xl:w-[700px] lg:w-[400px] lg:mr-[-100px] mr-[-50px] w-[300px] items-center justify-center z-30 mt-[-50px] xl:mt-[-150px]" style={{ clipPath: 'polygon(18.5% 38.5%, 70% 38.5%, 70% 100%, 15% 100%)' }} >
                         <div className=" relative pb-[70%] flex items-center justify-center">
                             <div className="absolute top-0 w-full h-full items-center flex justify-center">
                                 <div className="absolute z-30 w-full h-full">
