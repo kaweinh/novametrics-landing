@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Novametrics',
-  description: 'Weaving the fabric of space time',
+  description: 'Novametrics LLC is a big data analytics firm working internationally to solve real-world problems. We serve our clients through innovative approaches to "big data" analytics. Novametrics developed "weak-signal analysis" – a proprietary big data analytical capability that can identify the socio-cultural and economic',
 }
 
 export default function RootLayout({
