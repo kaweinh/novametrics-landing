@@ -207,7 +207,7 @@ const Footer = ( { fadeColor, setContactOpen }: Props) => {
                     
                     <div className='flex flex-col z-30 py-[2vh] px-[10vw] lg:px-[5vw] xl:px-[10vw]'>
                         <div className=' flex justify-center items-center z-30'>
-                            <Link href='/landing'>
+                            <Link href='/'>
                                 <motion.div 
                                     whileHover={{ scale: 1.1 }}
                                     className="lg:w-[35px] lg:h-[32px] h-[40px] w-[40px] bg-[url('/components/sh-logo-dull.svg')] bg-center bg-contain object-contain bg-no-repeat z-30"
@@ -216,7 +216,7 @@ const Footer = ( { fadeColor, setContactOpen }: Props) => {
 
                             <div className='absolute xl:w-[30%] lg:w-[30%] lg:mr-[5vw] xl:mr-[10vw] right-0 mt-4 lg:flex justify-end text-base font-thin hidden'>
                                 <div className='flex mr-[0.5vw] items-end z-30'>
-                                    <Link href='landing'>
+                                    <Link href='/'>
                                         <motion.div 
                                             whileHover={{
                                                 fontWeight: "bold",
@@ -262,7 +262,7 @@ const Footer = ( { fadeColor, setContactOpen }: Props) => {
                         <div className='w-full h-[2px] lg:mt-[20px] lg:mb-[20px] mt-[10px] mb-[10px] bg-black z-30'></div>
 
                         <div className='flex justify-start items-center lg:mb-[20px] mb-[10px] w-full text-base z-30'>
-                            <div className=' mx-auto'> Corporate Headquarters: Bethesda. MD </div>
+                            <div className=' mx-auto'> Corporate Headquarters: Bethesda, MD </div>
                         </div>
 
                         <div className='flex items-center z-30'>

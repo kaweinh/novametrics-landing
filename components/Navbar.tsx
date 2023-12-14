@@ -44,7 +44,7 @@ const Navbar = (props: Props) => {
 
     const getIcon = () => { 
         return (
-            <Link href='/landing' className='absolute flex justify-center items-center left-0 z-40'>
+            <Link href='/' className='absolute flex justify-center items-center left-0 z-40'>
 
                 <div 
                     className='w-[29px] h-[26.2px] ml-[20px] lg:ml-[50px] xl:ml-[200px] z-40 bg-no-repeat bg-cover cursor-pointer'
