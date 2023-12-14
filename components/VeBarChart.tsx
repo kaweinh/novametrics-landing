@@ -137,8 +137,8 @@ const VeBarChart = (props: Props) => {
                 .map( d => d.date );
 
             const legendData = [
-                { color: "#AEDFF8", text: "Yes/Maybe" },
-                { color: "#3A506B", text: "Other" },
+                { color: "#AEDFF8", text: "VE Events" },
+                { color: "#3A506B", text: "Insurgency Events" },
             ]
 
             svg
