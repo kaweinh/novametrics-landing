@@ -72,7 +72,7 @@ const PrettyMatrix = ( props: Props ) => {
         return (
             <td 
                 key={ col } 
-                className={ `border w-[40px] h-[40px] lg:w-[2vw] lg:h-[2vw] cursor-default border-white ${ getColor( value ) } text-center `}>
+                className={ `border w-[40px] h-[40px] lg:w-[40px] lg:h-[40px] cursor-default border-white ${ getColor( value ) } text-center `}>
                 { value.toFixed(2) }
             </td>
         )
@@ -88,8 +88,8 @@ const PrettyMatrix = ( props: Props ) => {
                         onClick={() => { setCenter([ Math.max(5, row) , Math.max(5, col) ]) } }
                         className={ `border cursor-default bg-opacity-10 border-white relative ${ getColor( value ) } text-center `}>
                         { value.toFixed(2) }
-                        <div className="absolute hidden lg:flex z-50 lg:w-[400px] lg:h-[200px] pointer-events-none bottom-0 left-0 bg-[url('/components/left-right-pyramid.png')] bg-contain object-contain bg-no-repeat "></div>
-                        <div className="absolute lg:hidden z-50 w-[70px] h-[200px] right-[-35px] pointer-events-none top-0 bg-[url('/components/top-down-pyramid.svg')] bg-contain object-contain bg-no-repeat "></div>
+                        <div className="absolute hidden lg:flex z-50 lg:w-[200px] lg:h-[100px] 2xl:w-[300px] 2xl:h-[150px] pointer-events-none bottom-0 left-0 bg-[url('/components/left-right-pyramid.png')] bg-contain object-contain bg-no-repeat "></div>
+                        <div className="absolute lg:hidden z-50 w-[70px] h-[200px] right-[-35px] pointer-events-none top-0 bg-[url('/components/top-down-pyramid.png')] bg-contain object-contain bg-no-repeat "></div>
 
                         { !hasMoved && (
                             <motion.div 
@@ -137,8 +137,8 @@ const PrettyMatrix = ( props: Props ) => {
 
     return (
         <div className='w-full flex flex-col lg:flex-row justify-center items-center'>
-            <div className=' w-fit relative bg-white mx-auto lg:mb-0 mb-[10vh]'>
-                <table className='mx-auto table-auto border-collapse border border-white xl:text-[0.2rem] text-[0.1rem]'>
+            <div className=' w-fit relative bg-white mx-auto lg:ml-auto lg:mr-10 mb-20 lg:mb-0'>
+                <table className='mx-auto table-auto border-collapse border border-white 2xl:text-[0.2rem] lg:text-[0.05rem] text-[0.1rem]'>
                     <tbody className='hidden lg:table' onMouseLeave={ () => { setPotentialCenter( [100, 100]) }}>
                         { cellValues.map((rowValues, row ) => (
                             <tr key={ row }>
@@ -165,11 +165,11 @@ const PrettyMatrix = ( props: Props ) => {
             </div>
 
             <div className='relative bg-white mx-auto p-4 lg:p-10 bg-opacity-30 rounded-3xl'>
-                <table className=' table-fixed border-collapse text-[0.5rem] xl:text-[0.8rem]'>
+                <table className=' table-fixed border-collapse text-[0.5rem] xl:text-[0.6rem]'>
                     <tbody className=' hidden lg:table'>
-                        <tr className=' text-white text-[0.5rem]'>
+                        <tr className=' text-white text-[0.5rem] font-thin'>
                             { rowNames.map(( name, index ) => ( 
-                                <th key={index} className=' w-[1vw] h-[10vh] lg:w-[2vw] lg:h-[8vh]'>
+                                <th key={index} className=' w-[40px] h-[80px]'>
                                     <div className='w-full h-full break-words'>
                                         { name }
                                     </div>
@@ -179,7 +179,7 @@ const PrettyMatrix = ( props: Props ) => {
 
                         { cellValues.slice( Math.max(0, center[0] - 4), center[0] + 6).map((rowValues, row ) => (
                             <tr key={ row }>
-                                <td className=' text-white text-[0.5rem] lg:w-[5vw] pr-[1vw]'>
+                                <td className=' text-white text-[0.5rem] lg:w-[100px] pr-[20px]'>
                                     { colNames[ row ] }
                                 </td>
 

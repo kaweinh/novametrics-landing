@@ -34,7 +34,7 @@ export default function Home() {
     const getPersonObject = (  coverUrl: string, borderColor: string ) => {
         return (
             <div 
-                className={ `relative h-[100px] w-[100px] rounded-full ${coverUrl} border-2 border-${borderColor} rounded-2xl overflow-hidden bg-cover object-cover bg-no-repeat `}
+                className={ `relative w-[100px] h-[100px] lg:h-[140px] lg:w-[140px] rounded-full ${coverUrl} border-2 border-${borderColor} rounded-2xl overflow-hidden bg-cover object-cover bg-no-repeat `}
                 style={{ boxShadow: 'inset 0 0 10px rgba(0,0,0, 1)' }}
             >
                 <motion.div
@@ -64,8 +64,8 @@ export default function Home() {
 
             <div className='relative w-screen h-fit flex flex-col justify-center items-center font-mukta-mahee'>
                 <div className='w-full h-[30vh] lg:h-[40vh] relative overflow-hidden'>
-                    <div className='absolute text-3xl lg:text-6xl text-white z-40 top-[50%] left-[20%]'>
-                        Team
+                    <div className='absolute xl:text-5xl text-3xl text-white z-40 top-[50%] left-[20%]'>
+                        Meet the Team
                     </div>
 
                     <motion.div 
@@ -79,8 +79,8 @@ export default function Home() {
                     </motion.div>
                 </div>
 
-                <div className='w-full h-fit lg:py-[20vh] lg:px-[10vw] xl:px-[18vw] py-[10vh] pl-[5vw] pr-[10vw] bg-neutral-white flex justify-center items-center text-black font-mukta-mahee text-3xl'>
-                    <div className='w-full grid lg:grid-cols-3 grid-cols-1 gap-y-20 justify-center items-center'>
+                <div className='w-full h-fit lg:py-[20vh] lg:px-[10vw] xl:px-[10vw] py-[10vh] pl-[5vw] pr-[10vw] bg-neutral-white flex justify-center items-center text-black font-mukta-mahee text-3xl'>
+                    <div className='w-full grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-y-20 lg:gap-y-32 justify-center items-center'>
                         { members.map((member) => (
                             <a key={member.name} href={`${member.linkUrl}`} target='_blank'>
                                 <div className='grid grid-cols-2 cursor-pointer'>

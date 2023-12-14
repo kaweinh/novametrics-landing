@@ -14,7 +14,7 @@ const Splash = (props: Props) => {
             <div className=' flex flex-col lg:flex-row justify-center w-full items-center mb-8 lg:mb-0'>
                 <div className='flex flex-col lg:ml-auto lg:mr-10'>
                     <motion.div
-                        className='lg:text-5xl text-3xl font-bold text-left lg:mb-12 flex flex-col justify-center items-center lg:items-start'
+                        className='xl:text-5xl text-3xl font-bold text-left lg:mb-12 flex flex-col justify-center items-center lg:items-start'
                     >
                         <motion.div
                             initial={{ opacity: 0, x: -100 }}

@@ -177,7 +177,7 @@ const Footer = ( { fadeColor, setContactOpen }: Props) => {
                                 </table>
                             </div>
 
-                            <div className=' lg:ml-[40vw] flex flex-col items-start justify-center lg:w-[35vw] xl:w-[25vw] p-6 lg:p-8 bg-white text-black rounded-xl z-40'>
+                            <div className=' lg:ml-[40vw] flex flex-col items-start justify-center lg:w-[35vw] xl:w-[25vw] mx-[5vw] lg:mr-0 p-6 lg:p-8 bg-white text-black rounded-xl z-40'>
                                 <h1 className='xl:text-3xl text-xl font-bold mb-[2vh]'> Let us know how we can help today </h1>
 
                                 <div className='xl:text-xl text-base mb-[2vh] font-thin text-black'>

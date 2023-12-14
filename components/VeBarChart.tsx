@@ -26,7 +26,7 @@ const VeBarChart = (props: Props) => {
     }, [inView])
 
     const handleResize = () => {
-        const lgBreakpoint = 1024; 
+        const lgBreakpoint = 1280; 
         if( window.innerWidth < lgBreakpoint ) {
             setWidth( 380 ) 
             setHeight( 250 )
@@ -265,15 +265,15 @@ const VeBarChart = (props: Props) => {
                 ref={d3Container}
             />
 
-            <div className='absolute font-mukta-mahee text-right lg:text-[0.6rem] text-[0.4rem] w-[70px] text-neutral-brown-orange mr-[190px] mb-[100px] lg:mr-[300px] lg:mb-[200px]'>
+            <div className='absolute font-mukta-mahee text-right xl:text-[0.6rem] text-[0.4rem] w-[70px] text-neutral-brown-orange mr-[190px] mb-[100px] xl:mr-[300px] xl:mb-[200px]'>
                 President Duterte takes office and begins his &quot;war on drugs&quot;
             </div>
 
-            <div className='absolute font-mukta-mahee text-right lg:text-[0.6rem] text-[0.4rem] w-[70px] text-neutral-brown-orange mr-[40px] mb-[90px] lg:mr-[30px] lg:mb-[150px]'>
+            <div className='absolute font-mukta-mahee text-right xl:text-[0.6rem] text-[0.4rem] w-[70px] text-neutral-brown-orange mr-[40px] mb-[90px] xl:mr-[30px] xl:mb-[150px]'>
                 Battle of Marawi 
             </div>
 
-            <div className='absolute font-mukta-mahee text-right lg:text-[0.6rem] text-[0.4rem] w-[100px] lg:w-[150px] text-neutral-brown-orange ml-[170px] lg:ml-[320px] lg:mt-[30px]'>
+            <div className='absolute font-mukta-mahee text-right xl:text-[0.6rem] text-[0.4rem] w-[100px] lg:w-[150px] text-neutral-brown-orange ml-[170px] xl:ml-[320px] xl:mt-[30px]'>
                 BARMM is established between the Philippines government and the Moro Islamic Liberation Front (MILF)
             </div>
         </div>

@@ -80,7 +80,7 @@ export default function Home() {
 
             <div className='relative w-screen h-fit flex flex-col justify-center items-center font-mukta-mahee'>
                 <div className='w-full h-[30vh] lg:h-[40vh] relative overflow-hidden'>
-                    <div className='absolute text-3xl lg:text-6xl text-white z-40 top-[50%] left-[20%]'>
+                    <div className='absolute xl:text-5xl text-3xl text-white z-40 top-[50%] left-[20%]'>
                         Publications
                     </div>
 
@@ -95,7 +95,7 @@ export default function Home() {
                     </motion.div>
                 </div>
 
-                <div className='w-full h-[30vh] flex justify-center items-center text-xl lg:text-3xl text-black font-semibold lg:px-[20vw] px-[10vw] bg-neutral-white'>
+                <div className='w-full py-[10vh] flex justify-center items-center text-base xl:text-2xl text-black font-semibold lg:px-[20vw] px-[10vw] bg-neutral-white'>
                     Discover a glimpse into Novametrics&apos; expertise through our featured publications, showcasing a snapshot of our extensive research 
                     and innovative analytical solutions
                 </div>

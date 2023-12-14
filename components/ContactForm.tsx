@@ -96,10 +96,14 @@ const ContactForm = (props: Props) => {
                 </div>
             }
 
-            <div ref={ panelRef } className=' w-[95vw] h-[70vh] overflow-y-scroll lg:w-[40vw] lg:h-fit bg-white rounded-xl p-4 lg:p-12 font-mukta-mahee text-3xl flex flex-col justify-start items-start text-black font-thin'>
-                <h1 className=' text-primary-dull font-bold'> Contact Us </h1>
+            <div ref={ panelRef } className=' w-[95vw] h-[70vh] lg:mt-[10vh] 2xl:mt-[0vh] lg:max-h-[80vh] lg:h-fit overflow-y-scroll lg:w-[70vw] xl:w-[60vw] 2xl:w-[40vw] bg-white rounded-xl p-4 lg:p-12 font-mukta-mahee text-2xl xl:text-3xl flex flex-col justify-start items-start text-black font-thin'>
+                <div className='flex w-full'>
+                    <h1 className=' text-primary-dull font-bold'> Contact Us </h1>
 
-                <form className='w-full flex-flex-col text-xl mt-[2vh]' onSubmit={handleSubmit}>
+                    <div className='ml-auto mr-0 cursor-pointer' onClick={ () => { props.setContactOpen(false)}}> &#x2715; </div>
+                </div>
+
+                <form className='w-full flex-flex-col text-base lg:text-xl mt-[2vh]' onSubmit={handleSubmit}>
                     <div className='flex items-center justify-between mb-[2vh]'>
                         <div className='py-2 font-semibold'> Name </div>
                         <input 

@@ -72,7 +72,7 @@ export default function Home() {
 
             <div className='relative w-screen h-fit flex flex-col justify-center items-center font-mukta-mahee'>
                 <div className='w-full h-[30vh] lg:h-[40vh] relative overflow-hidden'>
-                    <div className='absolute text-3xl lg:text-6xl text-white z-40 top-[50%] left-[20%]'>
+                    <div className='absolute xl:text-5xl text-3xl text-white z-40 top-[50%] left-[20%]'>
                         Our Work
                     </div>
 
@@ -96,14 +96,14 @@ export default function Home() {
                 <Partners />
 
                 <div className='w-full px-[5vw] lg:px-[10vw] py-[10vh] bg-white flex flex-col'>
-                    <div className=' px-[10vw] flex justify-center '>
-                        <h1 className=' font-bold text-2xl xl:text-4xl text-primary-dull mb-[5vh]'>
+                    <div className=' px-[10vw] flex justify-center items-center text-center '>
+                        <h1 className=' font-bold text-2xl xl:text-4xl text-primary-dull mb-10'>
                             Data-To-Decision Architecture 
                         </h1>
                     </div>
                     <FlowDiagram layers={ flowLayers } text_color='white'/>
 
-                    <div className=' xl:text-xl text-base text-black font-thin px-[10vw] mt-10 w-full'>
+                    <div className=' xl:text-xl text-base text-black font-thin lg:px-[10vw] mt-10 w-full'>
                         <p className='leading-8 lg:leading-10'>
                             Explore our innovative Data-to-Decision Architecture, where sophisticated analysis and insightful modeling converge to deliver empowering results. 
                             With precise synthesis of a problem&apos;s components, this methodology drives impactful decision-making.
@@ -112,22 +112,22 @@ export default function Home() {
                 </div>
 
                 <div ref={bg2Ref} className='w-full h-fit relative overflow-hidden border border-black'>
-                    <div className=' h-full w-full flex xl:text-xl text-base flex-col px-[5vw] lg:px-[10vw] py-[10vh] justify-center items-center font-thin'>
+                    <div className=' h-full w-full flex xl:text-xl text-base flex-col px-[5vw] lg:px-[0vw] py-[10vh] justify-center items-center font-thin'>
                         <h1 className=' text-white xl:text-4xl text-2xl font-bold z-30'>
                             Weak Signal Analysis
                         </h1>
 
-                        <p className='text-white mt-10 lg:px-[10vw] leading-8 lg:leading-10 w-full z-30'>
+                        <p className='text-white mt-10 lg:px-[20vw] leading-8 lg:leading-10 w-full z-30'>
                             Adapted from advanced methodologies originally developed for detecting foreign submarines and clandestine underground nuclear weapon tests, 
                             our proprietary Weak-Signal Analysis is an innovative method that uncovers intricate patterns to deliver predictive insights across vast open-source data.
                         </p>
 
-                        <p className='text-white mt-10 lg:px-[10vw] w-full leading-8 lg:leading-10 z-30'>
+                        <p className='text-white mt-10 lg:px-[20vw] w-full leading-8 lg:leading-10 z-30'>
                             Vast arrays of data are collected, cleaned, and verified to reveal the intricate interplay of indicators that represent populations, regions, and their environments.
                         </p>
 
-                        <div className=' mt-20 mb-20 lg:px-[10vw] leading-8 lg:leading-10 z-30'>
-                            <p className=' bg-gradient-to-r from-primary-soft to-primary-light p-10 text-lg font-semibold text-black rounded-xl w-full'>
+                        <div className=' mt-20 mb-20 lg:px-[20vw] leading-8 lg:leading-10 z-30'>
+                            <p className=' bg-gradient-to-r from-primary-soft to-primary-light p-10 text-sm xl:text-lg font-semibold text-black rounded-xl w-full'>
                                 Click through the myriad of indicators that characterize a successful environmentally-sustainable business venture in Liberia
                             </p>
                         </div>
@@ -147,6 +147,8 @@ export default function Home() {
                 <div className='h-fit w-full'>
                     <WsaDemo />
                 </div>
+
+                <div className='bg-white w-full h-32'></div>
 
                 <Footer fadeColor='white' setContactOpen={ setContactOpen } />
                 
