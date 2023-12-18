@@ -30,8 +30,8 @@ const Vision = (props: Props) => {
                     </div>
 
                     <div className='leading-8 lg:leading-10 mb-10'>
-                        Novametrics is a boutique analytics firm that provides advanced data-to-decision services for government agencies, 
-                        NGOs, foundations, impact investment funds, and aid and development groups.
+                        At Novametrics, we are driven by a commitment to revolutionize data analytics, focusing on impactful solutions that foster 
+                        informed decision-making and sustainable growth in a rapidly evolving world.
                     </div>
 
                     <div className='leading-8 lg:leading-10'>
