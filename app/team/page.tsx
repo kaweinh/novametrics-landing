@@ -65,7 +65,7 @@ export default function Home() {
             <div className='relative w-screen h-fit flex flex-col justify-center items-center font-mukta-mahee'>
                 <div className='w-full h-[30vh] lg:h-[40vh] relative overflow-hidden'>
                     <div className='absolute xl:text-5xl text-3xl text-white z-40 top-[50%] left-[20%]'>
-                        Meet the Team
+                        Leadership Team
                     </div>
 
                     <motion.div 
