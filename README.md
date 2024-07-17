@@ -1,1 +1,1 @@
-Landing page that can be seen here [novametrics]([https://www.novametricsllc.com/]) 
+Landing page that can be seen [here](https://www.novametricsllc.com/) 
